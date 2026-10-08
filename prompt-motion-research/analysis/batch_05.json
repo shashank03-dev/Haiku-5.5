@@ -1,0 +1,888 @@
+[
+  {
+    "slug": "aisongman-71ffac",
+    "title": "Pixel art card battle game",
+    "handle": "aisongman",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/aisongman/status/2103763192971461057",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 94,
+    "prompt_summary": "Asks for a Hearthstone-style one-on-one card game in pixel art, with no further spec, and to build it as well as possible.",
+    "inferred_stack": "Browser or JS game (HTML5 canvas or DOM sprites, pixel-art assets); engine not identifiable from stills",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Most likely a one-shot HTML5 game: pixel sprites drawn or generated as small images, scaled with nearest-neighbour rendering, and driven by a turn and card state machine. The four stills show live gameplay states (hover tooltip, placement highlight, HUD), so the piece is a capture of a running build rather than a rendered motion video.",
+    "visual_style": "Palette: slate-navy brick walls, deep green felt board, gold and orange HUD accents, saturated card art (blue, white, purple, red). Typography: small pixel bitmap font for card names, stats and HUD. Composition: top-down board with hero portraits at top and bottom, a card tray along the bottom edge, end-turn button at right. Background: tiled dark-blue brick wall with flame-lit torch icons.",
+    "motion_techniques": [
+      "card play tween",
+      "hover tooltip",
+      "placement highlight"
+    ],
+    "prompt_fidelity": "The stills match the request: a pixel-art, Hearthstone-style one-on-one card battle with hand, board, hero HP and an end-turn control. Depth of play beyond the 4 s capture is unknown.",
+    "standout_ideas": [
+      "Keep a game readable at small pixel scale with a fixed palette and bold card frames",
+      "Show card stats in a hover tooltip so the board stays uncluttered"
+    ],
+    "quality": 4,
+    "quality_note": "Coherent, readable pixel-art game UI with clear card states; depth of play is not visible in 4 s."
+  },
+  {
+    "slug": "ajith-io-4c248f",
+    "title": "Distilbook promo showreel",
+    "handle": "ajith_io",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/ajith_io/status/2103800569584562538",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 226,
+    "prompt_summary": "Asks for a 40-second showreel-style motion video for a product called Distilbook, showing off motion-design skill, with an original score loosely inspired by a film theme.",
+    "inferred_stack": "Rendered 3D or photoreal scene (Blender/Cycles-style or a real-time 3D engine); tool not identifiable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "The shots read as a lit 3D scene: a tilted page of text under a point light, with bloom and dust, then the letters break into a glowing particle stream. Likely built as instanced text meshes or sprites in a 3D tool or real-time engine, with a camera move and bloom grade. Audio is not visible in stills.",
+    "visual_style": "Palette: near-black, warm amber and gold glow, cream paper with brown-black type. Typography: classic serif for the page copy and heading, glowing serif letters in the particle stream. Composition: low camera across a tilted page, a single light hotspot, letters rising into dark space. Background: black void with fine dust and specks.",
+    "motion_techniques": [
+      "text-to-particle dispersal",
+      "bloom glow",
+      "camera tilt",
+      "ripple surface",
+      "dust particles"
+    ],
+    "prompt_fidelity": "The stills show a cinematic, atmospheric opening, but no product name, product UI or showreel framing appears in the 4 s preview. The 40 s length cannot be checked from the preview.",
+    "standout_ideas": [
+      "Copy on a page breaks into letters that stream toward the camera",
+      "One hard light hotspot as the single focal device"
+    ],
+    "quality": 4,
+    "quality_note": "Strong lighting and particle craft; the link to the product is not visible in the preview."
+  },
+  {
+    "slug": "amitsingha89-150378",
+    "title": "Handwoven textiles brand explainer",
+    "handle": "AmitSingha89",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/AmitSingha89/status/2103737604277780553",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 87,
+    "prompt_summary": "Asks for a professional explainer video for a handwoven textile brand's website, aimed at a first-time visitor.",
+    "inferred_stack": "Code-rendered typographic scene (HTML/CSS or a React-based video framework) over a dimmed photo; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A heavily dimmed photo of hands at a loom sits under a centred type stack, with line-mask reveals and fades on the headline and sub-line. The type uses web-style fonts (serif display, sans text). Most likely code-rendered; the stills cannot confirm the exact tool.",
+    "visual_style": "Palette: espresso brown and amber overlay, cream headline, terracotta italic accent, muted gold tracking. Typography: high-contrast serif headline with an italic accent line, wide-tracked uppercase sans for the brand line, small neutral sans for the sub-line. Composition: centred stack with generous margins and the brand line above the headline. Background: heavily dimmed, blurred photo of hands at a loom.",
+    "motion_techniques": [
+      "line mask reveal",
+      "fade in",
+      "blur-in",
+      "static hold"
+    ],
+    "prompt_fidelity": "Opening stills match a clear hero for a first-time visitor (brand, value line, sub-line). Only the first 4 s is visible, so the explainer flow and the accuracy of the copy against the website cannot be checked.",
+    "standout_ideas": [
+      "Two-tone headline: a cream statement and an italic accent line in a warm colour",
+      "Dim a photo heavily so the type carries the frame"
+    ],
+    "quality": 4,
+    "quality_note": "Clean, readable, on-brand typographic hierarchy with restrained motion."
+  },
+  {
+    "slug": "anthonyriera-9b1b2a",
+    "title": "Reddit marketing tool launch video",
+    "handle": "anthonyriera",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/anthonyriera/status/2103784508860305566",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "Many rounds",
+    "declared_stack": "Remotion",
+    "prompt_chars": 0,
+    "prompt_summary": "No prompt is published (skill entry). From the stills, the piece is a launch intro for a Reddit marketing tool, built around a mascot and a product-name reveal.",
+    "inferred_stack": "Remotion (React), as declared by the creator; mascot drawn with shapes or SVG",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Remotion composition, iterated over many rounds. A spiky orange mascot first assembles from a red dotted outline, then fills solid, with a small cursor overlay and a bold sans headline. The product word is revealed with blur and a colour shift; audio is not visible.",
+    "visual_style": "Palette: near-black background, vermilion mascot, white headline, blurred red product word. Typography: bold neo-grotesk sans for the 'Meet' headline; the product word is blurred in the 4 s window. Composition: centred mascot with the headline above and a cursor at the right edge. Background: flat near-black with no texture.",
+    "motion_techniques": [
+      "dotted outline build",
+      "shape fill",
+      "blur reveal",
+      "cursor overlay"
+    ],
+    "prompt_fidelity": "No prompt exists to compare against. The stills show a launch intro with a mascot and product name, which fits a launch video, but the product name is blurred and the rest of the piece is not visible.",
+    "standout_ideas": [
+      "Build a mascot from a dotted outline, then fill it solid",
+      "Put a cursor in the scene as a brand prop"
+    ],
+    "quality": 3,
+    "quality_note": "Clear launch intro, but the mascot reads crude and the product name is blurred out of the stills."
+  },
+  {
+    "slug": "ayushunleashed-ece3e3",
+    "title": "Claude motion design showreel",
+    "handle": "ayushunleashed",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/ayushunleashed/status/2103794962257084755",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 150,
+    "prompt_summary": "Asks for a 15-second motion-graphics showreel that presents the maker as an incredible motion designer, for a resume, going all out.",
+    "inferred_stack": "Code-rendered vector composition (SVG/canvas or HTML with a frame-timed timeline); not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A frame-timed vector scene sits inside a fixed HUD (corner brackets, timecode, BPM, chapter label), and the reel steps through point, line and plane. Shapes animate with easing, a perspective tilt and a glow pulse. Most likely produced from code at 1920x1080, with the HUD as a shared overlay layer.",
+    "visual_style": "Palette: near-black, signal red-orange, off-white. Typography: heavy grotesk for 'PLANE' and the wordmark, monospace for HUD labels and coordinates. Composition: centred object with a HUD frame and coordinate callouts. Background: black with a faint dot grid.",
+    "motion_techniques": [
+      "HUD overlay",
+      "perspective tilt",
+      "glow pulse",
+      "chapter counter"
+    ],
+    "prompt_fidelity": "The stills show a showreel-style sequence of motion fundamentals with a chaptered structure, which fits the ask. The restrained, systematic tone does not read as 'go all out', and the full 15 s is not visible in 4 s.",
+    "standout_ideas": [
+      "Showreel chapters as dimension steps: point, line, plane",
+      "HUD callouts with live coordinates on each shape"
+    ],
+    "quality": 4,
+    "quality_note": "Crisp, systematic design language with clear progression; restrained rather than 'all out'."
+  },
+  {
+    "slug": "bizibeast-10f264",
+    "title": "Bento.surf product video",
+    "handle": "bizibeast",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/bizibeast/status/2103696876130505124",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 174,
+    "prompt_summary": "Asks for a 40-second showreel-style motion video about the product Bento.surf, after researching it, to show motion-design skill.",
+    "inferred_stack": "Web-style UI motion (HTML/CSS with 3D transforms and blur, or a React video framework); not declared",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Product UI cards (logo tile, name, price) are scattered around a centred total, then tilted and depth-blurred as they land. The total changes from $33 to $196 per month with a red accent and a fine-print line. Likely built in HTML/CSS with transforms and filters, or a React video framework.",
+    "visual_style": "Palette: off-white background, navy ink, red accent, brand-coloured logo tiles (blue, navy, red, yellow). Typography: heavy geometric grotesk with tight tracking for the headline and prices. Composition: scattered white cards with soft shadows around a centred total. Background: pale grey-white with no texture.",
+    "motion_techniques": [
+      "card fly-in",
+      "depth-of-field blur",
+      "value swap",
+      "tilt"
+    ],
+    "prompt_fidelity": "The stills show a product pricing promo rather than a showreel of motion skill. The research-led product angle is a reasonable reading of 'video on Bento.surf', and the figures are not verified from the stills.",
+    "standout_ideas": [
+      "Let the total jump as each cost card lands, so the stack builds on screen",
+      "Blur background cards to suggest a crowd of competitors"
+    ],
+    "quality": 4,
+    "quality_note": "Clean, persuasive promo with strong hierarchy; a bit templated."
+  },
+  {
+    "slug": "blushpetal795-0c85c2",
+    "title": "Recruiter self-intro reel",
+    "handle": "blushpetal795",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/blushpetal795/status/2103744870041170220",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 180,
+    "prompt_summary": "Asks for a 15-second motion-graphics self-introduction to a recruiter, using the maker's own photo and a showreel feel, going all out.",
+    "inferred_stack": "Code-rendered HTML/SVG or React composition with a photo asset; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A name block is set in large caps with a masked reveal, and an orange dot slides through the letters as an accent. A circular headshot is framed by a ring of text set on a path, while a role line and a value statement fade in beside it. Likely SVG textPath or CSS inside a React video framework, with the photo as an image asset.",
+    "visual_style": "Palette: black, white, vivid orange (~#ff5a1f), muted grey. Typography: heavy neo-grotesk caps for the name and statement, italic serif for the greeting and accent word, small sans for the role line. Composition: centred name first, then a split layout with headshot left and statement right. Background: solid black.",
+    "motion_techniques": [
+      "mask reveal",
+      "text on path",
+      "accent dot slide",
+      "line stagger"
+    ],
+    "prompt_fidelity": "The stills match the brief: a self-introduction with a real headshot, a role line and a value statement, styled like a showreel. The rest of the 15 s is not visible.",
+    "standout_ideas": [
+      "Ring of role keywords set on a circular path around a headshot",
+      "An accent dot that slides through the name as a mark"
+    ],
+    "quality": 4,
+    "quality_note": "Strong hierarchy, a clean split layout, and a memorable ring-of-text device."
+  },
+  {
+    "slug": "brainextends-e19ac3",
+    "title": "Spotify product film",
+    "handle": "brainextends",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/brainextends/status/2103801834930606193",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 8142,
+    "prompt_summary": "Asks for an 18-second Spotify-themed product film from a detailed brief: a stage layout, generated album art, timed UI reveals, a player bar, and deterministic seek-driven rendering.",
+    "inferred_stack": "HTML/CSS/JS composition stepped frame by frame through a seek function, encoded to MP4 with a separate soundtrack; implied by the brief",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "The brief specifies a deterministic HTML build with an async seek(t), 60 fps capture and temporal subsampling for motion blur, and the stills (web-style UI, CSS gradients, pearlescent album art on a rounded stage) fit that approach. Likely a page driven by absolute time, captured frame by frame and muxed with generated electronic music. Confidence is medium because only stills were analysed.",
+    "visual_style": "Palette: emerald-to-black gradient backdrop, near-black stage, Spotify green (#1ED760), pearl lavender, cyan, pink and mustard album art. Typography: clean geometric sans in white and grey for headings and track names. Composition: a large rounded dark stage centred on a green gradient, with UI panels inside. Background: vertical green gradient, bright at upper-left and dark toward the bottom.",
+    "motion_techniques": [
+      "masked line reveal",
+      "perspective tilt",
+      "stagger list",
+      "match-position cover move",
+      "rounded-stage clip",
+      "persistent player bar"
+    ],
+    "prompt_fidelity": "The first 4 s follow the brief closely: green icon, masked 'Discover' reveal, desktop UI with three covers, 'New for you', then the 'Fresh finds' rows. A creator handle sits top-right in all four stills, against the brief's no-watermark rule, possibly as a posting overlay; the later beats are not visible.",
+    "standout_ideas": [
+      "Track one hero artwork through search, detail and zoom so the eye follows a single object",
+      "Keep a small player bar fixed as a visual anchor between shots"
+    ],
+    "quality": 4,
+    "quality_note": "Tracks the brief closely in the visible window; a handle watermark and the 4 s limit are the caveats."
+  },
+  {
+    "slug": "bthreeagency-b9b8d9",
+    "title": "Badge unlock screen animation",
+    "handle": "BThreeAgency",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/BThreeAgency/status/2103739079745827092",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 416,
+    "prompt_summary": "Asks for a badge-unlock screen that matches a linked Figma frame exactly, adds only motion, and has a solid 3D badge that tilts toward the cursor with gold particles, without bounce.",
+    "inferred_stack": "Web UI prototype (HTML/CSS/JS) with a 3D badge (Three.js or CSS 3D), screen-recorded in a phone frame; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A phone-frame prototype is screen-recorded with a cursor overlay on a light canvas. A gold hexagonal badge sits in a navy stage with a glowing floor, a burst of gold sparkles surrounds it, and the 'Early Explorer' title fades in beneath. Likely a browser build with a 3D or CSS-3D badge and a particle layer; the Figma reference is not in the record, so the match cannot be checked.",
+    "visual_style": "Palette: navy-to-black stage, gold (~#d4a84b) badge and sparkles, light grey outer canvas, white text. Typography: system sans (SF-like) for UI, bold white title, small grey caption. Composition: iPhone-style frame centred on a light canvas, hero badge at top, locked and unlocked badges below. Background: navy radial glow fading to black.",
+    "motion_techniques": [
+      "3D object",
+      "particle burst",
+      "title fade-in",
+      "cursor overlay"
+    ],
+    "prompt_fidelity": "The stills show the requested celebration: a gold 3D badge, gold particles and an unlock label. The 'match the Figma exactly', the cursor tilt and the no-bounce ease cannot be verified from stills.",
+    "standout_ideas": [
+      "A gold sparkle burst that settles around the hero object",
+      "Phone-frame capture with a visible cursor to show interaction"
+    ],
+    "quality": 4,
+    "quality_note": "Convincing celebration moment with clean hierarchy; tilt and Figma fidelity are not visible."
+  },
+  {
+    "slug": "ceowinkz-7c776b",
+    "title": "Amazon wholesale pitch video",
+    "handle": "ceowinkz",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/ceowinkz/status/2103647124126683602",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 176,
+    "prompt_summary": "Asks for a 15-second motion-graphics pitch to a brand for a wholesale Amazon company, arguing why the brand should let the company sell its products, going all out.",
+    "inferred_stack": "Code-rendered HTML/SVG or React composition with glow and particle layers; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A 'W' mark with an arrow sits in a cyan ring over a dark teal gradient with dust, then a light streak carries the cut into a headline. The pitch runs hook then problem, with a HUD card showing one price, a seller count and a trend, plus floating price tags. Likely code-rendered with glow filters and particle layers; the stills cannot confirm the tool.",
+    "visual_style": "Palette: deep navy-teal gradient, cyan accent, white type, red for the problem state. Typography: heavy neo-grotesk headlines, tracked monospace for HUD labels. Composition: centred logo and headline, then a split layout with headline left and data card right. Background: dark teal radial gradient with dust and corner brackets.",
+    "motion_techniques": [
+      "logo reveal",
+      "light streak transition",
+      "particle drift",
+      "HUD card",
+      "floating price tags"
+    ],
+    "prompt_fidelity": "The stills show a clear pitch structure (brand mark, hook, problem), which fits the ask. The 'why let us sell' payoff falls after 4 s, and the HUD figures are illustrative rather than sourced.",
+    "standout_ideas": [
+      "Open the problem with one price, one seller count and a trend",
+      "Use a light streak as the cut between brand mark and headline"
+    ],
+    "quality": 3,
+    "quality_note": "Clear three-beat pitch, but the generic HUD look keeps it modest in the stills."
+  },
+  {
+    "slug": "chatgptastra-0d95c7",
+    "title": "Motion principles showreel",
+    "handle": "ChatGptAstra",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/ChatGptAstra/status/2103834787647807540",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 28,
+    "prompt_summary": "Asks, in Chinese, for a 15-second motion-graphics video with a premium motion-designer aesthetic.",
+    "inferred_stack": "Code-rendered (HTML/SVG or canvas with an annotation and timeline overlay); not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A blue ball is animated along an arc with onion-skin ghosts, and the frames are annotated with handwritten notes such as 'slow in', 'squash!' and 'stagger: 45ms' plus a spacing timeline. The sequence then cuts to a kinetic headline, 'I MAKE THINGS MOVE.', with an underline and a dot. Likely code-rendered with an annotation layer and timecode overlays.",
+    "visual_style": "Palette: light grey paper, black type, bright blue accent, red for the squash note. Typography: heavy condensed grotesk for the headline, handwritten blue script for annotations, monospace timecodes. Composition: diagram-like scenes with arcs and a ground line, then a centred stacked headline. Background: off-white with a soft vignette.",
+    "motion_techniques": [
+      "onion skin",
+      "squash and stretch",
+      "annotation overlay",
+      "stagger",
+      "kinetic type",
+      "underline",
+      "spacing timeline"
+    ],
+    "prompt_fidelity": "The stills match a motion-design showreel built around craft principles, in a clean neutral style. The prompt was vague, so an educational principles theme is an interpretation rather than a stated request.",
+    "standout_ideas": [
+      "Label a motion demo with the principle and a number (e.g. stagger: 45ms)",
+      "Onion-skin arcs as a visual language for timing"
+    ],
+    "quality": 4,
+    "quality_note": "Clear, instructive and well-paced; the typography is plain but the annotation system works."
+  },
+  {
+    "slug": "codestackr-c071bf",
+    "title": "Claude motion reel",
+    "handle": "codeSTACKr",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/codeSTACKr/status/2103656229717328129",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 150,
+    "prompt_summary": "Asks for a 15-second showreel presenting the maker as an incredible motion designer, for a resume, going all out.",
+    "inferred_stack": "Frame-indexed code composition (HTML/canvas or React video framework) with HUD overlay; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "The frame counter (F 0034 / 0900 at 60 fps) shows a 900-frame timeline, and each chapter is typographic: a logo mark, a 'CLAUDE' mask reveal on cream, 'PIXELS' glitch slices with square particles, and outline type that sweeps. Likely deterministic per-frame code with a HUD layer and text effects, rendered to MP4. Audio is not visible.",
+    "visual_style": "Palette: near-black, cream (~#f1ebe0), signal red-orange, white. Typography: wide heavy grotesk for big words, monospace for HUD, red italic script accent. Composition: full-bleed centred type inside a viewfinder frame with timecode and frame counter. Background: black, or cream with a vignette.",
+    "motion_techniques": [
+      "mask reveal with clipped letters",
+      "glitch slice",
+      "pixel particles",
+      "outline stroke sweep",
+      "HUD counter"
+    ],
+    "prompt_fidelity": "The stills show a 15 s, 60 fps showreel of motion-design typography shots, which matches the length and the showreel idea. The 'go all out' energy reads as systematic and restrained.",
+    "standout_ideas": [
+      "Use the frame counter overlay as a verifiable timing spec",
+      "Mask-reveal a huge wordmark cut off at the baseline"
+    ],
+    "quality": 4,
+    "quality_note": "Varied typographic shots inside a consistent viewfinder frame; the glitch beat reads cleanly."
+  },
+  {
+    "slug": "danilowm-d3720d",
+    "title": "Motion designer showreel",
+    "handle": "danilowm",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/danilowm/status/2103661844661412022",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "HyperFrames",
+    "prompt_chars": 196,
+    "prompt_summary": "Asks, in Portuguese and with a HyperFrames skill call, for a 15-second showreel of motion-design skill that draws on the whole project context.",
+    "inferred_stack": "HyperFrames (HTML-based video framework) with SVG path drawing; declared by the creator and invoked in the prompt",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "The /hyperframes call tells the agent to use the project context, and the reel is built as chapters ('01/06 Kinetic type', '02/06 SVG path draw') on a 30 fps 1920x1080 timeline with a HUD header and progress bar. A kinetic word-by-word headline opens, then a chapter with pins and map paths over a stylized street map. Likely HTML/SVG compositions with GSAP-style tweens, rendered through HyperFrames.",
+    "visual_style": "Palette: off-white (~#f7f7f5), black, teal (~#14b8a6) and pale mint. Typography: geometric grotesk for headlines, grey sans for supporting copy, monospace HUD labels. Composition: split screen with copy left and a stylized street map right; a centred kinetic line in the opening. Background: light dotted grid with teal shape wipes.",
+    "motion_techniques": [
+      "kinetic type",
+      "SVG path draw",
+      "shape wipe",
+      "pin drop",
+      "chapter counter",
+      "blur-in"
+    ],
+    "prompt_fidelity": "The output uses the project's own context (a pet-friendly places map for a Brazilian town) inside a chaptered reel, which fits the showreel ask. Only two chapters appear in 4 s, so the full 15 s is not verified.",
+    "standout_ideas": [
+      "Use the product's own map and UI as the showreel subject",
+      "A chapter counter in the HUD (01/06) as a showreel index"
+    ],
+    "quality": 4,
+    "quality_note": "Well matched to the project with clear chapter pacing; the map is simplified but readable."
+  },
+  {
+    "slug": "emollick-8661a8",
+    "title": "Recursion explained in genres",
+    "handle": "emollick",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/emollick/status/2103688362960019567",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 159,
+    "prompt_summary": "Asks for a self-referential, clever, fast-moving video that explains recursion, with each explanation in a radically different video style.",
+    "inferred_stack": "Code-rendered HTML/SVG or React composition with a nested-frame motif; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A stack of nested rectangles, scaled and tinted, forms the recursion motif, and bold uppercase headlines sit on top. A later beat shows a mock video player with a thumbnail of another explainer, so the video contains a video that explains. Likely built from scaled shapes and UI mocks in code.",
+    "visual_style": "Palette: near-black, neon green, red, yellow, white. Typography: tall condensed uppercase grotesk (Anton/Bebas-like) with one accent word per line, monospace filename in the mock player. Composition: centred headline over repeated outlines, player mock centred inside the nested frames. Background: black with thin coloured rectangles.",
+    "motion_techniques": [
+      "recursive nested frames",
+      "kinetic headline",
+      "mock video UI"
+    ],
+    "prompt_fidelity": "The stills show the self-referential idea (nested frames, then a video about explaining videos), which fits the ask. The 'radically different style per explanation' is only hinted at by one thumbnail in 4 s.",
+    "standout_ideas": [
+      "Nested rectangles as a recursion metaphor that gets smaller each beat",
+      "A mock video player inside the video to make it self-referential"
+    ],
+    "quality": 4,
+    "quality_note": "The concept lands quickly, and the nested-frame motif is simple and effective."
+  },
+  {
+    "slug": "eyishazyer-af035b",
+    "title": "Motion designer showreel",
+    "handle": "eyishazyer",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/eyishazyer/status/2103816865852129686",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 151,
+    "prompt_summary": "Asks for a 15-second showreel presenting the maker as an incredible motion designer, for a resume, going all out.",
+    "inferred_stack": "Frame-indexed code composition (HTML/canvas or React video framework) with HUD overlays and post effects; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A 60 fps, 1920x1080 reel shares one HUD (timecode, scene counter, 120 BPM label) across chapters: a typed caption under a squash-and-stretch object, a ring of confetti particles, and an RGB-split wordmark. Scene 2 opens on a dark glitch wipe with bars. Likely deterministic per-frame code plus post effects (chromatic offset, glitch) rendered to MP4.",
+    "visual_style": "Palette: near-black, cream (~#f3efe6), red-orange, electric blue and magenta chromatic fringes, multicolour confetti. Typography: giant outlined numerals, wide black grotesk for the wordmark, monospace HUD and typed caption. Composition: centred hero object inside a HUD frame. Background: black or warm cream with a vignette and a red edge glow.",
+    "motion_techniques": [
+      "squash and stretch",
+      "typewriter caption",
+      "particle burst",
+      "RGB split",
+      "glitch scene wipe",
+      "HUD counter"
+    ],
+    "prompt_fidelity": "The stills follow the showreel brief with motion-principle references, a wordmark and scene transitions. The fourth frame is a mostly dark glitch wipe with little readable content, and the full 15 s is not visible.",
+    "standout_ideas": [
+      "A caption that types under a demo object (e.g. fig.01 - squash and stretch)",
+      "An RGB-split wordmark as a bold sign-off"
+    ],
+    "quality": 4,
+    "quality_note": "Energetic and on-theme; the glitch transition frame is hard to read."
+  },
+  {
+    "slug": "fractadev-149adc",
+    "title": "Voice agent SaaS launch",
+    "handle": "FractaDev",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/FractaDev/status/2103941789744861266",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 206,
+    "prompt_summary": "Asks for a high-end launch video for a voice-agent SaaS, using real components from the frontend project, in a showcase style.",
+    "inferred_stack": "Web UI rendered from HTML/CSS components (likely React), captured or composited; not declared",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "A call-card component (business name, number, incoming then missed state, ring pulse) is composed on a light background. The card flips state, and a headline with a blur-in word reveal sits beside stacked missed-call rows. Likely the product's own UI components rendered in a browser and composited into a 1920x1080 frame, with motion added through CSS or a React video framework.",
+    "visual_style": "Palette: off-white background, black text, red accent on one word, pale red and green call buttons. Typography: heavy neo-grotesk headline, small tracked eyebrow chip, sans card text. Composition: headline left, product card right, list rows stacked beneath the card. Background: soft white gradient with card shadows.",
+    "motion_techniques": [
+      "blur-in word",
+      "state change",
+      "stagger list",
+      "ring pulse",
+      "card slide"
+    ],
+    "prompt_fidelity": "The stills show a clean SaaS problem-to-product sequence in a high-end light style, which fits the launch ask. Whether the components are the product's own code cannot be verified from stills, and the voice-agent feature itself is not shown.",
+    "standout_ideas": [
+      "Make the product's own state change (incoming to missed) the payoff",
+      "Use a 555-style placeholder number so the UI reads as real without real data"
+    ],
+    "quality": 4,
+    "quality_note": "Clean, restrained, highly legible; motion is limited within the 4 s window."
+  },
+  {
+    "slug": "gautam-mer1-2ae354",
+    "title": "Matra caption app promo",
+    "handle": "gautam_mer1",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/gautam_mer1/status/2103703336780530003",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "Remotion, React",
+    "prompt_chars": 34,
+    "prompt_summary": "Asks for a 30-second Apple-style video of the maker's app.",
+    "inferred_stack": "Remotion (React), as declared; phone mockup with app footage",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "A declared Remotion/React composition at 720x1280. A black frame fades in 'Introducing', a purple app icon with a radial glow and wordmark follows, then a phone mockup rises from the bottom showing the app screen. The app screen is likely real footage composited into the device frame. Audio is not visible.",
+    "visual_style": "Palette: black, violet-purple icon, warm brown-purple glow, white. Typography: neutral Helvetica-style grotesk, regular weight for 'Introducing' and bold for the wordmark. Composition: centred logo lockup in a vertical frame, device rising at the bottom edge. Background: pure black with a radial glow behind the icon.",
+    "motion_techniques": [
+      "blur-in",
+      "logo glow",
+      "device slide-up",
+      "ghost fade-through"
+    ],
+    "prompt_fidelity": "The stills match an Apple-style product reveal: black field, 'Introducing', an icon, then the phone with app UI. The 30 s runtime and feature sequence are not visible in 4 s.",
+    "standout_ideas": [
+      "Ghost the logo behind a rising device as a handoff between brand and product",
+      "Real app footage inside a phone frame for credibility"
+    ],
+    "quality": 4,
+    "quality_note": "Convincing Apple-style reveal with clean pacing; the ghosted-logo handoff works."
+  },
+  {
+    "slug": "henkvaness-0e06af",
+    "title": "Prompting mistakes video tutorial",
+    "handle": "henkvaness",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/henkvaness/status/2103801351993975279",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 38,
+    "prompt_summary": "Asks for an educational video made from an article; the record title points to a tutorial on prompting mistakes.",
+    "inferred_stack": "Code-rendered HTML/CSS or SVG scene (or a React video framework); not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A single chat-UI mock with 'YOU' and 'CHATBOT' panels and placeholder bars sits on a cream vignette. A red rubber stamp, 'MADE IT UP', lands on the reply as a one-beat illustration of hallucination. Likely a short code-driven scene with a stamp animation; the article's content is not visible in the stills.",
+    "visual_style": "Palette: warm cream, off-white card, near-black prompt bubble, grey placeholder lines, red stamp. Typography: tracked small-caps labels, heavy red stamp lettering. Composition: centred card with the stamp across the lower-right of the reply. Background: cream radial vignette.",
+    "motion_techniques": [
+      "stamp drop",
+      "static hold"
+    ],
+    "prompt_fidelity": "The stills show one gag about made-up answers, which fits a prompting-mistakes theme loosely. The article's content and any instructional structure are not visible, and the text is placeholder.",
+    "standout_ideas": [
+      "A stamp as a one-beat rebuttal to a bad output",
+      "A chat-UI mock with placeholder bars to keep a lesson abstract"
+    ],
+    "quality": 3,
+    "quality_note": "Clean and on-theme but very sparse; placeholder text leaves the lesson unclear."
+  },
+  {
+    "slug": "heyiammallik-e72d17",
+    "title": "Portfolio motion reel",
+    "handle": "heyiammallik",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/heyiammallik/status/2103837803587293397",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 331,
+    "prompt_summary": "Asks the model to act as a pro motion designer: analyse the maker's portfolio, make a roughly 30-second video from it using trending motion and sound techniques, and self-critique until it meets pro standard.",
+    "inferred_stack": "Code-rendered typographic composition (HTML/CSS or React video framework) with metric overlays; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A 10-chapter type reel where each beat is one word (COMPLEX, CLEAR, RELIABLE, GROW) with a corner counter. Chapters switch between an outline wall, a cream card with red viewfinder brackets, a type-metrics overlay (cap height, baseline), and a clean black field with a red dot. Likely code-rendered with one shared type style and per-chapter layouts; sound is not visible.",
+    "visual_style": "Palette: black, cream (~#efebe3), red-orange accent (~#e5452d), white. Typography: bold neo-grotesk caps for each word, tracked monospace for labels and counters. Composition: one centred word per chapter with HUD labels in the corners. Background: black, cream, or repeated outline text.",
+    "motion_techniques": [
+      "word per beat",
+      "outline wall",
+      "metric overlay",
+      "viewfinder brackets",
+      "accent dot"
+    ],
+    "prompt_fidelity": "The stills show a consistent 10-chapter typographic system with a pro feel, but the 'analyse my portfolio' step cannot be verified, and sound and trend techniques are not visible.",
+    "standout_ideas": [
+      "A type-metrics overlay (cap height, baseline) as a designer-facing signal",
+      "One-word chapters with a numbered counter for pacing"
+    ],
+    "quality": 4,
+    "quality_note": "Systematic, confident typography; each chapter reads instantly."
+  },
+  {
+    "slug": "ho-ba-f3f0e9",
+    "title": "mdfor.dev product intro video",
+    "handle": "HO_BA",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/HO_BA/status/2103845264649761062",
+    "model": "Opus 5.5",
+    "effort": "High",
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 597,
+    "prompt_summary": "Asks for a 30-second product intro video for a markdown tool, using real screenshots and logo broken into animatable parts, music-synced motion, and a professional production feel.",
+    "inferred_stack": "Code-rendered HTML/CSS with a typewriter effect, or a React video framework; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A typewriter types '# Wri' in mono with a terracotta cursor, the word settles into a serif headline, and '*markdown*' is typed before its asterisks convert into terracotta italic. The background is a soft animated cream gradient. Likely code-rendered, with the typed effect driven by a per-frame character count.",
+    "visual_style": "Palette: warm cream (~#f7f1ea), espresso (~#2a2320), terracotta (~#c05e3a), soft peach glow. Typography: high-contrast bold serif headline, italic serif accent in terracotta, monospace for markdown syntax. Composition: centred single line with large whitespace. Background: soft cream blurred gradient with peach highlights.",
+    "motion_techniques": [
+      "typewriter",
+      "syntax-to-style morph",
+      "block cursor",
+      "blurred gradient background"
+    ],
+    "prompt_fidelity": "The 4 s opening matches a copy-led intro built on the markdown concept. Product screenshots, the logo breakdown and music-synced motion are not visible yet, so those asks are unverified.",
+    "standout_ideas": [
+      "Use the product's own syntax as the motion device (asterisks become italics)",
+      "A typewriter with a coloured cursor to introduce a brand"
+    ],
+    "quality": 4,
+    "quality_note": "Clever, elegant opener; the rest of the 30 s is not visible."
+  },
+  {
+    "slug": "hqmank-7c61f1",
+    "title": "Browser automation skill launch",
+    "handle": "hqmank",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/hqmank/status/2103831140033241156",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 201,
+    "prompt_summary": "Asks for a 20-second launch video for an open-source browser-automation skill, styled like a GitHub README hero, going all out.",
+    "inferred_stack": "Code-rendered HTML/CSS or React video framework with HUD overlays; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A bone-coloured canvas carries HUD chrome (project label, version, chapter counter, timecode, progress bar) and a three-line headline. Lines reveal with masks, the accent word turns orange, and chapter 01 opens with a glitched wordmark and a small mono caption. Likely code-rendered with a shared text component.",
+    "visual_style": "Palette: bone off-white (~#efebe4), near-black type, orange-red accent (~#ff5a2c), light grey hairlines. Typography: heavy extended grotesk caps for the headline, monospace for HUD and eyebrow text. Composition: left-aligned headline stack with HUD corner marks and a cursor accent. Background: flat off-white.",
+    "motion_techniques": [
+      "line mask reveal",
+      "glitch slice",
+      "accent colour switch",
+      "HUD counter",
+      "cursor overlay"
+    ],
+    "prompt_fidelity": "The stills use the brief's tagline as a hero headline in a README-hero tone, which fits. The 20 s is not visible in full, and the product UI does not appear in the 4 s.",
+    "standout_ideas": [
+      "Give the payoff verb the accent colour ('clicks')",
+      "HUD corner labels (project name, version) for a README-hero feel"
+    ],
+    "quality": 4,
+    "quality_note": "Confident hero typography with a strong README-hero feel."
+  },
+  {
+    "slug": "ibrahimwasim240-809370",
+    "title": "Personal skills showreel",
+    "handle": "ibrahimwasim240",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/ibrahimwasim240/status/2103943233432940763",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 108,
+    "prompt_summary": "Asks for a 25-second showreel of the maker's skills, styled for a resume, going all out.",
+    "inferred_stack": "Browser pixel-art composition (canvas or DOM with pixel fonts and CRT/glitch effects); not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "An arcade title card ('PLAYER 1', a name, 'PRESS START') in rainbow pixel type scrambles through a CRT glitch, then a platformer level with a HUD (score, lives, timer) and a 'PLAY IT' callout takes over. The skills appear as level elements, which is the creative device. Likely canvas or DOM sprites with pixel fonts and a scanline and glitch pass.",
+    "visual_style": "Palette: near-black navy, lime, cyan, magenta, purple and orange tile blocks. Typography: pixel bitmap font for titles, pixel mono for footers and HUD. Composition: centred title screen, then a full-width platformer with a top HUD bar and footer chapter label. Background: dark navy with a faint grid and pixel tiles.",
+    "motion_techniques": [
+      "CRT glitch scramble",
+      "pixel type",
+      "platformer scroll",
+      "HUD timer",
+      "chapter label"
+    ],
+    "prompt_fidelity": "The stills show a game-themed showreel that fits the 'showreel' idea, with a 'Game Design' chapter label. The individual skills are not yet visible, and the first 4 s includes a near-blank grey opener.",
+    "standout_ideas": [
+      "Frame a showreel as a playable level with chapter labels in the footer",
+      "Scramble a pixel-font title as the transition"
+    ],
+    "quality": 4,
+    "quality_note": "Strong, consistent arcade theme; the opener is blank and skill content is not yet visible."
+  },
+  {
+    "slug": "ik-builds-b8bdcf",
+    "title": "Paper-style product launch film",
+    "handle": "ik_builds",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/ik_builds/status/2103890476885585923",
+    "model": "Opus 5.5",
+    "effort": "Medium",
+    "iterations": "One-shot",
+    "declared_stack": "HyperFrames + GSAP",
+    "prompt_chars": 1528,
+    "prompt_summary": "Asks for a 15-second paper-style motion explainer for a product: HyperFrames and GSAP, no voiceover, marker notes and physics-led bounces. Product and copy placeholders in the prompt are unfilled.",
+    "inferred_stack": "HyperFrames + GSAP (declared); HTML composition with GSAP timelines",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "A teal ball bounces along an arc with onion-skin ghosts, then paper props (a bid summary, a drawing sheet, a pricing sheet) arrive as the ball settles on a ground line. Handwritten notes are drawn in with a stroke-dashoffset effect. The prompt requires seek-safe GSAP timelines, which the stills fit; the sound track is not visible.",
+    "visual_style": "Palette: paper white with soft vignette, ink grey, teal ball (~#3ccfbf), brick-red handwritten notes, pale yellow sticky note. Typography: handwritten script for notes, neutral sans on the paper props. Composition: a central ground line with the ball and paper props arranged around it. Background: paper-light radial gradient with no chrome.",
+    "motion_techniques": [
+      "onion skin arc",
+      "physics bounce",
+      "paper card toss",
+      "stroke draw annotation"
+    ],
+    "prompt_fidelity": "The stills follow the paper-light, marker-note, physics-bounce direction with no chrome. Kinetic type, the dark-mode switch and the logo are not visible in 4 s, and the unfilled placeholders mean the product story cannot be checked against its inputs.",
+    "standout_ideas": [
+      "Onion-skin ghost arcs as the path motif for a bounce",
+      "Paper props that pinball around one ball to carry the story"
+    ],
+    "quality": 4,
+    "quality_note": "Strong art direction and believable bounce physics; the product story is unverifiable."
+  },
+  {
+    "slug": "jacksonfall-54b2ac",
+    "title": "Branding agency showreel",
+    "handle": "jacksonfall",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/jacksonfall/status/2103925420211229164",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 246,
+    "prompt_summary": "Asks for a 30-second showreel framed as a niche branding agency serving startup founders, with every graphic built from scratch and maximum effort.",
+    "inferred_stack": "Unclear mix: vector or code-drawn marks with character-built type, plus a raster painted background; tool not identifiable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Four distinct shots: a sage-green radial arrow mark, an 'A' built from binary-like characters, a mint app-icon globe with a hand-drawn stroke, and a globe logo over a painterly sky. The marks look vector or code-drawn; the painterly landscape looks like a raster illustration, and its provenance is unknown. Audio is not visible.",
+    "visual_style": "Palette: sage olive (~#5f6452), white, black, electric blue dots, mint (~#8ccf7e), sky blue (~#6cc3f0). Typography: no text visible apart from the character-built 'A'. Composition: one centred mark per shot. Background: flat sage, black, flat white, and a painterly sky with hills.",
+    "motion_techniques": [
+      "mark reveal",
+      "character-matrix assembly",
+      "hand-drawn stroke",
+      "background swap"
+    ],
+    "prompt_fidelity": "The stills show branding-agency mark explorations, which is consistent with a showreel. The 'all graphics from scratch' requirement looks doubtful for the painterly landscape, and four unrelated looks in 4 s weaken the showreel's cohesion.",
+    "standout_ideas": [
+      "Build a logo mark from text characters as a motion device",
+      "Show several mark systems quickly to demonstrate range"
+    ],
+    "quality": 3,
+    "quality_note": "Good individual marks, but disjointed looks and a painterly background that clashes with the rest."
+  },
+  {
+    "slug": "jasonzhou1993-8595e0",
+    "title": "Claude motion reel",
+    "handle": "jasonzhou1993",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/jasonzhou1993/status/2103663364958515541",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 151,
+    "prompt_summary": "Asks for a 15-second showreel presenting the maker as an incredible motion designer, for a resume, going all out.",
+    "inferred_stack": "Frame-indexed code composition (HTML/canvas or React video framework) with HUD overlay; not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "The same HUD template used by several other entries (corner brackets, timecode, frame counter '036 / 900', chapter label) frames the reel. It moves from an intro (an orange dot on a line, a typed 'principles first.') to kinetic 'SPACING' with a tracking readout, then colour bar wipes reveal 'RHYTHM'. Likely deterministic per-frame code at 60 fps.",
+    "visual_style": "Palette: near-black, orange-red dot and bars, cream-white type, electric blue, grey outlines. Typography: heavy neo-grotesk for 'SPACING', outlined ghost words behind, mono HUD and captions. Composition: centred type over ghosted outline words, with bar wipes across the full frame. Background: near-black with bars.",
+    "motion_techniques": [
+      "typed caption",
+      "tracking animation",
+      "outline ghost text",
+      "bar wipe",
+      "HUD counter"
+    ],
+    "prompt_fidelity": "The stills read as a motion-design showreel built on motion principles (spacing, tracking, rhythm), with a 900-frame counter matching a 15 s timeline. This fits the ask.",
+    "standout_ideas": [
+      "Show the tracking value changing as a readout beside the word",
+      "Colour bar wipes that reveal the next word"
+    ],
+    "quality": 4,
+    "quality_note": "Tight, on-theme chapters with a clear technique demo per beat."
+  },
+  {
+    "slug": "jazzen-chen-4542ae",
+    "title": "AgentHud project motion video",
+    "handle": "Jazzen_Chen",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/Jazzen_Chen/status/2103751442393894989",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 63,
+    "prompt_summary": "Requests a dynamic motion-graphics piece about the maker's project, AgentHud, from a one-line brief.",
+    "inferred_stack": "Code-rendered glow and callout composition (SVG or canvas glow, or a 3D lighting setup); not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A black, rim-lit slot sits in the centre; coloured glows flare beneath it and leader lines draw out to labels for each provider and quota. Labels fade in with monospace values. Likely built in code with glow layers and line-draw animation, or a small 3D lighting setup, produced one-shot at max effort.",
+    "visual_style": "Palette: near-black navy, white rim light, green (~#3ddc84), amber (~#f5c542), red (~#ff4d4d). Typography: monospace for values, sans for provider names. Composition: centred horizontal bar with coloured glows and labels fanned below it. Background: dark radial gradient with a thin horizontal light line.",
+    "motion_techniques": [
+      "glow flicker",
+      "leader line draw",
+      "light flare",
+      "sparks",
+      "callout reveal"
+    ],
+    "prompt_fidelity": "The stills show a status HUD with provider quota callouts, a plausible reading of an 'AgentHud' video. The product UI inside the bar is empty in all four stills, and the brief was very short, so the content's accuracy cannot be checked.",
+    "standout_ideas": [
+      "Encode status as glow colour under a dark slot (green to red)",
+      "Leader-line callouts that pair a provider name with a value"
+    ],
+    "quality": 3,
+    "quality_note": "Attractive glow and callouts, but the product UI is never shown in the visible window."
+  },
+  {
+    "slug": "kloss-xyz-15182a",
+    "title": "Chaotic Claude POV video",
+    "handle": "kloss_xyz",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/kloss_xyz/status/2103664956482941143",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Python + ffmpeg",
+    "prompt_chars": 326,
+    "prompt_summary": "Asks for a vertical, chaotic brain-rot-style clip, generated in Python and rendered with ffmpeg, that ties into a new model launch and speaks from the model's point of view.",
+    "inferred_stack": "Python + ffmpeg (declared); frames drawn in Python, glitch and encode likely via ffmpeg filters",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Python + ffmpeg. Python draws 9:16 text frames with a status bar and a timer tied to absolute time ('0.98 seconds ago' steps up by one each second), then a glitch beat splits colour channels and slices the frame, consistent with ffmpeg filters. Audio is not visible in stills.",
+    "visual_style": "Palette: near-black, white, coral (~#e2785a) accent, mono grey labels. Typography: tall condensed bold sans in caps for 'I WAS BORN.', monospace for the status bar, typed line and sub-line. Composition: stacked type on a 9:16 canvas with a status bar at top. Background: flat near-black.",
+    "motion_techniques": [
+      "typewriter",
+      "live timer",
+      "chromatic split glitch",
+      "slice displacement",
+      "status bar"
+    ],
+    "prompt_fidelity": "The stills show the POV-from-a-model concept ('you hit enter', then 'I was born') and a glitch hit, which matches the core idea. The 'chaotic brain rot' level is restrained within 4 s, and sound design is not visible.",
+    "standout_ideas": [
+      "A live timer tied to frame time for a 'seconds since born' gag",
+      "A chromatic-split glitch on one beat rather than the whole piece"
+    ],
+    "quality": 4,
+    "quality_note": "Strong concept, clean type and an effective glitch beat; chaos is modest in the visible window."
+  },
+  {
+    "slug": "kloss-xyz-fe0c31",
+    "title": "History of AI timeline",
+    "handle": "kloss_xyz",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/kloss_xyz/status/2103652674336067876",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 59,
+    "prompt_summary": "Asks for a short film that surveys the major milestones in the past of artificial intelligence.",
+    "inferred_stack": "Code-rendered particle and text composition (canvas or three.js-style particles with glow, plus HTML/CSS text); not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "A soft orange glow point is the only element in the first three stills (0.6 to 2.6 s), then a particle sphere gathers around it and a line of uppercase text fades in. Likely a generative particle system with a bloom-style glow and a text layer in code. No dated milestones appear in the 4 s preview.",
+    "visual_style": "Palette: black, warm orange glow, white and grey text. Typography: uppercase neo-grotesk for the line, with the final word in lighter grey. Composition: centred glow with text over the particle field. Background: black with faint noise.",
+    "motion_techniques": [
+      "particle sphere",
+      "glow bloom",
+      "fade-in text",
+      "slow build"
+    ],
+    "prompt_fidelity": "The 4 s preview has no dated milestones, only a glowing dot and one thematic line, so the 'key moments in AI history' goal is not visible. The rest of the video may deliver it.",
+    "standout_ideas": [
+      "Gather particles into a sphere around an origin point to suggest a field building up"
+    ],
+    "quality": 2,
+    "quality_note": "Three of four stills are almost empty and the visible content does not yet show AI history."
+  },
+  {
+    "slug": "kmasiff-cc72cb",
+    "title": "Email verification tool promo",
+    "handle": "KmAsiff",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/KmAsiff/status/2103810247131549880",
+    "model": "Opus 5.5",
+    "effort": "High",
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 254,
+    "prompt_summary": "Asks for a 20-second, modern SaaS-style promo for an email verification tool, covering as many use cases as possible, inspired by YC and Claude social videos.",
+    "inferred_stack": "HTML/CSS web UI animated in a browser, or a React video framework; product card looks like real components; not declared",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "A dark indigo headline sequence strikes through 'bounces' and mask-reveals 'before you hit send.' before a light product card takes over: an input, a verify button, a 'Checking...' state, and a step tracker (syntax, disposable, DNS, SMTP, score) that ticks off. Likely real web UI pieces captured in a browser or built as a React video composition, with a cursor overlay.",
+    "visual_style": "Palette: deep indigo gradient, lavender accent (~#a78bfa), violet button (~#5b35e8), white card, red strike (~#ff4d6d). Typography: heavy neo-grotesk headline, monospace for the input and step labels. Composition: centred headline on dark, then a centred product card on a light lavender field. Background: dark indigo with a faint data grid, then soft lavender.",
+    "motion_techniques": [
+      "strikethrough draw",
+      "mask line reveal",
+      "step tracker",
+      "typed input",
+      "button state change",
+      "cursor overlay"
+    ],
+    "prompt_fidelity": "The stills show a modern SaaS promo with a strong hook and a product demo, which matches the ask. The 'many use cases' coverage and the 20 s runtime are not visible in the 4 s preview.",
+    "standout_ideas": [
+      "Strike through the pain word ('bounces') as the hook",
+      "A step-by-step verification tracker as the product demo"
+    ],
+    "quality": 4,
+    "quality_note": "Clean SaaS look with a clear hook and a believable product demo."
+  }
+]

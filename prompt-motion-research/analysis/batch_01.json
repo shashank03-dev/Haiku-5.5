@@ -1,0 +1,1019 @@
+[
+  {
+    "slug": "charlesmendez-73b6e4",
+    "title": "Datagran ChatGPT ads explainer",
+    "handle": "charlesmendez",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/charlesmendez/status/2102847039415476517",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 332,
+    "prompt_summary": "A slick, punchy promo for a company's product: a ChatGPT ads campaign, connected metrics and attribution, a voice agent, follow-ups with humans in the loop, then analytics.",
+    "inferred_stack": "Code-driven 2D motion graphics (HTML/CSS or React scene composition, Remotion-style) rendered to 1920x1080 MP4; exact framework not determinable from stills",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "The stills look like a scripted, time-indexed composition: headline lines enter in sequence, one green accent word and an underline are added, and a HUD bar shows chapter and timecode. The HUD reads 1920x1080, 30 fps and 120 BPM, which suggests the cuts were laid out on a tempo grid. Audio is not visible in the stills.",
+    "visual_style": {
+      "palette": "near-black (~#0a0c0b) with faint green glow, neon green accent (~#2bff5a), white text",
+      "typography": "heavy neo-grotesk sans (Helvetica or Inter Display-like), tight tracking; small monospace for HUD labels",
+      "composition": "left-aligned headline stack, HUD bar at top and timeline bar at bottom",
+      "background": "black with a soft green radial glow behind the text"
+    },
+    "motion_techniques": [
+      "line-by-line kinetic type",
+      "accent-colour word swap",
+      "underline sweep",
+      "HUD timecode overlay",
+      "chapter label"
+    ],
+    "prompt_fidelity": "The stills match the slick, punchy brief and open on the ChatGPT ads hook. The 4 s preview covers only the cold open, so the attribution, voice agent, human-in-the-loop and analytics beats are not visible.",
+    "standout_ideas": [
+      "A film-slate HUD (chapter, timecode, fps and BPM readout) makes a promo feel produced",
+      "Reserve one accent colour for the single word the viewer must remember"
+    ],
+    "quality": 4,
+    "quality_note": "Confident type system and HUD; only the opening is visible, so the full narrative is unverified."
+  },
+  {
+    "slug": "gonzalomacagno-2de1a9",
+    "title": "Festival lineup promo reel",
+    "handle": "GonzaloMacagno",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/GonzaloMacagno/status/2102897651008344202",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 74,
+    "prompt_summary": "A 10-second, advertising-style vertical reel for a festival lineup, with the event title, venue, date, headliners and the full artist list.",
+    "inferred_stack": "2D vector motion graphics (SVG or code-driven composition with animated ribbon paths) rendered to 9:16 MP4; tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "The four stills move through a title card, a date banner, the headliners and the full line-up, joined by a coloured band wipe. The background ribbons look like vector paths that drift slowly behind the text. Stills suggest a template or code timeline, but the exact tool cannot be identified.",
+    "visual_style": {
+      "palette": "lavender-to-blush gradient (~#c9a8f0 to ~#f6d9e6), periwinkle, violet and orange ribbon strokes, navy text (~#1e1a3e)",
+      "typography": "heavy, wide grotesk sans in caps for the title and headliner; medium weight for the lineup",
+      "composition": "centred stack; date in a white bar with a four-stripe rule above it",
+      "background": "soft vertical gradient with translucent ribbon strokes"
+    },
+    "motion_techniques": [
+      "drifting ribbon strokes",
+      "colour-band wipe transition",
+      "stacked text build",
+      "scene cuts between info cards"
+    ],
+    "prompt_fidelity": "The stills deliver a vertical, advertising-style reel that carries all the lineup information, as asked. The 4 s preview is shorter than the 10 seconds requested, so full timing cannot be checked.",
+    "standout_ideas": [
+      "Tiered lineup typography (headliners large, support mid, small names last) fits many names on a vertical frame",
+      "A translucent ribbon layer behind flat poster type keeps a static design alive"
+    ],
+    "quality": 3,
+    "quality_note": "Clean, legible and on-brief; the motion is simple and the design is poster-like."
+  },
+  {
+    "slug": "imthatcarlos-e04bfe",
+    "title": "Sherwood agentic hedge fund explainer",
+    "handle": "imthatcarlos",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/imthatcarlos/status/2102849219388133592",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "Remotion",
+    "prompt_chars": 212,
+    "prompt_summary": "A modern, punchy explainer for the Sherwood protocol that reuses landing-page branding and simply explains how it enables agentic hedge funds.",
+    "inferred_stack": "Remotion (React, frame-driven composition) rendered to 1920x1080 MP4",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Remotion, so each sentence is a React composition whose position, blur and opacity are interpolated from the frame number. The stills show word-level swaps with directional blur on outgoing and incoming words, applied as text effects rather than a camera move. Sherwood logo or landing-page assets are not visible in these frames.",
+    "visual_style": {
+      "palette": "near-black (~#0b0d0c) with emerald radial glow (~#1d6b47), white text (~#f2f2f2), mint highlight (~#5ff0a0)",
+      "typography": "neo-grotesk sans (Inter or Geist-like), medium weight, sentence case",
+      "composition": "one centred line or two-line sentence, large type, lots of black space",
+      "background": "black with a soft green radial glow centred behind the text"
+    },
+    "motion_techniques": [
+      "word-level kinetic type",
+      "directional motion blur on text",
+      "accent-colour highlight on key phrase",
+      "radial glow backdrop"
+    ],
+    "prompt_fidelity": "The stills follow the simple-explainer narrative with a slick, minimal look. They do not show Sherwood branding, which the prompt allowed the model to take from the landing page, and the 4 s preview cannot show the full explainer.",
+    "standout_ideas": [
+      "Blur-in word swaps keep a sentence-by-sentence explainer legible and punchy",
+      "Highlight the single noun that carries the payoff in the accent colour"
+    ],
+    "quality": 4,
+    "quality_note": "Clean, simple and on-message; motion is minimal in the sampled stills and no brand assets appear."
+  },
+  {
+    "slug": "kamstudiolabs-0b0824",
+    "title": "Lighthouse keeper silent short",
+    "handle": "KamStudioLabs",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/KamStudioLabs/status/2102908742518100086",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 104,
+    "prompt_summary": "A 45-second silent short film with no dialogue, where sound carries half the story; the model invents the plot.",
+    "inferred_stack": "Unknown: footage source (3D render, generated or photographed) with a title card added in post",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a near-black cinemascope frame, a widely tracked serif title card 'THE KEEPER' with a hairline underline, and a dim lighthouse silhouette, which suggests shots assembled in an editor with fades. Whether the footage is 3D, generated or live-action cannot be determined from stills. The sound design the prompt emphasises is not visible.",
+    "visual_style": {
+      "palette": "pure black, off-white title (~#e8e4dc), very low-key grey-blue for the scene",
+      "typography": "high-contrast serif in widely tracked capitals (Cormorant or Trajan-like)",
+      "composition": "centred title with hairline rule inside a ~2.35:1 frame",
+      "background": "black, fading to a dark scene"
+    },
+    "motion_techniques": [
+      "fade through black",
+      "centred title fade-in",
+      "cinemascope framing"
+    ],
+    "prompt_fidelity": "The stills suit a silent, lighthouse-themed short with no dialogue text. Three of the four frames are black or title-only, so the story, pacing and sound-led storytelling cannot be judged from the 4 s preview.",
+    "standout_ideas": [
+      "Open on a full black frame and a tracked serif title for a quiet, cinematic tone",
+      "Use one lit object (a lighthouse) as the only visual anchor in a dark frame"
+    ],
+    "quality": 3,
+    "quality_note": "Moody and on-brief, but the sampled frames are mostly dark or title-only, so craft is hard to judge."
+  },
+  {
+    "slug": "kamstudiolabs-447565",
+    "title": "Collision-driven music machine",
+    "handle": "KamStudioLabs",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/KamStudioLabs/status/2102899866762440893",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "HTML",
+    "prompt_chars": 113,
+    "prompt_summary": "A 45-second machine that plays an original piece of music, where every note comes from a visible collision.",
+    "inferred_stack": "HTML5 canvas or SVG with a 2D physics simulation and Web Audio, captured to MP4",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared single-file HTML: the stills show a dark instrument diagram with rails of tiles and bumpers, and glowing balls that travel and hit them. Each hit lights a tile and throws a spark, matching the note-on-collision idea, while a timer counts from 0:00 to 0:45. The frames show timed, rendered page output; audio is not visible.",
+    "visual_style": {
+      "palette": "midnight navy (~#0b1020) with amber tile glow (~#f0b35a), teal and violet rails, white-hot sparks",
+      "typography": "italic old-style serif title (Garamond or Cormorant-like) with small monospace HUD labels",
+      "composition": "full-width machine diagram in three horizontal bands; title top-left, timer top-right",
+      "background": "dark navy with a faint vignette"
+    },
+    "motion_techniques": [
+      "physics ball paths",
+      "collision flash and sparks",
+      "tile light-up on hit",
+      "timed progress readout"
+    ],
+    "prompt_fidelity": "The stills match the concept: a visible machine in which balls collide and light tiles. Whether the collisions drive a real melody cannot be verified from silent frames, and the 4 s preview does not show the full 45 seconds.",
+    "standout_ideas": [
+      "Make each musical event a visible physical collision so the logic is readable",
+      "A serif title with a mono HUD reads as a lab instrument"
+    ],
+    "quality": 4,
+    "quality_note": "Strong concept with clean rendering; the collision-to-note mapping can only be inferred from stills."
+  },
+  {
+    "slug": "kamstudiolabs-c9bb28",
+    "title": "Animated short about a bug",
+    "handle": "KamStudioLabs",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/KamStudioLabs/status/2102903173161877996",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 79,
+    "prompt_summary": "A 90-second animated short about a bug that refuses to be fixed.",
+    "inferred_stack": "Unknown: flat 2D illustration with a camera move, built in code (SVG or canvas) or generated; method cannot be determined",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a flat, night-time bedroom with a headphone-wearing figure at a desk and a monitor full of code, and the camera pushes closer across the frames. The steam and window moonlight look like looped animation. The bug character itself is not visible, so the production method cannot be pinned down.",
+    "visual_style": {
+      "palette": "deep indigo and navy (~#1d2140), warm screen glow, cool moon-blue window (~#5a6fb0), plant-green accent",
+      "typography": "none visible",
+      "composition": "over-the-shoulder view, figure silhouetted in the foreground, monitor centred",
+      "background": "dark navy room with a night window, moon and stars, plus a mug and a plant"
+    },
+    "motion_techniques": [
+      "slow dolly-in toward the monitor",
+      "looping steam and ambient light"
+    ],
+    "prompt_fidelity": "The stills set up the night-coding scene that suits a bug story, but no bug character appears in the four frames and the 4 s preview cannot show the 90-second arc.",
+    "standout_ideas": [
+      "A single glowing screen and a slow dolly-in can carry an atmospheric short on a small budget",
+      "Looped ambient motion (steam, moonlight) keeps a still illustrated set alive"
+    ],
+    "quality": 3,
+    "quality_note": "Atmospheric and well lit; the story element is not visible in the sampled frames."
+  },
+  {
+    "slug": "nikolajankovic-ce4ff4",
+    "title": "DeFi Saver stop-motion explainer",
+    "handle": "_nikolajankovic",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/_nikolajankovic/status/2102867033100616097",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 103,
+    "prompt_summary": "A hand-drawn stop-motion story told in the first person, with the narrator as DeFi Saver explaining themselves.",
+    "inferred_stack": "HTML/CSS or SVG text-and-paper overlay with stepped 12 fps updates; tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a grey paper-textured wall with a handwritten title, a blue hand-drawn underline and a taped caption strip whose text types out letter by letter. A small paper note pops in, which suggests a card-based layout. The subtitle claims stop-motion at 12 frames a second, but no drawn character is visible to confirm it.",
+    "visual_style": {
+      "palette": "light warm-grey paper (~#e4e5e0), graphite charcoal text (~#333333), single blue underline (~#4b4bd1), near-black caption strip (~#1f2226), off-white tape (~#f3efe2)",
+      "typography": "handwritten marker-style sans (Patrick Hand-like) in charcoal",
+      "composition": "centred title with rule and subline; caption strip anchored along the bottom edge",
+      "background": "grey textured paper wall"
+    },
+    "motion_techniques": [
+      "typewriter caption",
+      "hand-drawn underline stroke",
+      "paper note pop-in",
+      "stepped 12 fps updates (claimed)"
+    ],
+    "prompt_fidelity": "The paper-and-graphite look and first-person captions ('When you connect a wallet') fit the brief. No hand-drawn character or stop-motion movement is visible, and the 4 s preview covers only title and caption cards.",
+    "standout_ideas": [
+      "Taped caption strips that type out first-person lines feel like a handmade zine",
+      "Stepped frame updates in code can fake stop-motion without frame-by-frame art"
+    ],
+    "quality": 3,
+    "quality_note": "Charming, on-theme type and paper treatment; the stop-motion animation itself is not visible."
+  },
+  {
+    "slug": "ror-fly-9950f1",
+    "title": "Negroni recipe animation",
+    "handle": "Ror_Fly",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/Ror_Fly/status/2102853258582880547",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "HTML",
+    "prompt_chars": 367,
+    "prompt_summary": "A 30-second explainer-style animation building a Negroni from an empty glass to a finished drink, with ingredients and measures appearing as they are added.",
+    "inferred_stack": "HTML with SVG or CSS/JS tweened vector illustration, recorded as a square MP4",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared HTML: the stills show a chunky coral title that pops in letter by letter with an offset dark shadow, a subtitle line, and a flat outlined rocks glass with a 'FILL' label popping in beside it. The layout suggests a scripted sequence of recipe steps exported as a 1080x1080 video. Ingredient and measure labels are not visible in these frames.",
+    "visual_style": {
+      "palette": "cream background (~#faf8f3), coral title (~#f0737c) with charcoal outline and shadow, pale blue glass tint (~#e6f3f8), charcoal line work",
+      "typography": "heavy rounded display caps with offset shadow for the title; light grey sans for the subtitle",
+      "composition": "centred title and subtitle, one illustrated glass with a label beside it",
+      "background": "flat warm off-white"
+    },
+    "motion_techniques": [
+      "letter-by-letter pop-in",
+      "label pop-in beside object",
+      "flat vector illustration",
+      "step-by-step build sequence"
+    ],
+    "prompt_fidelity": "The opening matches the request: a title, a '30 second recipe' subtitle, an empty glass and a 'FILL' step in an explainer style. The stills do not show ingredients or measures going in, and the 4 s preview ends before the drink is built.",
+    "standout_ideas": [
+      "Pop-in action labels (FILL, STIR) beside the object turn a recipe into an infographic",
+      "A chunky outlined title with an offset shadow gives a playful brand look"
+    ],
+    "quality": 3,
+    "quality_note": "Clean and appealing flat style; the sampled stills show only the opening, not the recipe steps."
+  },
+  {
+    "slug": "twoclipping-6dd14e",
+    "title": "UGC ad generator promo",
+    "handle": "twoclipping",
+    "date": "2026-09-23",
+    "source_url": "https://x.com/twoclipping/status/2102554209166000267",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "HTML + Playwright",
+    "prompt_chars": 2515,
+    "prompt_summary": "A structured brief for a 20-second, beat-synced promo for a UGC ad generator: word-by-word type, a UI morph, a clip carousel and a drop, rendered from HTML.",
+    "inferred_stack": "HTML scene driven by a seek(t) function, rendered frame by frame in Playwright, with ffmpeg for motion blur and loudness (per the brief)",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "The prompt's build section describes a deterministic HTML file in which every style is computed from time, rendered with Playwright, with three sub-frames blended by ffmpeg to create motion blur. The declared stack, HTML + Playwright, matches that description. The stills show timed word reveals, a product window and a cursor typing and clicking; the audio analysis and sound-effect timing cannot be seen.",
+    "visual_style": {
+      "palette": "warm off-white (~#f6f4f0) with soft peach and blush blooms, near-black type (~#111111), one coral accent (~#f0745a) on the input focus ring",
+      "typography": "clean neo-grotesk sans (Geist or Inter-like), bold, tight tracking, lowercase",
+      "composition": "centred headline; product window centred with generous margins",
+      "background": "warm off-white with soft radial peach and pink blooms"
+    },
+    "motion_techniques": [
+      "masked word reveal",
+      "beat-timed word stagger",
+      "cursor typing and click",
+      "product UI card",
+      "sub-frame motion blur (per brief)"
+    ],
+    "prompt_fidelity": "The stills follow the brief's hook and UI beat (word reveals, then a cursor typing a product URL and clicking generate), with the restrained palette and no banned effects. The clip wall, 3D carousel, drop and logo are beyond the 4 s preview.",
+    "standout_ideas": [
+      "Store the look as a deterministic seek(t) function so every frame can be re-rendered and probed",
+      "Snap cuts to a measured kick grid and blend sub-frames for real motion blur"
+    ],
+    "quality": 4,
+    "quality_note": "Refined, minimal and close to the brief; only the first few seconds are visible, so the 3D carousel and drop are unverified."
+  },
+  {
+    "slug": "0xevinho-3777d8",
+    "title": "Pixel wizard crypto animation",
+    "handle": "0xEvinho",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/0xEvinho/status/2103212966703436195",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 50,
+    "prompt_summary": "A follow-up request: make a similar version of the earlier pixel-wizard animation, but with a crypto reference.",
+    "inferred_stack": "Procedural pixel art drawn on a low-res canvas or grid and scaled up with nearest-neighbour; tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "The prompt reads as an iteration, so the scene was probably reused from an earlier version and reskinned. Stills show a pixel-art night scene: a wizard casts an ice spell that freezes a training dummy, with floating damage numbers and a banner label. The crypto reference is not clearly legible at this resolution.",
+    "visual_style": {
+      "palette": "deep violet night (~#2a1f4f), cyan frost (~#8fe3ff), gold UI and numbers (~#f4c24a), campfire orange, red flag accent",
+      "typography": "pixel bitmap font for the spell banner and numbers (Press Start 2P-like)",
+      "composition": "side-on platform: wizard left, dummy right, moon top right, reflective water below",
+      "background": "night sky with pixel stars, dithered moon, pine silhouettes and water reflections"
+    },
+    "motion_techniques": [
+      "ice shard particles",
+      "damage-number pop-ups",
+      "spell banner",
+      "water reflections"
+    ],
+    "prompt_fidelity": "The stills keep the same wizard set-up and spell effects, which fits a 'similar version'. The requested crypto reference is not clearly identifiable in these frames, so that part of the brief is unverified.",
+    "standout_ideas": [
+      "A low-res buffer scaled with nearest-neighbour gives crisp pixel art cheaply",
+      "A spell banner and floating damage numbers give instant, readable game feedback"
+    ],
+    "quality": 4,
+    "quality_note": "Charming pixel-art game feel with clear effects; the crypto element is not verifiable from stills."
+  },
+  {
+    "slug": "1stnoel-c20a89",
+    "title": "Sotto reading app explainer",
+    "handle": "1stnoel_",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/1stnoel_/status/2103247530259603851",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 96,
+    "prompt_summary": "A one-minute educational explainer for a reading app, with synthesized voice narration.",
+    "inferred_stack": "Code-driven scene composition (HTML/CSS or a motion framework) with a TTS narration track",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Stills show parametric motion: a 'Chapter 1' page mock built from rounded bars that darken as words are learned, and a serif counter that climbs to 59/100 beside the headline. The layout and counter are most likely coded, and the narration is probably a TTS track that cannot be seen.",
+    "visual_style": {
+      "palette": "cream background (~#f4ecdc), espresso text (~#1f1a14), charcoal word bars, peach highlight (~#f2c9a0) for the active word",
+      "typography": "high-contrast serif (Fraunces or Newsreader-like) for headline and numerals, monospace caps for the kicker",
+      "composition": "two columns: headline and counter on the left, page card on the right",
+      "background": "flat warm cream"
+    },
+    "motion_techniques": [
+      "progressive word highlight",
+      "number count-up",
+      "text fade-in",
+      "chapter card layout"
+    ],
+    "prompt_fidelity": "The stills explain reading and vocabulary with a clear visual metaphor, which fits an educational piece. The app and its branding are not shown, the narration cannot be checked, and the 4 s preview covers only a small part of the minute.",
+    "standout_ideas": [
+      "A word-coverage bar on a faux book page visualises a number at a glance",
+      "A serif numeral with a mono kicker gives a calm editorial tone to an educational explainer"
+    ],
+    "quality": 4,
+    "quality_note": "Editorial, calm and easy to read with a strong metaphor; the product itself is not shown."
+  },
+  {
+    "slug": "abderrahmen-g-9e8ed0",
+    "title": "Sketchbook animals come alive",
+    "handle": "abderrahmen_g",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/abderrahmen_g/status/2103103836541899031",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "JavaScript",
+    "prompt_chars": 502,
+    "prompt_summary": "A playful, joyful HD video built from the user's hand-drawn input images, with sounds matched to the frames, made in JavaScript and inspired by reference clips.",
+    "inferred_stack": "JavaScript (canvas or SVG stroke animation over a paper texture) with Web Audio or an audio track",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared JavaScript: the stills show a textured paper background, then an ink line drawn stroke by stroke, followed by a hand-drawn yellow sun with a face and cloud doodles sliding in. The paper texture is probably an image or noise shader, and the reveals look like path animations. Sound is not visible in the stills.",
+    "visual_style": {
+      "palette": "warm off-white paper (~#f3eee2), graphite-black ink (~#1b1b1b), sun yellow (~#f7c948), sage watercolour hill (~#a8c6a0)",
+      "typography": "none visible",
+      "composition": "horizon line across the lower third, sun in the upper right",
+      "background": "textured cream paper with soft vignette"
+    },
+    "motion_techniques": [
+      "stroke draw-on",
+      "element slide-in",
+      "paper texture backdrop",
+      "drifting clouds"
+    ],
+    "prompt_fidelity": "The paper-textured, hand-drawn look fits 'hand-drawn and playful'. The sampled frames are mostly empty paper and simple drawings, so the animals and the user's input images are not identifiable, and the sound cannot be checked.",
+    "standout_ideas": [
+      "Stroke draw-on shows a drawing being made, which suits a hand-drawn brief",
+      "Paper texture plus watercolour fills keeps generated art feeling handmade"
+    ],
+    "quality": 3,
+    "quality_note": "Gentle, handmade feel; the sampled frames are mostly blank paper, so the reveal is not visible."
+  },
+  {
+    "slug": "anilraok-eff262",
+    "title": "Scrabble tile character story",
+    "handle": "Anilraok",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/Anilraok/status/2103087766662009118",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Three.js",
+    "prompt_chars": 316,
+    "prompt_summary": "Invent a story that subtly promotes a grid or crossword app, then animate it in Three.js at Pixar-level quality.",
+    "inferred_stack": "Three.js with PBR materials, shadows and depth-of-field post-processing, rendered to a vertical MP4",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Three.js: the stills show glossy-eyed wooden tiles with specular highlights, a warm key light and bokeh in the background, with the camera moving across a crossword board. Props such as a cobalt jar and a mug sit on the same set. The story arc and any character animation are not visible in four frames.",
+    "visual_style": {
+      "palette": "pale wood tiles (~#e8d3a4) with walnut lettering (~#4a2c1a), black night backdrop, warm bokeh (~#ffe8b0), cobalt jar accent (~#1f4fa0)",
+      "typography": "serif capitals on the tiles; small sans for the grid labels",
+      "composition": "close-up tiles in the foreground, a crossword board and props behind, vertical framing",
+      "background": "dark studio night with warm bokeh orbs"
+    },
+    "motion_techniques": [
+      "camera dolly across set",
+      "bokeh depth of field",
+      "specular material highlights",
+      "character props with eyes"
+    ],
+    "prompt_fidelity": "The stills match the device the prompt asked for: letter tiles with faces and a mini crossword board, which ties to the grid-app promo. The render looks polished, but the 'Pixar-level' bar and the story arc are not verifiable from four frames.",
+    "standout_ideas": [
+      "Give everyday objects faces to carry a product story without dialogue",
+      "Racks of bokeh and dolly moves make a small CG set feel cinematic"
+    ],
+    "quality": 4,
+    "quality_note": "Strong materials and lighting with a clear product hook; motion and story cannot be judged from 4 seconds."
+  },
+  {
+    "slug": "axtonliu-0b861d",
+    "title": "Pelican riding a bicycle",
+    "handle": "AxtonLiu",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/AxtonLiu/status/2103119648271290566",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 134,
+    "prompt_summary": "A far more complex and polished pelican-riding-a-bicycle animation, made with any technology rather than the usual HTML or SVG approach.",
+    "inferred_stack": "Photoreal 3D scene or generated footage with a cinematic grade; the tool is unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills look like a graded 3D render or generated footage: a sunset pier, sea reflections, a lamp post, a flying gull and a white pelican riding a bicycle with a basket. The camera tracks along the railing with depth of field and sun bloom. The exact tool cannot be determined from the stills.",
+    "visual_style": {
+      "palette": "warm sunset oranges (~#f2a65a), peach sky, golden sea reflections, dark teal railing shadows, white pelican",
+      "typography": "none",
+      "composition": "wide tracking shots with the pelican as the mid-ground subject and the lamp post as a framing element",
+      "background": "sunset sky with a sun glow over the sea"
+    },
+    "motion_techniques": [
+      "tracking camera along pier",
+      "depth-of-field pull",
+      "lens bloom",
+      "animated gull in flight"
+    ],
+    "prompt_fidelity": "The stills deliver a far more cinematic take than typical HTML or SVG pelican entries, which is what the prompt asked for. The 4 s preview shows short tracking shots, so the pedalling motion and bicycle detail cannot be fully judged.",
+    "standout_ideas": [
+      "Put an absurd subject into a real cinematic setting to beat benchmark-style prompts",
+      "A golden-hour grade and depth of field make simple geometry feel photographic"
+    ],
+    "quality": 4,
+    "quality_note": "Convincing light and cinematic framing; the pelican-bicycle interaction is not clearly visible in the stills."
+  },
+  {
+    "slug": "buildfastwithai-ed9447",
+    "title": "Three.js Skyraider aircraft model",
+    "handle": "BuildFastWithAI",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/BuildFastWithAI/status/2103152898708582551",
+    "model": "Opus 5.5",
+    "effort": "High",
+    "iterations": "One-shot",
+    "declared_stack": "Three.js",
+    "prompt_chars": 42,
+    "prompt_summary": "Build a Douglas A-1H Skyraider aircraft model in Three.js from a one-line prompt.",
+    "inferred_stack": "Three.js in a single HTML file: hand-built aircraft geometry, an orbit camera and an HTML control panel",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Three.js in one HTML file: the stills are screen captures of the app with a caption card, showing an orbiting camera around a camouflaged A-1H on a textured ground. A side panel of controls (landing gear, wings, flaps, paint, weathering, stance, scene) sits beside the viewport. The caption and title are overlays added in the recording.",
+    "visual_style": {
+      "palette": "olive and tan camouflage (~#6b7a4a and ~#c9b48a) on the airframe, beige ground (~#c8b89a), slate UI panel (~#2a2f38), white caption card",
+      "typography": "bold caps title in the lower left; clean small sans for UI labels",
+      "composition": "aircraft centred on the ground, control panel on the right, caption at top",
+      "background": "hazy tree line and a beige apron"
+    },
+    "motion_techniques": [
+      "orbit camera",
+      "soft contact shadows",
+      "interactive control panel",
+      "caption overlay"
+    ],
+    "prompt_fidelity": "Strong match: the model reads clearly as a Douglas A-1H Skyraider, with its radial engine, wing stations and camouflage, and it goes further with a control panel. The 'flyable' claim and detail accuracy are not verifiable from stills.",
+    "standout_ideas": [
+      "Ship a single-file 3D model with an in-app control panel so the artefact can be inspected",
+      "A caption card stating the build claim works as a hook for a technical demo"
+    ],
+    "quality": 4,
+    "quality_note": "Recognisable model with a polished presentation; detail and motion are limited in the four stills."
+  },
+  {
+    "slug": "chrisjdimarco-f068db",
+    "title": "Fiery samurai kata",
+    "handle": "chrisjdimarco",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/chrisjdimarco/status/2103232192847524106",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "JavaScript",
+    "prompt_chars": 186,
+    "prompt_summary": "A samurai figure drawn only in JavaScript, running a routine of impressive poses in one spot amid a fiery display.",
+    "inferred_stack": "JavaScript canvas or SVG with a pose-keyframed figure, particle embers and additive glow, captured from an interactive page",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared JavaScript, and the stills show a live, controllable page: named kata poses appear as captions, and on-screen hints list click for slow-mo, space to pause and R to restart. The figure is a rim-lit outline against a red sun, with flame braziers and ember particles. The page was most likely recorded to video.",
+    "visual_style": {
+      "palette": "blood-red sun (~#e0302a) with yellow core, maroon-black background (~#1a0606), ember orange (~#ff8a2a), gold outline on the figure (~#ffd27a)",
+      "typography": "small caps English labels with large Japanese kanji for each pose (for example 静 STILLNESS)",
+      "composition": "centred figure on a flat ground ellipse, sun behind, braziers on either side",
+      "background": "dusk gradient with silhouetted hills and a large red sun"
+    },
+    "motion_techniques": [
+      "pose sequencing",
+      "sword trail glow",
+      "ember particles",
+      "horizontal light-band streaks",
+      "click slow-mo"
+    ],
+    "prompt_fidelity": "Close to the brief: one samurai in one spot moving through distinct poses (stillness, draw, strike, splitting bamboo) amid fire. The figure is a stylised outline rather than a fully shaded character.",
+    "standout_ideas": [
+      "Named poses with kanji captions give a simple animation the structure of a real kata",
+      "Slow-mo and pause controls on the page let one asset serve as both video and interactive demo"
+    ],
+    "quality": 4,
+    "quality_note": "Strong mood and a clear pose sequence; the figure is simplified and anatomy is limited."
+  },
+  {
+    "slug": "deifosv-04e4d3",
+    "title": "Tennis game launch video",
+    "handle": "deifosv",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/deifosv/status/2103197522382786581",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 197,
+    "prompt_summary": "A high-energy launch video showing live site stats, desktop and mobile play and several themes; the model also writes a Suno song prompt.",
+    "inferred_stack": "Low-poly 3D court scene (Three.js or 3D render) with HTML-style overlays for the animated counters; tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a top-down, low-poly tennis court with a stylised crowd, plus overlay text: a 'LIVE' pill, large lime counters that tick up (games played 5,558 to 5,699; hours on court 230 to 236), and a caption. The court changes from blue to green between shots, which is the theme swap. The counters look like data-driven overlays, but their source is not shown.",
+    "visual_style": {
+      "palette": "court blue (~#2b5f8a) and court green (~#2f6d3c), lime numerals (~#d4f03a), white caps, dark navy pill (~#101826)",
+      "typography": "heavy condensed sans for numerals and labels (Anton or Bebas-like); small sans for captions",
+      "composition": "top-down court centred, large numerals overlaid mid-frame, small pill above",
+      "background": "grandstands and dark surround"
+    },
+    "motion_techniques": [
+      "numeric count-up",
+      "court theme swap",
+      "LIVE badge",
+      "stat-to-caption reveal"
+    ],
+    "prompt_fidelity": "The stills show the core asks: live-style stats and a theme change. The desktop and mobile views are not visible, and the Suno prompt is a text deliverable outside the video.",
+    "standout_ideas": [
+      "Count-up stat tiles over a live product scene make usage numbers feel alive",
+      "Swap the court colour as a one-shot theme preview"
+    ],
+    "quality": 4,
+    "quality_note": "Punchy stat hierarchy and a convincing court scene; the 4 s preview cannot show the desktop and mobile sections."
+  },
+  {
+    "slug": "ercankeskinx-ec2568",
+    "title": "Five scroll-based sections",
+    "handle": "ercankeskinx",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/ercankeskinx/status/2102995443818897906",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 89,
+    "prompt_summary": "Five completely different scroll-based sections, with the model choosing the context and layout for each.",
+    "inferred_stack": "Web page (HTML/CSS/JS) with scroll-linked state, screen-recorded at 1920x972",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "The output is a screen recording of a scroll page: a left index of project titles and a right sticky photo card that changes with the active item, plus a numbered counter (e.g. 1 of 6). Stills show the same section in several scroll states rather than five different sections. The behaviour is consistent with a scroll-linked active index.",
+    "visual_style": {
+      "palette": "warm off-white (~#e9e9e4), near-black text (~#151515), inactive grey list items (~#b5b5ae), architectural photos with pale blue skies",
+      "typography": "light-to-medium neo-grotesk sans for project titles; small monospace for the blurb and metadata",
+      "composition": "left: index list with the active item in dark type and a rule; right: rounded photo card with a metadata row beneath",
+      "background": "flat off-white"
+    },
+    "motion_techniques": [
+      "scroll-linked active state",
+      "image swap on scroll",
+      "numbered counter update",
+      "dimmed inactive list items"
+    ],
+    "prompt_fidelity": "The sampled stills show one well-made scroll layout (an architecture index with a sticky image) in several states, not five distinct sections. The variety the prompt asked for is not visible in the 4 s preview, so fidelity is partial.",
+    "standout_ideas": [
+      "A sticky image card beside a scrolling index is a reusable portfolio pattern",
+      "A monospace metadata row (place, programme, area) gives an editorial, architectural tone"
+    ],
+    "quality": 3,
+    "quality_note": "Refined editorial craft and smooth state changes, but only one of the five sections is visible."
+  },
+  {
+    "slug": "itsolelehmann-e47532",
+    "title": "Four seasons train window",
+    "handle": "itsolelehmann",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/itsolelehmann/status/2103124033365762215",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 115,
+    "prompt_summary": "Four seasons passing outside a train-carriage window, with a cosy carriage and a coffee cup on the table, in a Grand Budapest Hotel style.",
+    "inferred_stack": "Layered 2D vector illustration animated in code (SVG or HTML with parallax and particles); tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a flat, layered vector scene: a fixed window frame, curtains, table and cup in the foreground, with landscape layers that shift behind the glass and small particles drifting. A translucent vertical band sweeps across the glass, which sells the sense of motion. The exact tool cannot be identified from the stills.",
+    "visual_style": {
+      "palette": "dusty pink walls (~#e8b9c2), royal purple velvet curtains (~#4b2a7a), pastel mint meadows (~#9fd58f), snow-capped mountains (~#d7e3f2), gold accents (~#c9a24a)",
+      "typography": "none",
+      "composition": "symmetrical, centred window framed by curtains; table with cup and two lamps in the foreground",
+      "background": "pastel landscape with castles, meadows and mountains seen through the glass"
+    },
+    "motion_techniques": [
+      "parallax landscape",
+      "particle drift",
+      "glass reflection sweep",
+      "season state change"
+    ],
+    "prompt_fidelity": "Strong match to the requested style and props: symmetrical pastel framing, velvet curtains, table lamps and a coffee cup. Blossom and green-tree states appear in the stills; a clear winter or autumn state is not confirmed in these four frames.",
+    "standout_ideas": [
+      "A static frame with parallax scenery shows time passing without moving the camera",
+      "A translucent glass-reflection band sweeping across the window suggests a moving train"
+    ],
+    "quality": 4,
+    "quality_note": "On-style pastel illustration with clear scene changes; the full four-season arc is not confirmed in the sampled frames."
+  },
+  {
+    "slug": "jake11moran-a269c4",
+    "title": "Animated agent session story",
+    "handle": "jake11moran",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/jake11moran/status/2103247490237825416",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "HyperFrames",
+    "prompt_chars": 0,
+    "prompt_summary": "No prompt text recorded (skill-generated entry); the piece is a cartoon office story about an agent character.",
+    "inferred_stack": "HyperFrames (declared), flat vector cartoon animation",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared HyperFrames: the stills show a flat cartoon office set with a laptop-character at a wooden desk, a sleeping monitor, and small 'Z' bubbles that float up in a loop. Motion is idle-style animation on a static camera. The session story itself is not visible in four frames, and HyperFrames internals cannot be verified from stills.",
+    "visual_style": {
+      "palette": "terracotta laptop (~#e07a5f), warm wood desk (~#a0612f), navy night window (~#2b3a5c), beige wall (~#d8cfc0), teal lower wall (~#7fb9b5), pink accent (~#e65b8c)",
+      "typography": "small serif brass nameplate reading 'Jake's favorite agent'",
+      "composition": "one-point room, desk centred, night window at left, corkboard and graph above",
+      "background": "warm beige room with a night window and a guitar"
+    },
+    "motion_techniques": [
+      "idle loop animation",
+      "floating 'Z' sleep bubbles",
+      "static camera framing"
+    ],
+    "prompt_fidelity": "The stills show a cartoon office agent character, which fits an animated agent story. Without the original prompt or the session content, the narrative match cannot be judged; the sampled frames show one idle moment.",
+    "standout_ideas": [
+      "A laptop character with a nameplate humanises an AI tool in a single set",
+      "A sleeping monitor and Z bubbles stand in for an idle agent"
+    ],
+    "quality": 3,
+    "quality_note": "Charming, well-composed cartoon set; the story beat is minimal in the four stills."
+  },
+  {
+    "slug": "justincooperman-e7bbc4",
+    "title": "Tented image gen product video",
+    "handle": "justincooperman",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/justincooperman/status/2103201167367188876",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "Blender",
+    "prompt_chars": 124,
+    "prompt_summary": "An animated clip showing a product's image-generation feature: users ask for a branded image and see it added to their content.",
+    "inferred_stack": "Blender (declared) compositing 2D UI screenshots and a gradient backdrop with perspective-tilted cards",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared Blender: the stills show a soft gradient backdrop, a headline with one highlighted word, then a perspective-tilted chat panel and email preview, and a prompt being typed. The UI looks like screenshots placed on planes in a 3D-style scene, though no 3D geometry is clearly visible.",
+    "visual_style": {
+      "palette": "cream (~#faf7f2) with peach (~#f7c4a0) and sage (~#b5cdb0) blurred gradient blooms, charcoal text (~#222222), sage highlight word (~#5d7f5a), brown button (~#5b2e1f)",
+      "typography": "bold neo-grotesk sans (Inter-like) for the headline; small UI sans for the interface",
+      "composition": "centred headline, then a split product view with chat at left and email preview at right",
+      "background": "soft mesh gradient"
+    },
+    "motion_techniques": [
+      "word highlight",
+      "perspective card slide",
+      "typed prompt",
+      "soft gradient backdrop"
+    ],
+    "prompt_fidelity": "The stills follow the requested flow: a request for an on-brand image, a chat that builds an email, and a new hero prompt being typed. The branded image itself is not yet visible in the email preview, so the 'image added to content' step is only partly shown.",
+    "standout_ideas": [
+      "Show the chat prompt and the resulting artefact side by side for a feature demo",
+      "Use one sage-coloured word in the headline to tie the message to the brand"
+    ],
+    "quality": 4,
+    "quality_note": "Polished, product-led and easy to follow; the key image output is not in the sampled frames."
+  },
+  {
+    "slug": "kantamk-61f410",
+    "title": "Ball escaping twelve rings",
+    "handle": "kantamk",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/kantamk/status/2103148907228176511",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 33,
+    "prompt_summary": "A short vertical video made to go viral, with no further spec in the prompt.",
+    "inferred_stack": "HTML5 canvas or JS 2D animation with synced sound cues, rendered to a 9:16 MP4",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a looping hook: concentric neon rings from teal outside to magenta inside, a glowing ball and a rotating pink arm, and a counter that drops from 12 to 11 rings left as a ring breaks. Sparks and debris appear at the break, and a caption says every bounce plays a note. The pipeline is unclear, but the look is a parametric canvas-style animation with timed events.",
+    "visual_style": {
+      "palette": "near-black (~#0b0b12), teal outer rings (~#2fb7b0), violet-to-magenta inner rings (~#7b3fe4 to ~#ff3e9a), white ball and headline, pink counter (~#ff4fa3)",
+      "typography": "bold geometric sans (Poppins-like) for the headline and counter; small grey sans for the pill and caption",
+      "composition": "centred ring system with headline above and a sound pill and caption below, mobile-first",
+      "background": "near-black, with the rings as the main element"
+    },
+    "motion_techniques": [
+      "rotating ring gap",
+      "ball bounce",
+      "debris burst on ring break",
+      "counter decrement",
+      "sound-on cue"
+    ],
+    "prompt_fidelity": "The vague prompt is answered with a strong short-form hook: a question, a live counter and a sound cue. The viral mechanic and the note-per-bounce audio cannot be checked in silent stills, and the 4 s preview shows only the start of the loop.",
+    "standout_ideas": [
+      "A live countdown in the hook turns a simple animation into visible progress",
+      "A 'sound on' pill and an audio caption prompt the viewer to unmute"
+    ],
+    "quality": 4,
+    "quality_note": "Strong vertical hook with a clean glow design; the ring mechanic is only partly visible."
+  },
+  {
+    "slug": "linearuncle-5d2bae",
+    "title": "Derivative concept explainer",
+    "handle": "LinearUncle",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/LinearUncle/status/2103128559174971663",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Manim, edge-tts",
+    "prompt_chars": 53,
+    "prompt_summary": "A Chinese-language Manim video that explains the derivative in an accessible, example-led and thought-provoking way, with edge-tts voice-over.",
+    "inferred_stack": "Manim (Python) with edge-tts narration and burned-in subtitles",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Manim plus edge-tts: the stills show a title drawn stroke by stroke as an outline, then filled in gold, with a question line that fades in and a subtitle bar at the bottom that matches the narration. The outline-to-fill sequence is typical of Manim text animation. Examples and graphs are not visible in the sampled frames.",
+    "visual_style": {
+      "palette": "midnight navy (~#0f1624), gold title fill (~#f2c35b), white subtitle text, grey outline strokes",
+      "typography": "bold Chinese sans (Noto Sans SC-like) for the title and a regular weight for the question",
+      "composition": "centred title and question, with a bottom subtitle bar",
+      "background": "flat dark navy"
+    },
+    "motion_techniques": [
+      "outline stroke write-on",
+      "outline-to-fill colour change",
+      "fade-in subtitle line",
+      "burned-in subtitle bar"
+    ],
+    "prompt_fidelity": "The stills match the stack and the opening: a Manim-style title, Chinese narration subtitles and a derivative question. The examples and graphs the prompt requests are beyond the 4 s preview, so fidelity is only partly confirmed.",
+    "standout_ideas": [
+      "A stroke write-on title, then a fill, is a quick and legible concept opener in Manim",
+      "Burning in subtitles from the narration script keeps a voice-over explainer readable"
+    ],
+    "quality": 3,
+    "quality_note": "Clean, on-theme title sequence; the teaching content is not in the sampled frames."
+  },
+  {
+    "slug": "maxalexweber-67688b",
+    "title": "ODATANO Cardano hype edit",
+    "handle": "maxalexweber",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/maxalexweber/status/2103118009535459784",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 34,
+    "prompt_summary": "A high-energy hype edit for the ODATANO Cardano project that is meant to feel intense.",
+    "inferred_stack": "Code-driven 2D motion (canvas or HTML with glitch and RGB-split effects, or Python plus ffmpeg overlays); tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show letterboxed 16:9 frames: a typewriter line ('connectin_'), then single words ('SAP', 'CARDANO', 'MIDNIGHT') that appear with an RGB-split glitch over a ring and radiating speed lines. The pattern looks procedural, with glitch filters applied to each word. The exact tool cannot be identified.",
+    "visual_style": {
+      "palette": "dark navy gradient (~#0a1a3a to ~#1e3a6e), electric blue (~#2d6cf0), white type (~#f0f4ff), red and cyan chromatic fringes, black letterbox bars",
+      "typography": "heavy condensed grotesk caps with RGB-split glitch; monospace for the typewriter line",
+      "composition": "one big centred word over a ring with radiating streaks",
+      "background": "navy vignette with dust particles and speed lines"
+    },
+    "motion_techniques": [
+      "RGB-split glitch",
+      "radial speed lines",
+      "typewriter line",
+      "ring pulse",
+      "particle dust"
+    ],
+    "prompt_fidelity": "The energy the prompt asked for (glitch, speed lines, fast word cuts, a hype tone) is clear. The stills show 'SAP', 'CARDANO' and 'MIDNIGHT' but not 'ODATANO', so the brand is not confirmed by the frames.",
+    "standout_ideas": [
+      "An RGB-split glitch on one large word gives an instant hype hit",
+      "Radial speed lines around a ring add zoom energy cheaply"
+    ],
+    "quality": 3,
+    "quality_note": "High energy with clear type on a hype template; the frames are repetitive and the brand name is not shown."
+  },
+  {
+    "slug": "micheleharmonic-77628e",
+    "title": "GravityDEX anime hype edit",
+    "handle": "MicheleHarmonic",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/MicheleHarmonic/status/2103111448352244175",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 51,
+    "prompt_summary": "A hard-hitting anime-style hype edit pairing GravityDEX with the anime character Gojo Satoru.",
+    "inferred_stack": "Code-generated 2D stroke graphics (SVG or canvas path animation with typewriter text), rendered to 9:16 MP4",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show monochrome stroke animation: arcs assembling into a rotating ring, rounded pool shapes that brighten to white, and typewriter captions with a block cursor ('CARDANO'S', 'A POOL IS ONE UTxO.', 'ONE SWAP'). The Gojo character or anime footage is not visible in the sampled frames, so the edit reads as generic motion graphics with captions.",
+    "visual_style": {
+      "palette": "pure black (~#000000) background, white strokes (~#f2f2f2), soft white glow on filled shapes",
+      "typography": "bold monospace caps (JetBrains Mono-like) with a block cursor",
+      "composition": "central ring with captions below it in the lower third",
+      "background": "black"
+    },
+    "motion_techniques": [
+      "path stroke draw",
+      "ring rotation",
+      "typewriter caption",
+      "glow flash on fill"
+    ],
+    "prompt_fidelity": "The stark, hard-hitting energy is conveyed by strokes and typed captions. No Gojo Satoru character or anime imagery appears in the four stills, so the anime half of the brief is not met in these frames.",
+    "standout_ideas": [
+      "Monochrome stroke rings with typed captions make a minimalist hype language",
+      "Three typed lines over a glowing shape can explain a DeFi concept quickly"
+    ],
+    "quality": 3,
+    "quality_note": "Stark, on-trend rhythm; the anime character and visual energy are missing from the sampled frames."
+  },
+  {
+    "slug": "palashbagchi11-0a4b6b",
+    "title": "Backlink audit data promo",
+    "handle": "PalashBagchi11",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/PalashBagchi11/status/2102924409124389221",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 105,
+    "prompt_summary": "Add fast, royalty-free background music to an existing promo video and export two versions, landscape and portrait.",
+    "inferred_stack": "Kinetic-type motion graphics (HTML/CSS or a motion framework) with audio added in an editor or ffmpeg; tool not determinable",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "Stills show a kinetic type sequence: 'You paid for 173 backlinks.' is revealed line by line with a mask, and words jitter apart. A small mono vendor caption sits below, then a hard cut inverts to white with 'What did you actually get?' and a drawn underline. The music and the portrait cut are not visible in the four frames, and the tool cannot be confirmed.",
+    "visual_style": {
+      "palette": "near-black (~#111111), white type (~#ffffff), mid-grey mono caption (~#8a8a8a), inverted white ground with black type",
+      "typography": "bold neo-grotesk sans with tight tracking; monospace for the vendor caption",
+      "composition": "left-aligned headline stack with generous margin",
+      "background": "flat black, then flat white after the inversion cut"
+    },
+    "motion_techniques": [
+      "line mask reveal",
+      "word-level jitter",
+      "colour inversion cut",
+      "underline draw"
+    ],
+    "prompt_fidelity": "The landscape cut is visible and the text-driven data promo reads clearly. The requested royalty-free music and the portrait version are not visible in the stills, so those parts are unverified.",
+    "standout_ideas": [
+      "A hard colour inversion from a fact to a question builds tension in a data promo",
+      "A mono vendor caption under the big stat adds credibility"
+    ],
+    "quality": 3,
+    "quality_note": "Clear, punchy text sequence; music and the portrait version cannot be checked from the stills."
+  },
+  {
+    "slug": "parkerrex-1a54fe",
+    "title": "Token bucket rate limiter",
+    "handle": "ParkerRex",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/ParkerRex/status/2103206747846701462",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "Canvas",
+    "prompt_chars": 133,
+    "prompt_summary": "Explain a token-bucket rate limiter with canvas only and no libraries, with every frame a pure function of time so it can be screenshot-rendered.",
+    "inferred_stack": "Plain HTML5 canvas 2D, drawn as a pure function of time and captured frame by frame by a screenshot renderer",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Canvas: the stills show a deterministic simulation with a 10-slot bucket that drains per request and refills at 2 per second, a large token count, a request log of 'taken' and 'refused' lines, and a step chart over 12 seconds. The three sampled states (steady traffic, a burst, empty) are fixed points on that timeline, which is what a time-indexed renderer produces.",
+    "visual_style": {
+      "palette": "near-black (~#0b0e12), electric blue fill (~#4da3ff), green 'taken' (~#4ade80), red 'refused' (~#f87171), grey axes (~#6b7280)",
+      "typography": "monospace throughout (IBM Plex Mono-like), with a large sans numeral for the token count",
+      "composition": "bucket graphic on the left, big count and request log on the right, step chart along the bottom, footer handle",
+      "background": "flat dark panel with thin gridlines on the chart"
+    },
+    "motion_techniques": [
+      "fill level drain and refill",
+      "step-line chart build",
+      "colour-coded event log",
+      "state changes over time"
+    ],
+    "prompt_fidelity": "Very close: the stills walk through steady traffic, a burst that spends saved tokens and an empty bucket that refuses requests, which is the concept the prompt asked to explain. The frames read as fixed time states, which fits the pure-function-of-time requirement.",
+    "standout_ideas": [
+      "Plot an algorithm's state over time next to a live log to make it legible",
+      "Colour semantics (green taken, red refused) give instant comprehension"
+    ],
+    "quality": 5,
+    "quality_note": "Precise, clearly explained concept with restrained design that matches the brief; the 4 s sample is the only limit on the assessment."
+  },
+  {
+    "slug": "rames-jusso-589f80",
+    "title": "UK dubstep track with ASCII visuals",
+    "handle": "Rames_Jusso",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/Rames_Jusso/status/2103200703598776559",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "HyperFrames",
+    "prompt_chars": 37,
+    "prompt_summary": "A 140 BPM UK dubstep track in a Rusko or Skream style; the record title also mentions ASCII visuals, which the prompt does not.",
+    "inferred_stack": "Live-coded music (Strudel-style pattern code) shown in a code-editor overlay, rendered through HyperFrames with built-in drum samples",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "The visual is a code editor showing Strudel-style pattern code: setcpm(140/4), chord arrays, an offbeat square-wave skank with an inline filter slider, a sine sub and built-in drum samples. Tokens highlight in time with the beat and EQ-style bars pulse while the code scrolls. In this approach the audio is produced by the code itself, so the stills show the music being built.",
+    "visual_style": {
+      "palette": "black (~#000000) background, teal-cyan keywords (~#5fd6dc), muted grey-blue comments (~#6b7c8a), warm light text (~#dfe6ea), teal EQ bars",
+      "typography": "monospace code font (JetBrains Mono or Fira Code-like) with small line numbers",
+      "composition": "full-frame code editor, with a slider and EQ bars in the middle band",
+      "background": "pure black"
+    },
+    "motion_techniques": [
+      "typed code entry with cursor",
+      "beat-synced token highlight",
+      "inline slider",
+      "EQ bar pulse",
+      "scrolling code"
+    ],
+    "prompt_fidelity": "The stills show live-coded dubstep with a 140 BPM setting, half-time comments and skank stabs, which matches the request. The 'ASCII visuals' from the title are not clearly present, since the visual is a code editor, and the audio cannot be checked from frames.",
+    "standout_ideas": [
+      "Make the code itself the visual, highlighting tokens on each beat so the arrangement is readable",
+      "Inline sliders in the code show a filter being automated"
+    ],
+    "quality": 4,
+    "quality_note": "Clear code-as-visual concept that reads as music-making; the musical result cannot be verified from stills."
+  },
+  {
+    "slug": "ryzoft-4f85bd",
+    "title": "Animated space cartoon episode",
+    "handle": "Ryzoft",
+    "date": "2026-09-24",
+    "source_url": "https://x.com/Ryzoft/status/2102989395359887481",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Three.js",
+    "prompt_chars": 160,
+    "prompt_summary": "Invent a story and animate it in Three.js at the quality of an 80s space-saga and 90s cartoon episode.",
+    "inferred_stack": "Three.js scene with nebula sprites and noise textures, letterboxed, plus overlaid italic caption text",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared Three.js: the stills show a purple volumetric-looking nebula with a bright galactic core and a starfield, letterboxed to about 2.35:1. An italic serif narration caption types in word by word with a light-streak wipe under it, so the story is delivered as on-screen text rather than character animation.",
+    "visual_style": {
+      "palette": "deep violet (~#2d1740) and magenta nebula (~#8a3f9e), black space, white star highlights, warm white italic caption (~#f0e6d8)",
+      "typography": "italic old-style serif (Garamond-like) caption in sentence case",
+      "composition": "letterboxed cinemascope frame with a centred caption band over the nebula",
+      "background": "nebula with a starfield"
+    },
+    "motion_techniques": [
+      "word-by-word caption reveal",
+      "light-streak wipe",
+      "slow nebula drift",
+      "letterbox framing"
+    ],
+    "prompt_fidelity": "Partly met: the story is delivered as narrated captions in a space setting, but the cartoon-episode look with characters is not visible in the four stills. The result leans cinematic space rather than 90s cartoon.",
+    "standout_ideas": [
+      "Narration captions with a light-streak wipe pace a story without character animation",
+      "Nebula textures give a cheap atmospheric space backdrop"
+    ],
+    "quality": 3,
+    "quality_note": "Atmospheric and cinematic; does not yet show the cartoon characters or episode style the prompt asked for."
+  }
+]

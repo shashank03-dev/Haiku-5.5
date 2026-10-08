@@ -1,0 +1,1388 @@
+{
+  "corpus": {
+    "records": 232,
+    "records_with_prompt_text": 229,
+    "records_null_prompt": 3,
+    "unique_slugs": 232,
+    "unique_handles": 216,
+    "date_range": [
+      "2026-09-23",
+      "2026-10-07"
+    ],
+    "model_declared": {
+      "Opus 5.5": 232
+    },
+    "tags": {
+      "prompt": 229,
+      "skill": 4
+    },
+    "tag_combinations": {
+      "prompt": 228,
+      "skill": 3,
+      "prompt+skill": 1
+    },
+    "promptShared_true": 232,
+    "dimensions": {
+      "1920x1080": 149,
+      "1280x720": 37,
+      "1080x1920": 11,
+      "1080x1080": 9,
+      "720x1280": 5,
+      "1440x1440": 4,
+      "1920x982": 2,
+      "1920x1078": 1,
+      "1920x1068": 1,
+      "848x480": 1,
+      "1280x708": 1,
+      "1280x848": 1,
+      "854x480": 1,
+      "1920x972": 1,
+      "1408x1080": 1,
+      "1920x1292": 1,
+      "1080x1350": 1,
+      "1152x720": 1,
+      "886x1920": 1,
+      "720x720": 1,
+      "720x900": 1,
+      "1920x816": 1
+    }
+  },
+  "by_effort": {
+    "declared_counts": {
+      "Max": 22,
+      "undeclared": 196,
+      "High": 7,
+      "Medium": 7
+    },
+    "note": "meta_effort is only shown on 36 of 232 pages; the rest are undeclared.",
+    "median_chars_by_effort": {
+      "Max": {
+        "n": 22,
+        "median": 151.0,
+        "mean": 207
+      },
+      "High": {
+        "n": 7,
+        "median": 150,
+        "mean": 191
+      },
+      "Medium": {
+        "n": 7,
+        "median": 166,
+        "mean": 359
+      },
+      "undeclared": {
+        "n": 193,
+        "median": 151,
+        "mean": 542
+      }
+    }
+  },
+  "by_iterations": {
+    "declared_counts": {
+      "undeclared": 136,
+      "One-shot": 89,
+      "A few rounds": 6,
+      "Many rounds": 1
+    },
+    "note": "meta_iterations is only shown on 96 of 232 pages.",
+    "median_chars_by_iterations": {
+      "One-shot": {
+        "n": 89,
+        "median": 150
+      },
+      "A few rounds": {
+        "n": 6,
+        "median": 145.5
+      },
+      "undeclared": {
+        "n": 134,
+        "median": 151.0
+      }
+    },
+    "xml_tag_share_by_iterations": {
+      "One-shot": {
+        "n": 89,
+        "with_xml_tags": 1,
+        "asks_before_build": 0,
+        "has_qa_gate": 2
+      },
+      "A few rounds": {
+        "n": 6,
+        "with_xml_tags": 0,
+        "asks_before_build": 0,
+        "has_qa_gate": 1
+      },
+      "undeclared": {
+        "n": 134,
+        "with_xml_tags": 9,
+        "asks_before_build": 9,
+        "has_qa_gate": 12
+      }
+    },
+    "note2": "96 entries declare a round count (89 one-shot, 6 a few rounds, 1 many rounds). Round count does not track prompt length or spec density."
+  },
+  "by_declared_stack": {
+    "declared_counts": {
+      "undeclared": 177,
+      "Remotion": 12,
+      "HyperFrames": 9,
+      "HTML": 8,
+      "Three.js": 5,
+      "JavaScript": 5,
+      "HTML + Playwright": 3,
+      "OpenEdit": 1,
+      "Manim, edge-tts": 1,
+      "HTML canvas + Playwright + ffmpeg": 1,
+      "Python + ffmpeg": 1,
+      "HTML, Playwright": 1,
+      "SVG/Canvas": 1,
+      "HyperFrames + GSAP": 1,
+      "Python": 1,
+      "WebGL2 + Canvas 2D + Web Audio": 1,
+      "HTML/JS, Playwright, ffmpeg": 1,
+      "Blender": 1,
+      "Remotion, React": 1,
+      "Canvas": 1
+    },
+    "note": "meta_stack is shown on 55 of 232 pages.",
+    "family_counts": {
+      "undeclared": 177,
+      "HTML / JS / Canvas": 21,
+      "Remotion": 13,
+      "HyperFrames": 10,
+      "Other (Python, Manim, Blender, OpenEdit)": 5,
+      "Three.js / WebGL": 6
+    }
+  },
+  "by_tag": {
+    "counts": {
+      "prompt": 229,
+      "skill": 4
+    },
+    "skill_entries": [
+      {
+        "slug": "lexnlin-6161a6",
+        "tags": [
+          "skill"
+        ],
+        "prompt_text_present": false,
+        "stack": "undeclared",
+        "iterations": "undeclared"
+      },
+      {
+        "slug": "anthonyriera-9b1b2a",
+        "tags": [
+          "skill"
+        ],
+        "prompt_text_present": false,
+        "stack": "Remotion",
+        "iterations": "Many rounds"
+      },
+      {
+        "slug": "jake11moran-a269c4",
+        "tags": [
+          "skill"
+        ],
+        "prompt_text_present": false,
+        "stack": "HyperFrames",
+        "iterations": "undeclared"
+      },
+      {
+        "slug": "buildfastwithai-53234e",
+        "tags": [
+          "prompt",
+          "skill"
+        ],
+        "prompt_text_present": true,
+        "stack": "undeclared",
+        "iterations": "One-shot"
+      }
+    ]
+  },
+  "prompt_length": {
+    "chars_min": 11,
+    "chars_max": 15306,
+    "chars_mean": 493.1,
+    "chars_median": 151,
+    "words_median": 26,
+    "buckets_chars": {
+      "101-250": 124,
+      "2001-4000": 4,
+      "4001+": 8,
+      "501-1000": 8,
+      "251-500": 19,
+      "null": 3,
+      "1-100": 64,
+      "1001-2000": 2
+    },
+    "one_line_count": 198,
+    "multi_paragraph_count": 20,
+    "single_paragraph_multi_line_count": 11,
+    "over_1000_chars": 14,
+    "over_4000_chars": 8
+  },
+  "xml_tags": {
+    "prompts_with_closed_xml_style_tags": 10,
+    "tag_frequency": {
+      "build": 9,
+      "direction": 9,
+      "gotchas": 9,
+      "inputs": 9,
+      "structure": 9,
+      "start": 8,
+      "script": 1,
+      "sound": 1,
+      "voice": 1,
+      "art_direction": 1,
+      "artwork": 1,
+      "audio": 1,
+      "deliverables": 1,
+      "implementation_and_validation": 1,
+      "motion_quality": 1,
+      "persistent_player": 1,
+      "timeline": 1
+    },
+    "distinct_tag_names": 17
+  },
+  "constraints": {
+    "duration_bucket": {
+      "11-15s": 87,
+      "unstated": 83,
+      "21-30s": 20,
+      "<=10s": 8,
+      "31-60s": 12,
+      ">60s": 6,
+      "16-20s": 13
+    },
+    "duration_stated_count": 146,
+    "aspect_ratio_stated": 19,
+    "fps_stated": 13,
+    "fps_values": {
+      "60": 9,
+      "30": 2,
+      "29.97": 2,
+      "59.94": 2
+    },
+    "hex_palette_stated": 6,
+    "palette_word_or_hex": 21,
+    "palette_limit_stated": 8,
+    "font_stated": 15,
+    "music_or_beat_stated": 31,
+    "bpm_stated": 12,
+    "bpm_values": {
+      "120": 8,
+      "124": 2,
+      "129.83": 1,
+      "140": 1
+    },
+    "sound_or_sfx_stated": 28,
+    "voice_or_narration_stated": 9,
+    "explicit_silent_or_no_audio": 7,
+    "loop_stated": 9,
+    "banned_label_present": 9,
+    "never_or_avoid_language": 19,
+    "deliverable_container_stated": 18,
+    "timing_numbers_or_beats": 20,
+    "named_easing_or_spring": 15,
+    "qa_gate_language": 15,
+    "asks_or_checkpoints_before_build": 9,
+    "inputs_block_tag": 9,
+    "unfilled_placeholders": 10,
+    "contains_url_or_handle": 23,
+    "showreel_template_phrase": 71,
+    "go_all_out_phrase": 90,
+    "hype_vocabulary": 111,
+    "names_model_or_brand_claude_opus": 14,
+    "names_tool_or_stack": 39,
+    "banned_technique_words_mentioned_any": 21,
+    "banned_technique_word_frequency": {
+      "blur": 10,
+      "glow": 9,
+      "particle": 9,
+      "glass": 9,
+      "3d": 9,
+      "gradient": 8,
+      "template": 7,
+      "bouncy": 5,
+      "crossfade": 5,
+      "spin": 4,
+      "shake": 3,
+      "bouncing": 3,
+      "stock footage": 3,
+      "math.random": 2,
+      "lens flare": 2,
+      "neon": 2,
+      "shockwave": 2,
+      "rgb split": 1,
+      "whip-pan": 1
+    }
+  },
+  "languages": {
+    "English": 206,
+    "Japanese": 7,
+    "Chinese": 10,
+    "French": 2,
+    "Korean": 1,
+    "Turkish": 1,
+    "German": 1,
+    "Spanish": 1
+  },
+  "non_english_slugs": [
+    "majin-appsheet-2d3c1a",
+    "linearuncle-5d2bae",
+    "nft-chen-5f8bb0",
+    "axtonliu-0b861d",
+    "gorden-sun-041f56",
+    "chatgptastra-0d95c7",
+    "ddryo-loos-300829",
+    "yunn260414-60d996",
+    "tankazunori0914-0fc886",
+    "ezshine-c90d73",
+    "triglyceee-bd5b08",
+    "gigabit-million-16b3a0",
+    "topi-003-9ca6b5",
+    "hoyoyoda-3a5c08",
+    "topi-003-b0e12c",
+    "allforbigfire-86ff3c",
+    "demitiyageekzen-7770ad",
+    "rebutonepress-810f78",
+    "cansincengiz-me-cf68dd",
+    "grace-sunnyy-29bc61",
+    "anas0ra-e57aea",
+    "iammxfschr-d68f90",
+    "gonzalomacagno-2de1a9"
+  ],
+  "constraint_density_tiers": {
+    "definition": "count of 13 constraint families present (duration, aspect, fps, palette, font, music/beat, sfx, timing, named easing, banned label, deliverable container, QA gate, loop)",
+    "counts": {
+      "0-2": 203,
+      "9+": 13,
+      "3-5": 11,
+      "6-8": 2
+    }
+  },
+  "duplicates": {
+    "method": "exact = identical after lowercasing and punctuation stripping; near = word 5-gram Jaccard; clusters are complete-linkage (every member pair >= 0.6), so no chaining",
+    "exact_duplicate_groups": [
+      {
+        "size": 30,
+        "distinct_handles": 30,
+        "slugs": [
+          "3xtihor-0f6911",
+          "ajith-io-b5626e",
+          "ayushunleashed-ece3e3",
+          "blue-clarity-ef56d0",
+          "crazyalphaaa-bc7e75",
+          "eyishazyer-af035b",
+          "fionntobin-97b7af",
+          "gabrielbuzziv-4ff0c6",
+          "himanshutwtxs-5f4b43",
+          "itsuki-dev-10942d",
+          "jasonzhou1993-8595e0",
+          "leadnotifi-e83f94",
+          "leonkohli-6dc01b",
+          "m1n9-k7-ff9ab9",
+          "marouanegazouzi-6071d5",
+          "misbahsy-80eaec",
+          "mrtanviir-132457",
+          "raphaelaubryy-4b137e",
+          "safarkhanshuvo-ffd52d",
+          "sahildesigner23-ee3155",
+          "shneural-2abdfa",
+          "stephanlivera-df17a2",
+          "tequilafunks-97f6c9",
+          "teslachartz-c58b32",
+          "thayto-dev-44b911",
+          "thismacapital-dfba20",
+          "tolgayhickiran-e90799",
+          "umangratani-57f86a",
+          "web3wesley-7bb108",
+          "zaqailo-212ad3"
+        ],
+        "text_start": "make a dynamic 15 second motion graphics video that shows what an incredible motion designer you are like it s"
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "slugs": [
+          "demonugc-4c5753",
+          "twoclipping-5cba86"
+        ],
+        "text_start": "inputs ask me for 8 to 12 ui states i want the shape to become e g button loader player slider toggle tabs cha"
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "slugs": [
+          "ajith-io-c52e09",
+          "itisrazak-3ad902"
+        ],
+        "text_start": "research distilbook make a dynamic 40 second motion graphics video on distilbook that shows what an incredible"
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "slugs": [
+          "1littlecoder-9fef89",
+          "souravbhar871-61f424"
+        ],
+        "text_start": "make a dynamic 10 second motion graphics video that shows who are you as opus 5 5 be as creative and dynamic a"
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "slugs": [
+          "mdaman010-e7226a",
+          "sayan-shanky-f850d8"
+        ],
+        "text_start": "show me what goes on inside an ai data centre"
+      },
+      {
+        "size": 2,
+        "distinct_handles": 1,
+        "slugs": [
+          "sudo-kiran-4f8b59",
+          "sudo-kiran-b055de"
+        ],
+        "text_start": "make a dynamic 30 seconds motion graphic video about the distilbook like a product explainer the video has to "
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "slugs": [
+          "codestackr-c071bf",
+          "motiondsgnr-9dcfa6"
+        ],
+        "text_start": "make a dynamic 15 second motion graphics video that shows what an incredible motion designer you are like it s"
+      }
+    ],
+    "exact_duplicate_prompts_in_groups": 42,
+    "exact_duplicate_groups_count": 7,
+    "pairs_jaccard_ge_0_6_total": 832,
+    "pairs_jaccard_ge_0_9_total": 442,
+    "pairs_cross_handle_ge_0_6": 829,
+    "pairs_same_handle_ge_0_6": 3,
+    "same_handle_pairs": [
+      {
+        "a": "notdwd-c2037d",
+        "b": "notdwd-7de38a",
+        "jaccard": 0.981,
+        "handle": "notdwd"
+      },
+      {
+        "a": "ajith-io-c52e09",
+        "b": "ajith-io-4c248f",
+        "jaccard": 0.639,
+        "handle": "ajith_io"
+      },
+      {
+        "a": "sudo-kiran-b055de",
+        "b": "sudo-kiran-4f8b59",
+        "jaccard": 1.0,
+        "handle": "sudo_kiran"
+      }
+    ],
+    "near_or_exact_clusters_size_ge_2": [
+      {
+        "size": 33,
+        "distinct_handles": 33,
+        "handles": [
+          "3xtihor",
+          "Adamdesgns",
+          "CrazyAlphaaa",
+          "LeonKohli",
+          "MisbahSy",
+          "RaphaelAubryy",
+          "TeslaChartz",
+          "Web3Wesley",
+          "ajith_io",
+          "ayushunleashed",
+          "blue_clarity",
+          "eyishazyer",
+          "fionntobin",
+          "gabrielbuzziv",
+          "himanshutwtxs",
+          "itsuki_dev",
+          "jasonzhou1993",
+          "leadnotifi",
+          "levabashidze",
+          "m1n9_k7",
+          "marouanegazouzi",
+          "mrtanviir",
+          "safarkhanshuvo",
+          "sahildesigner23",
+          "shneural",
+          "stephanlivera",
+          "steventey",
+          "tequilafunks",
+          "thayto_dev",
+          "thismacapital",
+          "tolgayhickiran",
+          "umangratani",
+          "zaqailo"
+        ],
+        "min_pairwise_jaccard": 0.615,
+        "example_normalised_text": "make a dynamic 15 second motion graphics video that shows what an incredible motion designer you are like it s your showreel for a résumé go",
+        "slugs": [
+          "3xtihor-0f6911",
+          "adamdesgns-478d6d",
+          "ajith-io-b5626e",
+          "ayushunleashed-ece3e3",
+          "blue-clarity-ef56d0",
+          "crazyalphaaa-bc7e75",
+          "eyishazyer-af035b",
+          "fionntobin-97b7af",
+          "gabrielbuzziv-4ff0c6",
+          "himanshutwtxs-5f4b43",
+          "itsuki-dev-10942d",
+          "jasonzhou1993-8595e0",
+          "leadnotifi-e83f94",
+          "leonkohli-6dc01b",
+          "levabashidze-2d713a",
+          "m1n9-k7-ff9ab9",
+          "marouanegazouzi-6071d5",
+          "misbahsy-80eaec",
+          "mrtanviir-132457",
+          "raphaelaubryy-4b137e",
+          "safarkhanshuvo-ffd52d",
+          "sahildesigner23-ee3155",
+          "shneural-2abdfa",
+          "stephanlivera-df17a2",
+          "steventey-0d20e4",
+          "tequilafunks-97f6c9",
+          "teslachartz-c58b32",
+          "thayto-dev-44b911",
+          "thismacapital-dfba20",
+          "tolgayhickiran-e90799",
+          "umangratani-57f86a",
+          "web3wesley-7bb108",
+          "zaqailo-212ad3"
+        ]
+      },
+      {
+        "size": 3,
+        "distinct_handles": 2,
+        "handles": [
+          "ajith_io",
+          "itisRazak"
+        ],
+        "min_pairwise_jaccard": 0.639,
+        "example_normalised_text": "make a dynamic 40 second motion graphics video on distilbook that shows what an incredible motion designer you are like it s your showreel g",
+        "slugs": [
+          "ajith-io-4c248f",
+          "ajith-io-c52e09",
+          "itisrazak-3ad902"
+        ]
+      },
+      {
+        "size": 3,
+        "distinct_handles": 3,
+        "handles": [
+          "codeSTACKr",
+          "motiondsgnr",
+          "utopyaszx"
+        ],
+        "min_pairwise_jaccard": 0.645,
+        "example_normalised_text": "make a dynamic 15 second motion graphics video for bold pilot that shows what an incredible motion designer you are like it s your showreel ",
+        "slugs": [
+          "codestackr-c071bf",
+          "motiondsgnr-9dcfa6",
+          "utopyaszx-1b2f94"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 1,
+        "handles": [
+          "notdwd"
+        ],
+        "min_pairwise_jaccard": 0.981,
+        "example_normalised_text": "inputs ask me for my product name a logo or let you draw a simple mark my brand colours or pull them from my logo the one line thing a user ",
+        "slugs": [
+          "notdwd-7de38a",
+          "notdwd-c2037d"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "handles": [
+          "demonugc",
+          "twoclipping"
+        ],
+        "min_pairwise_jaccard": 1.0,
+        "example_normalised_text": "inputs ask me for 8 to 12 ui states i want the shape to become e g button loader player slider toggle tabs chart command palette toast pure ",
+        "slugs": [
+          "demonugc-4c5753",
+          "twoclipping-5cba86"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "handles": [
+          "1littlecoder",
+          "souravbhar871"
+        ],
+        "min_pairwise_jaccard": 1.0,
+        "example_normalised_text": "make a dynamic 10 second motion graphics video that shows who are you as opus 5 5 be as creative and dynamic as possible avoid the frames an",
+        "slugs": [
+          "1littlecoder-9fef89",
+          "souravbhar871-61f424"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "handles": [
+          "johnsavage_ai",
+          "manuelogomigo"
+        ],
+        "min_pairwise_jaccard": 0.645,
+        "example_normalised_text": "make a dynamic 15 second motion graphics video that shows what an incredible motion designer you are like it s your showreel for a resume go",
+        "slugs": [
+          "johnsavage-ai-b091c0",
+          "manuelogomigo-f33ca9"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "handles": [
+          "elliot_garreffa",
+          "jesscaroline7"
+        ],
+        "min_pairwise_jaccard": 0.875,
+        "example_normalised_text": "make this a dynamic motion graphics video that shows what an incredible motion designer you are like it s your showreel for a résumé go all ",
+        "slugs": [
+          "elliot-garreffa-f334bc",
+          "jesscaroline7-1ff7cb"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 1,
+        "handles": [
+          "sudo_kiran"
+        ],
+        "min_pairwise_jaccard": 1.0,
+        "example_normalised_text": "make a dynamic 30 seconds motion graphic video about the distilbook like a product explainer the video has to be very incredible product url",
+        "slugs": [
+          "sudo-kiran-4f8b59",
+          "sudo-kiran-b055de"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "handles": [
+          "melvynx",
+          "prasad_pilla"
+        ],
+        "min_pairwise_jaccard": 0.7,
+        "example_normalised_text": "make a dynamic 15 second motion graphics video that shows what an incredible motion designer you are for tryalanai go all out",
+        "slugs": [
+          "melvynx-6cde6c",
+          "prasad-pilla-2c0cba"
+        ]
+      },
+      {
+        "size": 2,
+        "distinct_handles": 2,
+        "handles": [
+          "Sayan_shanky",
+          "mdaman010"
+        ],
+        "min_pairwise_jaccard": 1.0,
+        "example_normalised_text": "show me what goes on inside an ai data centre",
+        "slugs": [
+          "mdaman010-e7226a",
+          "sayan-shanky-f850d8"
+        ]
+      }
+    ],
+    "cluster_count_size_ge_2": 11,
+    "prompts_in_clusters_size_ge_2": 55,
+    "clusters_spanning_2_plus_handles": 9,
+    "prompts_in_cross_handle_clusters": 51
+  },
+  "handles_with_multiple_entries": {
+    "twoclipping": 3,
+    "ajith_io": 4,
+    "LexnLin": 2,
+    "notdwd": 2,
+    "kloss_xyz": 2,
+    "sudo_kiran": 4,
+    "_topi_003": 2,
+    "BuildFastWithAI": 2,
+    "KamStudioLabs": 3,
+    "rneayan": 2
+  },
+  "showreel_template": {
+    "count_with_incredible_motion_designer_and_showreel_or_resume": 71,
+    "count_standard_phrase_after_normalisation": 42
+  },
+  "structure_style": {
+    "xml_style_tagged": 10,
+    "header_or_rule_sectioned_no_xml": 1,
+    "plain_prose_or_one_liner": 218,
+    "note": "header_or_rule_sectioned = at least 3 lines that are ALL-CAPS labels, end with a colon, or sit under a rule glyph"
+  },
+  "feature_slugs": {
+    "xml_style_tagged": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "brainextends-e19ac3",
+      "demonugc-4c5753"
+    ],
+    "header_or_rule_sectioned": [
+      "brainextends-e19ac3",
+      "daniel-haida-8691d4"
+    ],
+    "ask_before_build": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "demonugc-4c5753"
+    ],
+    "unfilled_placeholders": [
+      "alex-prompter-1ea044",
+      "melvynx-6cde6c",
+      "rossaxbt-3085b7",
+      "polydao-7a572b",
+      "sudo-kiran-b055de",
+      "lemomo-ai-0d9cff",
+      "sudo-kiran-6609ed",
+      "en-ra-81c6dd",
+      "ik-builds-b8bdcf",
+      "sudo-kiran-4f8b59"
+    ],
+    "explicit_banned_label": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "demonugc-4c5753"
+    ],
+    "loop_or_last_frame_rule": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "ultimaxbt-bbebf5",
+      "lukasersil-0ed38e",
+      "demonugc-4c5753",
+      "gdgtify-287ddf",
+      "loicrambo-ad6830",
+      "charlesmendez-73b6e4"
+    ],
+    "fps_stated": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "brainextends-e19ac3",
+      "demonugc-4c5753",
+      "gdgtify-287ddf",
+      "daniel-haida-8691d4",
+      "ik-builds-b8bdcf"
+    ],
+    "bpm_stated": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "brainextends-e19ac3",
+      "demonugc-4c5753",
+      "daniel-haida-8691d4",
+      "rames-jusso-589f80",
+      "wani-shola-16ca7a"
+    ],
+    "named_easing_or_spring": [
+      "twoclipping-5cba86",
+      "twoclipping-221cab",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "brainextends-e19ac3",
+      "dale-vaz-cc612a",
+      "demonugc-4c5753",
+      "gdgtify-287ddf",
+      "daniel-haida-8691d4",
+      "ik-builds-b8bdcf",
+      "wani-shola-16ca7a",
+      "aschapmann-131210"
+    ],
+    "hex_palette": [
+      "antonio-kodheli-490109",
+      "notdwd-c2037d",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "gdgtify-287ddf",
+      "daniel-haida-8691d4"
+    ],
+    "palette_limit": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "demonugc-4c5753",
+      "wani-shola-16ca7a"
+    ],
+    "explicit_silent_or_no_audio": [
+      "notdwd-c2037d",
+      "notdwd-7de38a",
+      "brainextends-e19ac3",
+      "gdgtify-287ddf",
+      "daniel-haida-8691d4",
+      "ik-builds-b8bdcf",
+      "kamstudiolabs-0b0824"
+    ],
+    "multi_paragraph": [
+      "twoclipping-5cba86",
+      "antonio-kodheli-490109",
+      "twoclipping-221cab",
+      "lexnlin-038035",
+      "notdwd-c2037d",
+      "twoclipping-6dd14e",
+      "steventey-0d20e4",
+      "ultimaxbt-bbebf5",
+      "notdwd-7de38a",
+      "rossaxbt-3085b7",
+      "polydao-7a572b",
+      "brainextends-e19ac3",
+      "tak3sh8-be5012",
+      "demonugc-4c5753",
+      "daniel-haida-8691d4",
+      "bogdandragomir-35e024",
+      "ik-builds-b8bdcf",
+      "wani-shola-16ca7a",
+      "reflex-cloud-72ffe5",
+      "kyonax-on-tech-aabc1d"
+    ],
+    "showreel_template_15s_identical_group": [
+      "stephanlivera-df17a2",
+      "shneural-2abdfa",
+      "ajith-io-b5626e",
+      "himanshutwtxs-5f4b43",
+      "gabrielbuzziv-4ff0c6",
+      "thismacapital-dfba20",
+      "thayto-dev-44b911",
+      "jasonzhou1993-8595e0",
+      "tequilafunks-97f6c9",
+      "ayushunleashed-ece3e3",
+      "eyishazyer-af035b",
+      "blue-clarity-ef56d0",
+      "raphaelaubryy-4b137e",
+      "misbahsy-80eaec",
+      "mrtanviir-132457",
+      "web3wesley-7bb108",
+      "m1n9-k7-ff9ab9",
+      "zaqailo-212ad3",
+      "crazyalphaaa-bc7e75",
+      "fionntobin-97b7af",
+      "itsuki-dev-10942d",
+      "tolgayhickiran-e90799",
+      "3xtihor-0f6911",
+      "leonkohli-6dc01b",
+      "marouanegazouzi-6071d5",
+      "safarkhanshuvo-ffd52d",
+      "sahildesigner23-ee3155",
+      "teslachartz-c58b32",
+      "leadnotifi-e83f94",
+      "umangratani-57f86a"
+    ]
+  },
+  "length_by_structure": {
+    "xml_style_median_chars": 4623.0,
+    "header_style_median_chars": 15306,
+    "plain_median_chars": 150.5
+  },
+  "archetypes_heuristic": {
+    "method": "rule-based classifier in work/archetypes.py (keyword + structure rules, with 17 manual overrides); spot-checked, expect roughly +/-10% boundary noise. Shares are % of that archetype.",
+    "counts": {
+      "brief_explainer": 16,
+      "code_medium": 13,
+      "grounded_brand_film": 28,
+      "open_brief": 50,
+      "product_promo_oneliner": 36,
+      "scaffold_placeholder": 10,
+      "showreel_oneliner": 66,
+      "spec_sheet_film": 10
+    },
+    "per_archetype": {
+      "brief_explainer": {
+        "n": 16,
+        "median_chars": 99.5,
+        "share_states_duration": 43.8,
+        "share_states_timing_or_beats": 6.2,
+        "share_names_music_or_beat": 6.2,
+        "share_names_sound_or_sfx": 0.0,
+        "share_names_named_easing": 0.0,
+        "share_has_banned_list": 0.0,
+        "share_has_qa_gate": 0.0,
+        "share_asks_inputs_or_checkpoint": 0.0,
+        "share_has_fps": 0.0,
+        "share_has_palette_word_or_hex": 6.2,
+        "share_names_container_or_deliverable": 6.2,
+        "share_has_url_or_handle": 18.8,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "ror-fly-9950f1",
+          "emollick-8661a8",
+          "kloss-xyz-fe0c31",
+          "0xnfrith-5be616",
+          "nikolajankovic-ce4ff4",
+          "sarut0bisasuke-cefa43",
+          "tak3sh8-be5012",
+          "jhylee95-e1152f"
+        ]
+      },
+      "code_medium": {
+        "n": 13,
+        "median_chars": 134,
+        "share_states_duration": 15.4,
+        "share_states_timing_or_beats": 15.4,
+        "share_names_music_or_beat": 7.7,
+        "share_names_sound_or_sfx": 30.8,
+        "share_names_named_easing": 7.7,
+        "share_has_banned_list": 0.0,
+        "share_has_qa_gate": 0.0,
+        "share_asks_inputs_or_checkpoint": 0.0,
+        "share_has_fps": 0.0,
+        "share_has_palette_word_or_hex": 0.0,
+        "share_names_container_or_deliverable": 30.8,
+        "share_has_url_or_handle": 7.7,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "linearuncle-5d2bae",
+          "axtonliu-0b861d",
+          "gorden-sun-041f56",
+          "kloss-xyz-15182a",
+          "dale-vaz-cc612a",
+          "buildfastwithai-ed9447",
+          "chrisjdimarco-f068db",
+          "demitiyageekzen-7770ad"
+        ]
+      },
+      "grounded_brand_film": {
+        "n": 28,
+        "median_chars": 147.0,
+        "share_states_duration": 50.0,
+        "share_states_timing_or_beats": 10.7,
+        "share_names_music_or_beat": 17.9,
+        "share_names_sound_or_sfx": 17.9,
+        "share_names_named_easing": 10.7,
+        "share_has_banned_list": 0.0,
+        "share_has_qa_gate": 7.1,
+        "share_asks_inputs_or_checkpoint": 0.0,
+        "share_has_fps": 3.6,
+        "share_has_palette_word_or_hex": 10.7,
+        "share_names_container_or_deliverable": 3.6,
+        "share_has_url_or_handle": 10.7,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "samuel-yostt-891f87",
+          "tdinh-me-815acb",
+          "ho-ba-f3f0e9",
+          "hqmank-7c61f1",
+          "techyoutbe-945b56",
+          "deifosv-04e4d3",
+          "visheshbaghell-3aba37",
+          "imthatcarlos-e04bfe"
+        ]
+      },
+      "open_brief": {
+        "n": 50,
+        "median_chars": 80.0,
+        "share_states_duration": 44.0,
+        "share_states_timing_or_beats": 2.0,
+        "share_names_music_or_beat": 14.0,
+        "share_names_sound_or_sfx": 10.0,
+        "share_names_named_easing": 0.0,
+        "share_has_banned_list": 0.0,
+        "share_has_qa_gate": 0.0,
+        "share_asks_inputs_or_checkpoint": 0.0,
+        "share_has_fps": 0.0,
+        "share_has_palette_word_or_hex": 0.0,
+        "share_names_container_or_deliverable": 2.0,
+        "share_has_url_or_handle": 0.0,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "lexnlin-038035",
+          "majin-appsheet-2d3c1a",
+          "sab8a-364a5a",
+          "itsolelehmann-e47532",
+          "sudo-kiran-49176d",
+          "nft-chen-5f8bb0",
+          "mandelduck-95fd08",
+          "chatgptastra-0d95c7"
+        ]
+      },
+      "product_promo_oneliner": {
+        "n": 36,
+        "median_chars": 155.0,
+        "share_states_duration": 63.9,
+        "share_states_timing_or_beats": 0.0,
+        "share_names_music_or_beat": 5.6,
+        "share_names_sound_or_sfx": 2.8,
+        "share_names_named_easing": 0.0,
+        "share_has_banned_list": 0.0,
+        "share_has_qa_gate": 2.8,
+        "share_asks_inputs_or_checkpoint": 0.0,
+        "share_has_fps": 0.0,
+        "share_has_palette_word_or_hex": 2.8,
+        "share_names_container_or_deliverable": 0.0,
+        "share_has_url_or_handle": 38.9,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "steventey-0d20e4",
+          "davidmarcus-a28a60",
+          "jacksonfall-54b2ac",
+          "robj3d3-b18fad",
+          "viktoroddy-98c1d8",
+          "arjunsh1607-93005d",
+          "ratheejaisal-1f4538",
+          "prasad-pilla-2c0cba"
+        ]
+      },
+      "scaffold_placeholder": {
+        "n": 10,
+        "median_chars": 208.5,
+        "share_states_duration": 90.0,
+        "share_states_timing_or_beats": 20.0,
+        "share_names_music_or_beat": 30.0,
+        "share_names_sound_or_sfx": 30.0,
+        "share_names_named_easing": 20.0,
+        "share_has_banned_list": 10.0,
+        "share_has_qa_gate": 20.0,
+        "share_asks_inputs_or_checkpoint": 10.0,
+        "share_has_fps": 20.0,
+        "share_has_palette_word_or_hex": 50.0,
+        "share_names_container_or_deliverable": 10.0,
+        "share_has_url_or_handle": 0.0,
+        "share_has_placeholder": 100.0,
+        "slugs_sample": [
+          "alex-prompter-1ea044",
+          "melvynx-6cde6c",
+          "rossaxbt-3085b7",
+          "polydao-7a572b",
+          "sudo-kiran-b055de",
+          "lemomo-ai-0d9cff",
+          "sudo-kiran-6609ed",
+          "en-ra-81c6dd"
+        ]
+      },
+      "showreel_oneliner": {
+        "n": 66,
+        "median_chars": 151.0,
+        "share_states_duration": 92.4,
+        "share_states_timing_or_beats": 1.5,
+        "share_names_music_or_beat": 3.0,
+        "share_names_sound_or_sfx": 0.0,
+        "share_names_named_easing": 0.0,
+        "share_has_banned_list": 0.0,
+        "share_has_qa_gate": 0.0,
+        "share_asks_inputs_or_checkpoint": 0.0,
+        "share_has_fps": 0.0,
+        "share_has_palette_word_or_hex": 1.5,
+        "share_names_container_or_deliverable": 1.5,
+        "share_has_url_or_handle": 0.0,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "stephanlivera-df17a2",
+          "shneural-2abdfa",
+          "ajith-io-b5626e",
+          "himanshutwtxs-5f4b43",
+          "gabrielbuzziv-4ff0c6",
+          "thismacapital-dfba20",
+          "ajith-io-c52e09",
+          "thayto-dev-44b911"
+        ]
+      },
+      "spec_sheet_film": {
+        "n": 10,
+        "median_chars": 4198.5,
+        "share_states_duration": 80.0,
+        "share_states_timing_or_beats": 100.0,
+        "share_names_music_or_beat": 100.0,
+        "share_names_sound_or_sfx": 100.0,
+        "share_names_named_easing": 90.0,
+        "share_has_banned_list": 80.0,
+        "share_has_qa_gate": 100.0,
+        "share_asks_inputs_or_checkpoint": 80.0,
+        "share_has_fps": 100.0,
+        "share_has_palette_word_or_hex": 100.0,
+        "share_names_container_or_deliverable": 90.0,
+        "share_has_url_or_handle": 20.0,
+        "share_has_placeholder": 0.0,
+        "slugs_sample": [
+          "twoclipping-5cba86",
+          "antonio-kodheli-490109",
+          "twoclipping-221cab",
+          "notdwd-c2037d",
+          "twoclipping-6dd14e",
+          "ultimaxbt-bbebf5",
+          "notdwd-7de38a",
+          "brainextends-e19ac3"
+        ]
+      }
+    },
+    "char_share_pct": {
+      "brief_explainer": 2.1,
+      "code_medium": 2.4,
+      "grounded_brand_film": 19.6,
+      "open_brief": 4.9,
+      "product_promo_oneliner": 5.1,
+      "scaffold_placeholder": 8.0,
+      "showreel_oneliner": 10.3,
+      "spec_sheet_film": 47.6
+    },
+    "total_prompt_chars": 112928
+  },
+  "identical_prompt_group_30": {
+    "prompt_text_normalised_start": "make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are ...",
+    "handles": 30,
+    "titles": [
+      "Claude motion designer showreel",
+      "Abstract motion design reel",
+      "Claude motion design showreel",
+      "Particle sphere motion reel",
+      "Claude motion designer showreel",
+      "Motion designer showreel",
+      "Blue editorial motion showreel",
+      "Enxovaly baby app promo",
+      "Motion designer showreel",
+      "Kinetic type showreel",
+      "Claude motion reel",
+      "Lead Notifi product ad",
+      "Geometric motion designer showreel",
+      "Kinetic type and particle showreel",
+      "Crux motion design showreel",
+      "LiteLLM promo reel",
+      "Claude motion designer showreel",
+      "Motion designer rÃ©sumÃ© reel",
+      "Motion design showreel",
+      "3D motion design showreel",
+      "Bold kinetic type showreel",
+      "Claude motion designer showreel",
+      "Claude motion design reel",
+      "Motion designer showreel",
+      "AjustaCV Pro pricing promo",
+      "Travel visa service promo",
+      "Motion design principles reel",
+      "Shape and dot motion showreel",
+      "Type, form, space showreel",
+      "Motion designer showreel"
+    ],
+    "resolutions": {
+      "1280x720": 8,
+      "1920x1080": 22
+    },
+    "declared_effort": {
+      "undeclared": 21,
+      "Medium": 2,
+      "Max": 6,
+      "High": 1
+    },
+    "declared_stack": {
+      "undeclared": 27,
+      "HyperFrames": 2,
+      "Remotion": 1
+    },
+    "note": "Same prompt text: 24 distinct titles across 30 handles and two resolutions. Several titles name a product that the prompt never mentions.",
+    "distinct_titles": 24
+  },
+  "vocabulary_probe": {
+    "just_do_no_questions": {
+      "count": 4,
+      "slugs": [
+        "brainextends-e19ac3",
+        "daniel-haida-8691d4",
+        "levabashidze-2d713a",
+        "aisongman-71ffac"
+      ]
+    },
+    "grounded_in_real_assets_repo_site_figma_screenshots": {
+      "count": 31,
+      "slugs": [
+        "antonio-kodheli-490109",
+        "twoclipping-221cab",
+        "notdwd-c2037d",
+        "samuel-yostt-891f87",
+        "ho-ba-f3f0e9",
+        "notdwd-7de38a",
+        "melvynx-6cde6c",
+        "rossaxbt-3085b7",
+        "brainextends-e19ac3",
+        "hqmank-7c61f1",
+        "techyoutbe-945b56",
+        "deifosv-04e4d3",
+        "visheshbaghell-3aba37",
+        "imthatcarlos-e04bfe",
+        "sachaarbonel-8f14f4",
+        "gdgtify-287ddf",
+        "daniel-haida-8691d4",
+        "bthreeagency-b9b8d9",
+        "theviableedge-9065be",
+        "macrohou-33959d",
+        "ik-builds-b8bdcf",
+        "wani-shola-16ca7a",
+        "aschapmann-131210",
+        "andginja-333d32",
+        "l3d1c-0e35a3",
+        "fractadev-149adc",
+        "madebyjmayala-b9204d",
+        "oliahmed205-3e31c4",
+        "listudio-820c7b",
+        "ai-baymax-0ef9dd",
+        "parkerrex-1a54fe"
+      ]
+    },
+    "anti_ai_tell_instructions": {
+      "count": 3,
+      "slugs": [
+        "lexnlin-038035",
+        "1littlecoder-9fef89",
+        "souravbhar871-61f424"
+      ]
+    },
+    "says_ignore_memory_or_existing_tools": {
+      "count": 11,
+      "slugs": [
+        "math-files-39c9d0",
+        "hanifproduktif-54bdee",
+        "hqmank-7c61f1",
+        "aistocksavvy-3fb9f5",
+        "lemomo-ai-0d9cff",
+        "visheshbaghell-3aba37",
+        "aschapmann-131210",
+        "reflex-cloud-72ffe5",
+        "blushpetal795-0c85c2",
+        "ibrahimwasim240-809370",
+        "nolkeeg-bf062e"
+      ]
+    },
+    "one_accent_colour_rule": {
+      "count": 5,
+      "slugs": [
+        "twoclipping-5cba86",
+        "antonio-kodheli-490109",
+        "twoclipping-6dd14e",
+        "ultimaxbt-bbebf5",
+        "demonugc-4c5753"
+      ]
+    },
+    "verbatim_or_exact_text_rule": {
+      "count": 2,
+      "slugs": [
+        "antonio-kodheli-490109",
+        "gdgtify-287ddf"
+      ]
+    },
+    "no_invented_numbers_or_claims_rule": {
+      "count": 3,
+      "slugs": [
+        "antonio-kodheli-490109",
+        "daniel-haida-8691d4",
+        "ik-builds-b8bdcf"
+      ]
+    },
+    "explicit_loop_word": {
+      "count": 6,
+      "slugs": [
+        "twoclipping-5cba86",
+        "antonio-kodheli-490109",
+        "ultimaxbt-bbebf5",
+        "demonugc-4c5753",
+        "loicrambo-ad6830",
+        "charlesmendez-73b6e4"
+      ]
+    },
+    "beat_or_sync_language": {
+      "count": 19,
+      "slugs": [
+        "twoclipping-5cba86",
+        "antonio-kodheli-490109",
+        "twoclipping-221cab",
+        "notdwd-c2037d",
+        "twoclipping-6dd14e",
+        "ultimaxbt-bbebf5",
+        "notdwd-7de38a",
+        "rossaxbt-3085b7",
+        "polydao-7a572b",
+        "brainextends-e19ac3",
+        "demonugc-4c5753",
+        "jhylee95-e1152f",
+        "gdgtify-287ddf",
+        "daniel-haida-8691d4",
+        "bogdandragomir-35e024",
+        "wani-shola-16ca7a",
+        "aschapmann-131210",
+        "reflex-cloud-72ffe5",
+        "samaote-5e2fc2"
+      ]
+    },
+    "determinism_seek_or_pure_function": {
+      "count": 13,
+      "slugs": [
+        "twoclipping-5cba86",
+        "twoclipping-221cab",
+        "notdwd-c2037d",
+        "twoclipping-6dd14e",
+        "ultimaxbt-bbebf5",
+        "notdwd-7de38a",
+        "rossaxbt-3085b7",
+        "brainextends-e19ac3",
+        "demonugc-4c5753",
+        "gdgtify-287ddf",
+        "daniel-haida-8691d4",
+        "xelandre-363f00",
+        "parkerrex-1a54fe"
+      ]
+    },
+    "ignore_memory_or_tools_instruction": {
+      "count": 2,
+      "slugs": [
+        "reflex-cloud-72ffe5",
+        "nolkeeg-bf062e"
+      ]
+    },
+    "ask_me_for_gate_with_defaults": {
+      "count": 4,
+      "of": 9,
+      "slugs": [
+        "antonio-kodheli-490109",
+        "notdwd-c2037d",
+        "notdwd-7de38a",
+        "rossaxbt-3085b7"
+      ]
+    }
+  }
+}

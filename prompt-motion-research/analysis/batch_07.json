@@ -1,0 +1,1046 @@
+[
+  {
+    "slug": "thismacapital-dfba20",
+    "title": "Travel visa service promo",
+    "handle": "thismacapital",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/thismacapital/status/2103773635714375808",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "A few rounds",
+    "declared_stack": null,
+    "prompt_chars": 151,
+    "prompt_summary": "Asks for a 15-second, go-all-out motion-designer showreel that works as a resume piece.",
+    "inferred_stack": "Code-driven 2D motion (HTML/SVG or Remotion-style); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. The stills show a tilted boarding-pass illustration, a rubber-stamp overlay, and a dotted SVG flight path with a plane icon, which fits scripted 2D scenes rendered from code with hard cuts between text cards. Audio and render path are not visible in stills.",
+    "visual_style": {
+      "palette": "Pale grey-blue #EEF3FA, near-black #111827, saturated sky blue #1A8CF0, white",
+      "typography": "Bold neo-grotesk sans (Inter/Geist-like), tight tracking; small tracked-caps eyebrow",
+      "composition": "Left headline stack with the boarding pass at right; later a single centred line on full-bleed blue",
+      "background": "Off-white, then flat saturated blue"
+    },
+    "motion_techniques": [
+      "kinetic type",
+      "SVG path draw",
+      "stamp reveal",
+      "pill highlight",
+      "scene cut"
+    ],
+    "prompt_fidelity": "Off-brief: the prompt asks for a motion-designer showreel, but the stills show a French travel-visa / flight-booking promo (title: 'Travel visa service promo'). Either the record is mismatched or prompt context is missing; the 4 s preview covers about a quarter of the 15 s film.",
+    "standout_ideas": [
+      "Dotted flight path drawn as an SVG arc with a plane riding along it, reused as a connector between statements",
+      "Rubber-stamp overlay ('RÉSERVÉ') slammed onto an illustrated ticket to mark a state change"
+    ],
+    "quality": 3,
+    "quality_note": "Clean, legible type and a clear stamp beat, but off-brief for the recorded prompt."
+  },
+  {
+    "slug": "triglyceee-bd5b08",
+    "title": "Moroccan political history timeline",
+    "handle": "TrigLyceee",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/TrigLyceee/status/2103804459986161719",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "A few rounds",
+    "declared_stack": null,
+    "prompt_chars": 74,
+    "prompt_summary": "French request for a video summarising Moroccan political life since independence.",
+    "inferred_stack": "Code-driven kinetic-type cards (HTML/CSS or Remotion-style); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Each sampled frame is a full-bleed colour card with one large Arabic phrase, with hard cuts between cards, which fits a script converted into timed cards and rendered to MP4 from code. Narration and music are not visible in stills.",
+    "visual_style": {
+      "palette": "Deep navy #172038, brick red #B22234, mustard #F2B632, cream text #F3EBDD",
+      "typography": "Heavy Arabic display sans (Kufi / Noto Arabic Bold-like), centred, phrase ends with a full stop",
+      "composition": "One centred phrase per card, large, generous margins",
+      "background": "Flat solid colour per card, changing with each beat"
+    },
+    "motion_techniques": [
+      "kinetic type",
+      "hard cut",
+      "fade-in text",
+      "colour-coded cards"
+    ],
+    "prompt_fidelity": "On-topic: the cards are short phrases on Morocco's post-independence history ('70 years', 'three kings', 'two coups'). The 4 s preview has only three cards, with no dates, timeline or map to show the sequence.",
+    "standout_ideas": [
+      "One flat colour per card, so the background colour marks each new beat",
+      "Summary as stat-style phrase cards instead of paragraphs"
+    ],
+    "quality": 3,
+    "quality_note": "Clear and on-topic, but very sparse: flat text cards with no timeline or supporting visuals."
+  },
+  {
+    "slug": "twoclipping-221cab",
+    "title": "Photo print app launch film",
+    "handle": "twoclipping",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/twoclipping/status/2103835273813496100",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "HTML + Playwright",
+    "prompt_chars": 5222,
+    "prompt_summary": "Long brief for a square Apple-keynote-style launch film for a photo print app: one continuous morphing take at 120 BPM, liquid-glass UI, iris transitions, and a wordmark ending. Asks for inputs and beat map first.",
+    "inferred_stack": "HTML/SVG/canvas, deterministic seek(t) render via Playwright, ffmpeg encode (declared HTML + Playwright)",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared HTML plus Playwright. The brief specifies one 1440px HTML file driven by a seek(t) function, SVG displacement for glass, canvas distance fields for glyphs, per-frame Playwright capture with ffmpeg blending to 60 fps, and SFX and music from downloaded Mixkit files. The stills match its opening beats in order (wordmark spelled out, dot grown into a pill, six-blade iris over a disc, square photo), which supports the declared pipeline.",
+    "visual_style": {
+      "palette": "Warm off-white canvas #F5F4EF, black UI #0E0E0F, warm photo tones (orange door) as the only colour",
+      "typography": "Wide heavy grotesk (Archivo-like, per brief wdth 125 / w800) for the wordmark; Geist-style UI sans",
+      "composition": "One centred object on a near-empty canvas; the camera fills the frame with each scene",
+      "background": "Flat warm off-white with faint vignette"
+    },
+    "motion_techniques": [
+      "iris transition",
+      "shape morph",
+      "wordmark squeeze",
+      "liquid glass displacement",
+      "spring easing",
+      "screen-studio zoom",
+      "cursor-driven change"
+    ],
+    "prompt_fidelity": "The 4 stills follow the opening beats in order: the wordmark 'develop.', the pill, the iris, and the square photo. The later glass, phone, print and order scenes are not reached within the 4 s preview, so the full brief is only partly checked.",
+    "standout_ideas": [
+      "Iris shutter: six blades close over a label and open onto a photo, so the scene change is a shape, not a fade",
+      "One black shape morphs through every state (order, print, delivered), which enforces the no-crossfade rule"
+    ],
+    "quality": 5,
+    "quality_note": "Deliberate, shape-driven transitions and frame-exact construction; only the opening is visible in the preview."
+  },
+  {
+    "slug": "vanshwtfff-db0466",
+    "title": "Motion designer showreel",
+    "handle": "VanshWTFFF",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/VanshWTFFF/status/2103644352794992798",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 139,
+    "prompt_summary": "Asks for a 10-second, go-all-out motion-designer showreel presenting the creator as a resume-worthy motion designer.",
+    "inferred_stack": "Code-driven 2D motion (HTML/canvas or Remotion-style); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Frames show animation-principles demos (a squash-and-stretch ball with a dotted arc, easing-curve graphs, a timeline scrubber) and large letters over a blueprint grid, suggesting scripted 2D elements with diagram overlays rendered from code. The exact tool cannot be determined from stills.",
+    "visual_style": {
+      "palette": "Blueprint blue #1B3A9E with white linework; light grey-blue #F3F5FA; navy ball; yellow #F5C518 and red accents",
+      "typography": "Heavy grotesk display letters; small monospace-style timeline labels",
+      "composition": "Diagrams and easing graphs beside the animated object; timeline strip along the bottom",
+      "background": "Blueprint grid, then flat light grey, then saturated yellow op-art"
+    },
+    "motion_techniques": [
+      "kinetic type",
+      "squash and stretch",
+      "easing curve graph",
+      "bounce arc path",
+      "op-art pattern",
+      "motion blur"
+    ],
+    "prompt_fidelity": "Good fit for a showreel that shows off motion skill, and the full video is 10.05 s as requested. It teaches animation principles rather than framing a resume, and no creator name or resume card appears in the stills.",
+    "standout_ideas": [
+      "Easing curves (linear, ease in-out, expo out, back out, bounce) shown as labelled graphs beside the animated object",
+      "Dotted red trajectory arc drawn behind a bouncing ball to show its path"
+    ],
+    "quality": 4,
+    "quality_note": "Smart, self-explaining concept with clean demos; the blurred big letters soften the frame."
+  },
+  {
+    "slug": "viktoroddy-98c1d8",
+    "title": "MotionSites one million visitors",
+    "handle": "viktoroddy",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/viktoroddy/status/2103802280617402509",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 106,
+    "prompt_summary": "Launch video for MotionSites AI after it reached one million monthly visitors in eight months.",
+    "inferred_stack": "Code-driven HTML/CSS with a 3D-tilted screenshot wall and text overlays, or compositor-style (Remotion/After Effects-like); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a perspective-tilted mosaic of real website screenshots that drifts across the frame, then a black field with a small pill label and a headline with a gradient word, which suggests layered 2D/3D transforms of screenshot assets with text overlays. The exact tool and audio cannot be determined from stills.",
+    "visual_style": {
+      "palette": "Black #000000 background; white type; peach-to-pink gradient on one word; multicolour screenshot content",
+      "typography": "Heavy grotesk sans, all-caps headline; small tracked-caps pill label",
+      "composition": "Dense tilted grid of screenshots; centred headline over a row of cards at the bottom",
+      "background": "Black; screenshot wall in 3D perspective"
+    },
+    "motion_techniques": [
+      "3D perspective tilt",
+      "screenshot wall pan",
+      "gradient text",
+      "blur-in",
+      "fade to black"
+    ],
+    "prompt_fidelity": "Partly matched: the headline is about AI agents and 'design superpowers', and the sampled frames show no '1M visitors' or launch stat. The 4 s preview cannot confirm later stat beats, so the milestone story is unverified.",
+    "standout_ideas": [
+      "Tilted screenshot wall as proof-of-work background for a launch",
+      "A single gradient-filled keyword to carry emphasis in an all-caps headline"
+    ],
+    "quality": 3,
+    "quality_note": "Attractive mosaic and headline, but the milestone message is absent from the sampled stills."
+  },
+  {
+    "slug": "visheshbaghell-3aba37",
+    "title": "Tally product demo",
+    "handle": "VisheshBaghell",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/VisheshBaghell/status/2103772327146119508",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 93,
+    "prompt_summary": "Asks for a product demo for the creator's site, built with a /brag skill, that emphasises every feature.",
+    "inferred_stack": "HTML/CSS/SVG motion with typewriter text (code-driven, likely); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show scripted word reveals, tally strokes that fade in and out behind the copy, and a monospace work-order note typing character by character with a block caret, which points to a coded 2D composition with a typing effect. Final encode and audio are not visible.",
+    "visual_style": {
+      "palette": "Off-white #F7F9FD, pale blue tally strokes #DCE7FA, near-black ink #111827, accent blue #1F5BD8",
+      "typography": "Grotesk sans for headlines (Inter-like); monospace for the work-order note",
+      "composition": "Centred headline line, then a document card left of centre with tally marks behind",
+      "background": "Flat off-white with a large faded tally-mark motif"
+    },
+    "motion_techniques": [
+      "word reveal",
+      "typewriter",
+      "stroke fade",
+      "blur-to-sharp",
+      "motif background"
+    ],
+    "prompt_fidelity": "Partly matched: the stills show a product (Tally) with a 'one job, two documents' feature story and an example record typing in, but only a few features appear in the 4 s preview and no site UI is shown.",
+    "standout_ideas": [
+      "Tally marks as a brand motif used as background texture",
+      "A realistic typed work-order note as the product demo, instead of a UI screenshot"
+    ],
+    "quality": 4,
+    "quality_note": "Restrained, on-message demo with a clear motif; too few features are visible to judge completeness."
+  },
+  {
+    "slug": "wani-shola-16ca7a",
+    "title": "Developer portfolio site showreel",
+    "handle": "wani_shola",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/wani_shola/status/2103769906638459278",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Remotion",
+    "prompt_chars": 1006,
+    "prompt_summary": "Remotion showreel for a developer-relations portfolio: real site captures, brand rules, 120 BPM cuts, site-only chat Q&A, ending on the site and email, 90-100 s.",
+    "inferred_stack": "Remotion (declared): React frame-driven composition rendered to MP4",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared Remotion, so the video is React components driven by the frame number and rendered to MP4. The brief calls for browser and phone frames holding real site captures, a chat Q&A, and beat-cut music. The sampled stills show only two serif text cards ('I build it.' and 'I explain it.'), so the captures and chat scenes cannot be verified.",
+    "visual_style": {
+      "palette": "Warm near-black #1C1714, burnt orange #C65A32, warm off-white #F2EBDD",
+      "typography": "High-contrast serif display with an italic accent word; small tracked-caps sans eyebrow",
+      "composition": "Centred: small-caps eyebrow above a large two-word line",
+      "background": "Solid dark warm black"
+    },
+    "motion_techniques": [
+      "accent word swap",
+      "static text hold",
+      "eyebrow label"
+    ],
+    "prompt_fidelity": "Unverified: only two text cards appear in the 4 s preview. The brief's website captures, phone and browser frames, chat answers, and closing contact email do not appear in the sampled stills.",
+    "standout_ideas": [
+      "Swapping one italic accent verb ('build' to 'explain') while the rest of the line stays fixed",
+      "One-line serif statements as a calm, restrained rhythm"
+    ],
+    "quality": 3,
+    "quality_note": "Tasteful type and palette, but the sampled frames are text cards only, so the showreel content cannot be judged."
+  },
+  {
+    "slug": "web3wesley-7bb108",
+    "title": "Type, form, space showreel",
+    "handle": "Web3Wesley",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/Web3Wesley/status/2103644329294365164",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 151,
+    "prompt_summary": "Asks for a 15-second, go-all-out motion-designer showreel for a resume.",
+    "inferred_stack": "HTML/CSS plus GSAP (ease names printed in the on-screen HUD), browser-rendered to MP4 (likely)",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "No declared stack, but the HUD prints GSAP ease names (expo.out, power3.out, power4.out, back.out(1.7)) and lists 'GSAP · Three.js · Canvas · HTML' as tools, so a coded HTML timeline is the most likely build. The frames show a resume card with a skills list, then a full-bleed wide-grotesk 'TYPE' slide and an italic serif 'type' slide, cut together with HUD timecode overlays. The render step is inferred.",
+    "visual_style": {
+      "palette": "Cream card #F3EDE3, near-black ink #151515, safety orange #FF4F1F, letterbox black #0B0B0B",
+      "typography": "High-contrast Didone-style serif for 'Claude' with an italic serif accent; wide heavy grotesk (Archivo VF per HUD) for 'TYPE'; small monospace HUD",
+      "composition": "Resume card centred in a letterboxed frame with corner brackets; then full-bleed one-word slides",
+      "background": "Black letterbox with cream card; flat orange for chapter slides"
+    },
+    "motion_techniques": [
+      "hard cut between chapters",
+      "kinetic type",
+      "expo ease",
+      "HUD overlay",
+      "skill list build",
+      "orange dot accent"
+    ],
+    "prompt_fidelity": "Strong fit: the piece is literally a resume-style reel with a skills list (Type, Form, Space, Time) and a 15 s runtime (15.06 s full video). Only the first ~4 s are sampled, so later chapters are inferred from the HUD labels.",
+    "standout_ideas": [
+      "Showreel framed as a resume card, so the reel itself carries the credibility claim",
+      "Printing the easing name on screen (e.g. 'EASE power4.out') as a motion-designer signature"
+    ],
+    "quality": 4,
+    "quality_note": "Clear concept and type system with a consistent HUD; craft is strong, though only the opening is visible."
+  },
+  {
+    "slug": "zaqailo-212ad3",
+    "title": "Motion designer showreel",
+    "handle": "zaqailo",
+    "date": "2026-09-26",
+    "source_url": "https://x.com/zaqailo/status/2103768009017835623",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 151,
+    "prompt_summary": "Asks for a 15-second, go-all-out motion-designer showreel for a resume.",
+    "inferred_stack": "Code-driven 2D motion with a HUD chapter overlay; exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a HUD template (corner brackets, timecode, chapter label, beat counter) wrapped around scenes: a red laser line, a dark grid with a dashed ring, a letter-by-letter 'EMOTION' scene, and a blurred 'MOTI' scene with a geometric ring. This suggests a scripted timeline with blur and easing, rendered to MP4; the render tool is not identifiable.",
+    "visual_style": {
+      "palette": "Charcoal #17181C, off-white #F3F1EC, signal red-orange #FF4A2B, multicolour geometric accent",
+      "typography": "Heavy wide grotesk (Archivo-like) for display; small monospace HUD labels",
+      "composition": "Full-frame scenes inside a HUD frame; one central word or shape per scene",
+      "background": "Charcoal with a faint grid, or off-white paper"
+    },
+    "motion_techniques": [
+      "kinetic type",
+      "letter colour accent",
+      "directional blur",
+      "grid build",
+      "HUD overlay",
+      "beat counter"
+    ],
+    "prompt_fidelity": "Good fit for a designer showreel with chaptered scenes that show type, layout and motion, and the 15.06 s full runtime matches the brief. The resume framing is not visible in the sampled stills.",
+    "standout_ideas": [
+      "Chapter HUD ('#0 Layout & grid', '#1 Kinetic type') as a self-explaining reel index",
+      "A single accent-coloured letter in an otherwise black word"
+    ],
+    "quality": 4,
+    "quality_note": "Cohesive HUD system and bold type; a few scenes read as abstract."
+  },
+  {
+    "slug": "agonaliu-466a8f",
+    "title": "Trezio app motion reel",
+    "handle": "agonaliu_",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/agonaliu_/status/2104117465475326227",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 162,
+    "prompt_summary": "Asks for a 15-second Trezio app showreel in the resume-style motion-designer framing.",
+    "inferred_stack": "Code-driven 2D with depth blur (HTML/canvas or Remotion-style); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Frames show a chaptered HUD reel for Trezio ('01 / 06 CHAOS', '02 / 06 CAPTURE') with scattered UI cards and sticky notes that blur with depth, a headline reveal, and a blue circle wipe. The look is consistent with a coded or template-driven composition at 1920x1080, 60 fps; exact tool and audio are unknown.",
+    "visual_style": {
+      "palette": "Dark navy #0E1020 for the chaos scene; cream-white #F5F3EE for capture; electric blue #2F4BE8 for the wipe; sticky-note yellow #F2D96B",
+      "typography": "Bold grotesk headline with an italic serif accent word in blue; monospace UI labels",
+      "composition": "Chaos: floating fragments around a centred headline; Capture: left-aligned headline with keycap icons and app cards at right",
+      "background": "Dark gradient, then off-white with soft shadows"
+    },
+    "motion_techniques": [
+      "depth-of-field blur",
+      "floating cards",
+      "word reveal",
+      "circle wipe",
+      "keycap icons",
+      "chapter HUD"
+    ],
+    "prompt_fidelity": "Good fit for a showreel-style Trezio piece with chapters and a clear product arc, and the 15.06 s full runtime matches. The stills tell a product story ('148 screenshots', 'Save anything.') rather than a designer resume, so the 'incredible designer' framing is only implied.",
+    "standout_ideas": [
+      "Chaos to clarity: scattered UI fragments with depth blur resolve into one headline",
+      "Keycap icons animate in to teach the input before the feature line"
+    ],
+    "quality": 4,
+    "quality_note": "Clear story arc and polished type and UI composition."
+  },
+  {
+    "slug": "allforbigfire-86ff3c",
+    "title": "Anime robot combining sequence",
+    "handle": "allforbigfire",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/allforbigfire/status/2104193522715029657",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Python",
+    "prompt_chars": 56,
+    "prompt_summary": "Japanese request for an anime-style 3D CG scene where three vehicles transform and combine into a robot.",
+    "inferred_stack": "Python-driven 3D (declared Python; likely bpy/Blender or a Python 3D pipeline) with cel-style shading and ffmpeg",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared stack is Python. The stills show low-poly, flat-shaded vehicle models with dark outlines over a cartoon sky with clouds and speed lines, plus a numbered lower-third name bar, which fits Python code generating or rendering 3D geometry, with cel-style lines added in the renderer or in post. The transformation and robot-combine beats are not in the 4 s preview.",
+    "visual_style": {
+      "palette": "Sky blue #3D7BE0 fading to pale #9FC7F2; red #E0242A; cool grey #B8BEC6; blue #1E5BDB; yellow exhaust #FFD21F; black caption bar #111111",
+      "typography": "Bold Japanese sans for the unit name; red-accent Latin label ('JET', 'CAR')",
+      "composition": "Vehicle near centre, clouds at the edges; lower-third label bottom-left",
+      "background": "Gradient sky with clouds and speed lines; flat grey road"
+    },
+    "motion_techniques": [
+      "3D model turn",
+      "speed lines",
+      "lower-third caption",
+      "cel shading"
+    ],
+    "prompt_fidelity": "Partly matched: the vehicles appear as unit-labelled 3D models in an anime-style palette, but neither the transformation nor the robot-combine is visible in the 4 s preview, and only two of the three units appear.",
+    "standout_ideas": [
+      "Numbered unit lower-thirds ('1号機 JET', '2号機 CAR') that present a transforming team as a lineup",
+      "Flat cel-shaded low-poly models with outline strokes to get an anime look cheaply"
+    ],
+    "quality": 3,
+    "quality_note": "Consistent stylised look, but the key transformation beat is not visible in the sampled frames."
+  },
+  {
+    "slug": "arjunsh1607-93005d",
+    "title": "Pixelup Labs studio showreel",
+    "handle": "arjunsh1607",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/arjunsh1607/status/2104295133432922126",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 102,
+    "prompt_summary": "Asks for a 15-second, detail-oriented showreel for the Pixelup Labs studio, going all out.",
+    "inferred_stack": "Code-driven HTML/WebGL-style composition with a 3D glowing logo; exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a design-tool selection box, a client-name list with one highlighted name, a glowing green 3D logo, and a light grid with pixel-dither squares, all inside chaptered HUD brackets. This suggests a scripted composition rendered from code, possibly with WebGL for the logo; the exact tool is not visible.",
+    "visual_style": {
+      "palette": "Electric blue #1D4FFF, glow green #22C55E, light grid #F2F3F4, magenta accent #9B2FD0, pixel squares in orange, blue and mint",
+      "typography": "Heavy grotesk for chapter words ('Brands'); tracked monospace HUD and client names",
+      "composition": "Hero element centred; HUD brackets at the corners; client list in a row near the bottom",
+      "background": "Solid blue with vertical guides; dark green radial glow; light grid with dither squares"
+    },
+    "motion_techniques": [
+      "texture-filled type",
+      "glow",
+      "3D logo",
+      "pixel dither squares",
+      "guide-line grid",
+      "chapter HUD"
+    ],
+    "prompt_fidelity": "Good fit for a studio showreel: chaptered scenes show client logos, a 3D brand mark, and studio identity, and the 15.06 s runtime matches. The reel leans on client logos, so it reads more like a studio credits reel than a designer's resume.",
+    "standout_ideas": [
+      "Each chapter gets its own colour world (blue, green, light grid) for rhythm across a logo-heavy reel",
+      "Pixel-dither squares as a recurring studio motif"
+    ],
+    "quality": 4,
+    "quality_note": "Varied and detailed chapters with a coherent HUD; some scenes are logo-heavy."
+  },
+  {
+    "slug": "aschapmann-131210",
+    "title": "SaaS launch video",
+    "handle": "aschapmann",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/aschapmann/status/2104230888812724497",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Remotion",
+    "prompt_chars": 996,
+    "prompt_summary": "Asks for a 30-second Remotion launch video built from the product's site and codebase: kinetic type, springs, on-beat builds, logo reveal, self-checked renders.",
+    "inferred_stack": "Remotion (declared): React frame-driven composition rendered to MP4",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared Remotion, so the film is React components driven by the frame number and rendered with the Remotion CLI. Stills show a dark, perspective-tilted grid of Reddit-style post cards behind a word-by-word kinetic headline, consistent with a 3D card layer with animated text on top. The stills carry no product name, so the [product] placeholder cannot be checked.",
+    "visual_style": {
+      "palette": "Charcoal #15161A, post-card grey #1F2126, red-orange accent on the Reddit mark and 'goldmine', white type",
+      "typography": "Heavy neo-grotesk sans (Inter Display-like) with one red accent word",
+      "composition": "Centred two-line headline over a tilted card grid",
+      "background": "Dark perspective grid of UI cards with depth blur"
+    },
+    "motion_techniques": [
+      "kinetic type",
+      "3D perspective tilt",
+      "word-by-word reveal",
+      "depth blur",
+      "accent colour swap"
+    ],
+    "prompt_fidelity": "Partly matched: kinetic type, depth and a tilted UI-card background fit the brief's premium direction, and the 30.1 s runtime matches. The sampled frames make one 'why the market matters' point, so the pain, solution and logo-reveal beats are not visible.",
+    "standout_ideas": [
+      "A tilted card wall as a depth layer that keeps the headline in front",
+      "Accent colour on one noun ('goldmine') to carry the thesis"
+    ],
+    "quality": 4,
+    "quality_note": "Strong kinetic headline and depth; the four sampled frames show a single message."
+  },
+  {
+    "slug": "bogdandragomir-35e024",
+    "title": "Product intro synced to music",
+    "handle": "BogdanDragomir",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/BogdanDragomir/status/2104045641538412658",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 203,
+    "prompt_summary": "Asks for an intro video explaining what a linked product does, with original music and the video synced to it.",
+    "inferred_stack": "Code-driven 3D plus 2D (likely Three.js/WebGL or a Blender-style render for the capsules, shader or canvas dither transitions); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a 3D render of electronic-ink microcapsules under a 'Fig. 1' caption, a grid of dark discs, a pixel-dither dissolve, and a product line with a particle-dispersion effect. That suggests 3D assets plus shader or canvas transitions; the music and sync claims cannot be checked from stills.",
+    "visual_style": {
+      "palette": "Near-black #0E0D0C, off-white capsules #EDEBE6, warm amber rim #C98B4B, cream text #E6E1D8",
+      "typography": "Serif display with an italic accent for the headline; small-caps label; monospace sample address",
+      "composition": "Scientific-figure framing with the headline at left and a sample inbox card at top right",
+      "background": "Black with blurred disc bokeh"
+    },
+    "motion_techniques": [
+      "3D render",
+      "dither pixel transition",
+      "particle dispersion",
+      "depth-of-field blur"
+    ],
+    "prompt_fidelity": "Partly matched: the product's job is stated ('Forward your newsletters') with a sample inbox address, but the opening microcapsule figure is not tied to the product in the stills. The music and sync requirements cannot be checked from stills.",
+    "standout_ideas": [
+      "A 'Fig. 1' scientific-plate opening as a credible, quiet way to start a consumer intro",
+      "Pixel-dither dissolve as the scene transition"
+    ],
+    "quality": 3,
+    "quality_note": "Striking macro opening and a tidy product card, but the link from the opener to the product message is unclear."
+  },
+  {
+    "slug": "daniel-haida-8691d4",
+    "title": "Taxtello bookkeeping app film",
+    "handle": "daniel_haida",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/daniel_haida/status/2104139720829636937",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "A few rounds",
+    "declared_stack": "Remotion",
+    "prompt_chars": 15306,
+    "prompt_summary": "Long brief for a 15-second premium Remotion product film for Taxtello, built from real UI and brand tokens in restrained gold and navy, with a music cue sheet.",
+    "inferred_stack": "Remotion (declared): React rebuild of the product UI with frame-driven easing",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared Remotion; the brief asks for the real dashboard to be rebuilt in React from the product's design tokens, with object-driven transitions and frame-based easing. Stills show a gold tile logo, a dashboard panel in slight perspective with a large mono figure, and the copy line 'Alles im Blick.', which fits that pipeline. Music is delivered as a cue sheet rather than a visible track.",
+    "visual_style": {
+      "palette": "Navy-black #0C0F1A, panel #131722, muted gold #E8B84B, primary text #E8EAF2, small green #34D399 positive chip",
+      "typography": "Plus Jakarta Sans for copy (geometric sans); monospace (JetBrains Mono-like) for figures",
+      "composition": "Dashboard panel at right in slight perspective; one short copy line at left",
+      "background": "Deep navy with soft falloff and a dark vignette"
+    },
+    "motion_techniques": [
+      "perspective product panel",
+      "text reveal",
+      "gold accent highlight",
+      "mono figure emphasis"
+    ],
+    "prompt_fidelity": "Strong match on palette, typeface and the 'Alles im Blick.' copy, with the dashboard recognisable as a product surface. The 4 s preview cannot confirm the storyboard's documents, invoices and tax scenes; the 14.06 s runtime fits the 14-15 s target.",
+    "standout_ideas": [
+      "One large mono figure (48.260 EUR) as the emotional anchor of the product shot",
+      "Gold reserved for active states and a single chip, so the accent stays precious"
+    ],
+    "quality": 4,
+    "quality_note": "Disciplined palette and product-first framing, close to the brief; later scenes are not visible."
+  },
+  {
+    "slug": "elliot-garreffa-f334bc",
+    "title": "Muse connector tracker promo",
+    "handle": "elliot_garreffa",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/elliot_garreffa/status/2104213514944446825",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "Remotion",
+    "prompt_chars": 146,
+    "prompt_summary": "Asks to turn 'this' (no source named) into a go-all-out motion-designer showreel for a resume.",
+    "inferred_stack": "Remotion (declared): SVG path animation with a halftone backdrop",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared Remotion, so the video is React and SVG composed frame by frame and rendered to MP4. Stills show a blue line-art logo being drawn stroke by stroke, a green halftone gradient backdrop, and brand icons moving around a headline, consistent with SVG path animation and interpolated positions.",
+    "visual_style": {
+      "palette": "Off-white #FBFCFA, mint halftone #CDE8D8, brand blue #1F5DE0, ink #0E1116, pale green accent",
+      "typography": "Bold geometric grotesk (Inter-like) for the headline; small monospace captions",
+      "composition": "Centred headline stack with orbiting brand icons; corner labels top-left and top-right",
+      "background": "Light, with halftone dot gradients at the edges and a faint elliptical orbit line"
+    },
+    "motion_techniques": [
+      "SVG path draw",
+      "orbit",
+      "icon drift",
+      "stagger headline",
+      "halftone backdrop"
+    ],
+    "prompt_fidelity": "Does not match the recorded prompt: the stills show a promo for the Muse connector tracker by Agent Discoverability, not a showreel. The prompt never names Muse, so the source material ('this') is missing from the record, or the record is mismatched.",
+    "standout_ideas": [
+      "Logo line-art drawn stroke by stroke as the opening beat, before the wordmark lands",
+      "Brand icons orbiting a headline as a visual metaphor for tracking connectors"
+    ],
+    "quality": 3,
+    "quality_note": "Clean, well-paced brand promo with good SVG drawing; off-brief for the recorded prompt."
+  },
+  {
+    "slug": "en-ra-81c6dd",
+    "title": "Website analyzer product promo",
+    "handle": "en______ra",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/en______ra/status/2104035188061986980",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 194,
+    "prompt_summary": "Asks for a 15-second showreel for 'RedSeed AI', a placeholder project name left in the prompt, styled as a resume-style motion-designer piece.",
+    "inferred_stack": "HTML/CSS or React UI animation (typed input, progress bar, card build); exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a web-app flow: a URL typed into an input pill, a click on an orange button, a grey loading bar filling in orange, and an analysis card with tags, all with blur-in and eased motion. That suggests a coded UI composition rendered to MP4; the exact tool and audio are unknown.",
+    "visual_style": {
+      "palette": "Warm off-white #F0EEE9, white pills, burnt orange #E4501E, charcoal #161616 text, grey placeholder #CFCFCF",
+      "typography": "Geometric sans (Outfit-like) for UI and headline",
+      "composition": "One centred UI component in the square frame, then a centred result card",
+      "background": "Flat warm grey-beige"
+    },
+    "motion_techniques": [
+      "typed text",
+      "cursor click",
+      "progress bar fill",
+      "UI card build",
+      "blur-in",
+      "tag stagger"
+    ],
+    "prompt_fidelity": "Mismatch: the prompt asks for a showreel for 'RedSeed AI', but the stills show a product demo for SkinPal (skinpalai.app), an AI skin-analysis tool, and the placeholder was never replaced. The record is either stale or mismatched.",
+    "standout_ideas": [
+      "One UI component that changes state in place (input, loading bar, result card), so the demo needs no cuts",
+      "Orange reserved for the action and approval states only"
+    ],
+    "quality": 3,
+    "quality_note": "Believable, clean UI animation; off-brief relative to the recorded prompt."
+  },
+  {
+    "slug": "gigabit-million-16b3a0",
+    "title": "Steam new releases news recap",
+    "handle": "gigabit_million",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/gigabit_million/status/2104068536041959719",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 99,
+    "prompt_summary": "Japanese request for a roughly 60-second motion-graphics recap of Steam games released Sept 25-26, explaining each title's appeal from a gamer's view.",
+    "inferred_stack": "Code-driven 2D (HTML/CSS or Remotion-style) with Japanese web fonts; exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a dark navy title card with a small pill label, a Japanese headline, a date line, and a row of six numbered chips, which looks like a coded template with text animated in and game entries to follow. Per-game cards and audio are not in the 4 s preview.",
+    "visual_style": {
+      "palette": "Deep navy #0B1A2E to #0E2440 gradient; light-blue pill #5FB6E8; white headline; faint ghost date numerals; chips in orange, blue, purple, green, pink",
+      "typography": "Bold Japanese sans (Noto Sans JP-like) for headline and body; tracked Latin label",
+      "composition": "Left-aligned headline stack with a rule beneath; numbered chips in a row",
+      "background": "Dark navy radial gradient with faint particles"
+    },
+    "motion_techniques": [
+      "text reveal",
+      "staggered chip row"
+    ],
+    "prompt_fidelity": "Good fit on topic and format: Steam new releases, the dates, and six numbered titles in Japanese with a gamer-focused voice. Only the title and index are visible in the 4 s preview, so per-game content is unverified; the 60.05 s runtime fits the request.",
+    "standout_ideas": [
+      "Numbered chips 01-06 as a table of contents that previews the whole run",
+      "Ghost date numerals behind the headline to carry the date without extra copy"
+    ],
+    "quality": 3,
+    "quality_note": "Clean, legible Japanese typography and a coherent template; per-game storytelling is not visible yet."
+  },
+  {
+    "slug": "henkpoley-3d3407",
+    "title": "Deliberately terrible motion showreel",
+    "handle": "HenkPoley",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/HenkPoley/status/2104220387613761980",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": null,
+    "declared_stack": "HTML",
+    "prompt_chars": 221,
+    "prompt_summary": "Deliberately terrible one-minute HTML showreel page that makes the creator look like a bad motion designer, done with bare-minimum effort.",
+    "inferred_stack": "Hand-written HTML/CSS page with default browser styling and an embedded video player, captured as video",
+    "inferred_stack_confidence": "high",
+    "how_it_was_made": "Declared HTML. The stills show a plain page in default Times and monospace styling, a blinking red 'AVAILABLE FOR HIRE' marquee, and a video player with REC and timecode overlays showing bars-and-tone and a countdown leader. The artifact is the page itself, most likely captured by screen recording, and the joke works because the page is the deliverable.",
+    "visual_style": {
+      "palette": "Default browser white #FFFFFF, default link blue, alarm-red marquee, green-to-orange gradient title card, SMPTE-style bars",
+      "typography": "Default Times-style serif for headings and body; Courier-style monospace for the marquee and timecode overlays",
+      "composition": "Single-column page with a bordered video box",
+      "background": "White page with a dark video frame"
+    },
+    "motion_techniques": [
+      "blinking marquee",
+      "REC blink",
+      "timecode overlay",
+      "countdown leader",
+      "test-pattern bars"
+    ],
+    "prompt_fidelity": "Strong fit: the page reads as a deliberately bad showreel (default styling, 'UNREGISTERED VERSION - FREE TRIAL' watermark, 'my professor said to' captions, a 1:00 runtime on the player), and the joke lands within the first 4 s.",
+    "standout_ideas": [
+      "Watermark and 'my professor said to' annotations as the joke vocabulary for bad design",
+      "The whole piece is one screen, so the deliverable is the page itself"
+    ],
+    "quality": 4,
+    "quality_note": "Committed, precise execution of an intentionally bad brief that still reads clearly as a joke."
+  },
+  {
+    "slug": "jesscaroline7-1ff7cb",
+    "title": "Ondefica app motion reel",
+    "handle": "jesscaroline7",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/jesscaroline7/status/2104336637752955094",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": "A few rounds",
+    "declared_stack": "HyperFrames",
+    "prompt_chars": 140,
+    "prompt_summary": "Asks for a dynamic, go-all-out motion-designer showreel for a resume; the prompt names no product.",
+    "inferred_stack": "HyperFrames (declared): frame-driven vector motion with glow and particles, exported 1080x1920",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared HyperFrames, so the piece is a frame-driven vector composition rendered to a vertical 1080x1920 MP4. Stills show a white arrow-like mark built from bars with an orange dot and ring that throws particles, then a stacked logo lockup 'ONDE FICA', consistent with timed scales, strokes and glows.",
+    "visual_style": {
+      "palette": "Near-black warm #15130F, off-white #F5F1E8, orange-red #F05A1E glow and dot",
+      "typography": "Heavy geometric sans in uppercase with tight leading (Montserrat/Poppins ExtraBold-like)",
+      "composition": "Vertical stack: arrow mark above, two-line wordmark below, left-weighted with negative space",
+      "background": "Dark brown-black with a warm orange glow at left and a faint dot texture"
+    },
+    "motion_techniques": [
+      "stroke build",
+      "particle burst",
+      "orbit ring",
+      "logo lockup",
+      "glow pulse"
+    ],
+    "prompt_fidelity": "Mismatch: the prompt asks for a resume showreel, but the stills show a logo reveal for the Ondefica app (title: 'Ondefica app motion reel') with no resume framing. The prompt does not name the app.",
+    "standout_ideas": [
+      "Logo assembled from strokes with a particle spark at the joint, then the wordmark locks under it",
+      "One orange point as the moving accent that ties the mark together"
+    ],
+    "quality": 3,
+    "quality_note": "Crisp, clean vertical reveal; the showreel brief is not met in the sampled frames."
+  },
+  {
+    "slug": "lemomo-ai-0d9cff",
+    "title": "Whiteboard skill tutorial",
+    "handle": "lemomo_ai",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/lemomo_ai/status/2104070024575242622",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 169,
+    "prompt_summary": "Asks for a whiteboard-explainer tutorial on making videos with the Lemo-Opuscar skill: one prompt, one answer, then ship.",
+    "inferred_stack": "Screen capture of a web gallery with burned-in bilingual subtitles; example films are code-made; exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a browser gallery of AI-made short films with thumbnails, timers and a playing clip, plus English and Chinese subtitles burned in, which points to a screen recording of a web page with a subtitle overlay. A whiteboard-style animation or narration track is not visible.",
+    "visual_style": {
+      "palette": "Dark brown-black page #1A130E with gold rules; film frames in warm stained-glass tones (red #C0392B, cobalt #2E4A8C, yellow-green #8AB34A); white subtitle box",
+      "typography": "Bold book-serif for gallery titles; small-caps labels; sans subtitles in English and Chinese",
+      "composition": "Card grid on the page; one film frame full-width with a subtitle at the bottom",
+      "background": "Dark wood-brown page; warm-lit film frames"
+    },
+    "motion_techniques": [
+      "screen recording",
+      "video playback",
+      "subtitle overlay",
+      "gallery scroll"
+    ],
+    "prompt_fidelity": "Mismatch: the prompt asks for a whiteboard-explainer tutorial, but the stills show a showcase gallery of example films (thirty-nine film styles, e.g. 'Stained Glass', 'Risograph Print') with burned-in subtitles and no whiteboard style.",
+    "standout_ideas": [
+      "A showcase gallery as the tutorial itself, so the example films teach what the skill can do",
+      "Stacked English-over-Chinese subtitles that keep both readable"
+    ],
+    "quality": 2,
+    "quality_note": "Clean subtitles and a rich showcase, but it does not deliver the requested whiteboard tutorial in the sampled frames."
+  },
+  {
+    "slug": "notdwd-7de38a",
+    "title": "Frame by Frame launch video",
+    "handle": "notdwd",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/notdwd/status/2104229441211969685",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 10311,
+    "prompt_summary": "12-second square product sting for 'Frame by Frame' with frame-exact camera moves, glassy Apple-style UI, no cuts on stills, and defaults if inputs are skipped.",
+    "inferred_stack": "HTML/CSS/SVG rendered frame by frame from a seek(t) function (per the prompt's build spec), Playwright/ffmpeg encode",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "No declared stack, but the prompt specifies a single 1080 HTML page driven by a seek(frame) function with keyframe tables, CSS and SVG blur, and Playwright capture. The stills match that build: the default 'Frame by Frame' lockup with an 'on Whop' pill, an FF icon with four orbiting squares, and a Mac menu-bar scene with the cursor on the app mark. The exact render path is not shown.",
+    "visual_style": {
+      "palette": "Page #FDFDFB, haze #B7CFEB, navy #294376 to #1E2F52, blues #2F6BFF and #3CC8F0, mint #4ED6A0",
+      "typography": "Inter (400-700)",
+      "composition": "Centred lockup in a light hub window; then a centred icon with four orbiting squares; then a macOS menu bar",
+      "background": "Off-white with blue haze, then a blue Mac wallpaper with thin white line art"
+    },
+    "motion_techniques": [
+      "exponential ease-out",
+      "directional blur",
+      "orbit and lock",
+      "cursor path",
+      "menu-bar reveal",
+      "blur-to-sharp"
+    ],
+    "prompt_fidelity": "Strong visual fit to the spec's palette, Inter type, 'on Whop' pill, FF icon with four squares, and menu-bar scene. Timing does not match the spec: the menu-bar scene is on screen at 3.6 s, while the spec's frame table puts it at about 1.7-2.6 s, so the preview may be retimed or the film differs from the spec.",
+    "standout_ideas": [
+      "Four coloured squares orbit, lock into a cross, then slide into a row as the icon shrinks: a clean app-icon transition",
+      "Menu-bar app mark with three coloured status dots as a tidy product home"
+    ],
+    "quality": 4,
+    "quality_note": "Polished, Apple-like finish with a consistent palette and blur; the timing mismatch is the main gap."
+  },
+  {
+    "slug": "thayto-dev-44b911",
+    "title": "AjustaCV Pro pricing promo",
+    "handle": "thayto_dev",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/thayto_dev/status/2104200591278739735",
+    "model": "Opus 5.5",
+    "effort": "Max",
+    "iterations": null,
+    "declared_stack": "HyperFrames",
+    "prompt_chars": 151,
+    "prompt_summary": "Asks for a 15-second, go-all-out motion-designer showreel for a resume.",
+    "inferred_stack": "HyperFrames (declared): HTML-based frame-driven composition with card stacks and counters",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared HyperFrames, so the video is an HTML composition driven by a frame timeline and rendered to MP4. Stills show a Portuguese headline in a serif, a fanned stack of job-card UI that counts to '10 vagas', and two pricing cards comparing per-job and monthly pricing with a strikethrough and a green note, all consistent with coded elements animated on a timeline.",
+    "visual_style": {
+      "palette": "White #FFFFFF, near-black #14141A, blue accent #2F5BDB, green note #1F7A4D, pale blue panel #F4F7FD, grey #6B7280",
+      "typography": "High-contrast serif display for the headline and prices; grotesk sans for body and UI",
+      "composition": "Headline at left with a card stack at right; then two pricing cards side by side",
+      "background": "Flat off-white"
+    },
+    "motion_techniques": [
+      "card fan stack",
+      "number count-up",
+      "strikethrough",
+      "stagger reveal",
+      "colour phrase highlight"
+    ],
+    "prompt_fidelity": "Mismatch: the prompt asks for a motion-designer showreel, but the stills show a Portuguese pricing promo for AjustaCV Pro (per the title, a CV-tailoring product). The 4 s preview cannot confirm the rest.",
+    "standout_ideas": [
+      "Live price math: stacked job cards and a running total before a side-by-side pricing comparison",
+      "A single blue phrase in a serif headline as the emphasis device"
+    ],
+    "quality": 3,
+    "quality_note": "Clear, well-set promo with readable numbers; off-brief for the recorded prompt."
+  },
+  {
+    "slug": "theviableedge-9065be",
+    "title": "Second brain service promo",
+    "handle": "TheViableEdge",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/TheViableEdge/status/2104207707980869918",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": "Remotion",
+    "prompt_chars": 156,
+    "prompt_summary": "15-second motion-designer showreel that doubles as a hero asset for a course landing page.",
+    "inferred_stack": "Remotion (declared): React composition with floating cards and text swaps",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared Remotion, so the frames are React components timed by frame number and rendered to MP4. Stills show floating document, sticky-note and voice-memo cards blurred by depth behind a centred statement, plus a chapter HUD (AUDIT / WORKING COPY / RETRIEVAL TESTS). That suggests layered cards with blur and timed text swaps.",
+    "visual_style": {
+      "palette": "Warm off-white #F4F3EE, near-black #111111, orange #E8562A, purple #6B4FD8, blue #3A6BE0, green #22A06B, sticky yellow #F2D96B",
+      "typography": "Bold grotesk (Inter-like) for statements; monospace for file names and HUD",
+      "composition": "Centred statement over a field of card fragments; chapter nav at the bottom",
+      "background": "Warm off-white with blurred UI cards"
+    },
+    "motion_techniques": [
+      "depth-of-field blur",
+      "text swap",
+      "floating cards",
+      "chapter nav",
+      "colour dot markers"
+    ],
+    "prompt_fidelity": "Partly matched: the 15 s length and motion-design look fit, but the content is an AI-context explainer ('It's a context problem.') rather than a designer showreel. It could serve a course landing page, but the sampled stills do not show what the course teaches.",
+    "standout_ideas": [
+      "Blurred background cards behind a single statement so the message stays dominant",
+      "Colour-coded chapter dots as a progress indicator"
+    ],
+    "quality": 3,
+    "quality_note": "Readable, on-theme explainer with good depth; off-brief for a showreel."
+  },
+  {
+    "slug": "topi-003-9ca6b5",
+    "title": "Kinetic type motion showreel",
+    "handle": "_topi_003",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/_topi_003/status/2104086342204592443",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 90,
+    "prompt_summary": "Japanese request for a dynamic 15-second motion-designer showreel in resume style, going all out.",
+    "inferred_stack": "Code-driven 2D with a shared HUD template (tool not declared); HTML/canvas or Remotion-style likely",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a sequence of scenes sharing a HUD (timecode, sequence counter, chapter label): a radial-ticked intro, a red 'HELLO.' title card, and a 'MOTION' scene with type-spec overlays. That reads as coded scenes on one template; tool and audio are not visible.",
+    "visual_style": {
+      "palette": "Near-black #0B0B0D, vermilion #F0432A, off-white #EFEBE4, red outline accents",
+      "typography": "Condensed heavy grotesk (Anton, per the on-screen spec label) for display; monospace for HUD",
+      "composition": "Huge centred word filling the width; corner HUD brackets",
+      "background": "Solid colour per scene: black, red-orange, off-white"
+    },
+    "motion_techniques": [
+      "kinetic type",
+      "radial line burst",
+      "outline ring",
+      "letter colour swap",
+      "motion blur",
+      "HUD sequence counter"
+    ],
+    "prompt_fidelity": "Good fit in spirit: bold typography and reel-style chapters, and the 15.06 s runtime matches the brief. No resume framing or creator name is visible in the sampled frames.",
+    "standout_ideas": [
+      "Sequence counter in the HUD ('SEQ 03/07 TYPOGRAPHY') as a reel index",
+      "Red outline circles behind condensed type as a print-spec texture"
+    ],
+    "quality": 4,
+    "quality_note": "Bold, cohesive showreel system with strong type; sampled scenes are simple but confident."
+  },
+  {
+    "slug": "topi-003-b0e12c",
+    "title": "Anime maid dance showreel",
+    "handle": "_topi_003",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/_topi_003/status/2104088986969055288",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 84,
+    "prompt_summary": "Japanese request to make the girl in the provided image dance excitingly in a dynamic 15-second showreel-style motion-graphics video.",
+    "inferred_stack": "Bone-rigged 2.5D illustration (mesh deformation) inside a coded HUD template; exact tool unknown",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show one illustrated character with an overlay reading 'rigged from one illustration: 16 bones, 18,644 tris, ink lines', which implies mesh and bone deformation of a single 2D image rendered per frame, with a title marquee, count-in and move labels added as layers. The renderer and music are not identifiable from stills.",
+    "visual_style": {
+      "palette": "Sunburst yellow #F7D318, near-black #111111, hot-pink offset #FF3E8A, white character details",
+      "typography": "Heavy black display (Anton-like) and bold Japanese/Latin marquee; small monospace HUD captions",
+      "composition": "Character large, centred-left; spec panel bottom-left; numbered move label bottom-right",
+      "background": "Yellow radial sunburst with halftone dots and dark silhouettes"
+    },
+    "motion_techniques": [
+      "character rig animation",
+      "marquee scroll",
+      "count-in graphic",
+      "pink offset outline",
+      "spec callouts"
+    ],
+    "prompt_fidelity": "Good fit: a stylised character dances in a showreel frame with move labels ('01 MOVE / GROOVE', '02 MOVE / STEP & KICK') and a 'six' count-in at 150 BPM. The source image is not in the record.",
+    "standout_ideas": [
+      "Rig callouts (bone and triangle counts) on screen as a credible technical flourish",
+      "A count-in graphic (SIX - COUNT-IN - 150 BPM) that sets the beat before the dance"
+    ],
+    "quality": 4,
+    "quality_note": "Charming, on-brief character motion with a strong poster palette; only a short preview is visible."
+  },
+  {
+    "slug": "tstfully-0aa6b4",
+    "title": "YouTube transcript product ad",
+    "handle": "tstfully",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/tstfully/status/2104033772949680192",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": null,
+    "prompt_chars": 83,
+    "prompt_summary": "Asks for a 15-second motion-graphics product ad: paste a YouTube video and get every word.",
+    "inferred_stack": "Code-driven HTML/CSS or Remotion-style UI motion (tool not declared)",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a glowing red play button, a headline that resolves word by word, a URL typed into a field beside a glowing 'Get transcript' button, and an empty transcript panel, consistent with a coded UI composition with timed text and glow. Audio is not visible.",
+    "visual_style": {
+      "palette": "Near-black #0E0E11, YouTube-style red #E53935, red radial glow, white #F5F5F7, muted grey #8A8A93",
+      "typography": "Bold grotesk headline, italic serif accent 'word.' in red, monospace for URL and timecode",
+      "composition": "Centred headline over the play icon; then a top input bar with a transcript panel below",
+      "background": "Near-black with a soft red radial glow"
+    },
+    "motion_techniques": [
+      "word-by-word reveal",
+      "blur-to-sharp",
+      "glow pulse",
+      "typed input",
+      "progress dashes",
+      "timecode overlay"
+    ],
+    "prompt_fidelity": "Strong fit: the ad shows pasting a YouTube URL, pressing 'Get transcript', and the headline 'Paste a YouTube video. Get every word.' The transcript output itself is not reached in the 4 s preview.",
+    "standout_ideas": [
+      "One italic serif accent word in brand red as the single moment of emphasis",
+      "Glow on the primary action that carries the click into the next step"
+    ],
+    "quality": 4,
+    "quality_note": "Tight, on-message product ad with clear hierarchy and believable UI."
+  },
+  {
+    "slug": "yunn260414-60d996",
+    "title": "What is Git explainer",
+    "handle": "Yunn260414",
+    "date": "2026-09-27",
+    "source_url": "https://x.com/Yunn260414/status/2104044910769016888",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": null,
+    "declared_stack": "JavaScript",
+    "prompt_chars": 98,
+    "prompt_summary": "Chinese-language request for a JavaScript-built, narrated beginner video on what Git is, covering common commands.",
+    "inferred_stack": "JavaScript-driven HTML/canvas or Remotion-style composition (declared JavaScript), with burned-in subtitles and narration",
+    "inferred_stack_confidence": "medium",
+    "how_it_was_made": "Declared JavaScript, so frames are generated in code and rendered to video. Stills show a centred title with the Git logo on a navy vignette, burned-in Chinese subtitles, and a macOS-style window holding a '论文.docx' file, consistent with scripted scenes plus a subtitle track. The narration audio cannot be checked from stills.",
+    "visual_style": {
+      "palette": "Dark navy #0F1A33 with black vignette, Git orange-red #F05133, white #FFFFFF, muted blue-grey subtitles #A9B6D3",
+      "typography": "Chinese sans (Noto Sans SC-like), bold for the title and regular for subtitles; Latin 'Git' in the same family",
+      "composition": "Centred logo and title stack; subtitle bar at the bottom; a mock file window for the example",
+      "background": "Dark navy radial vignette"
+    },
+    "motion_techniques": [
+      "centred title hold",
+      "burned-in subtitles",
+      "mock UI window",
+      "scene cut"
+    ],
+    "prompt_fidelity": "Good fit: a beginner-friendly 'What is Git' opener with a relatable hook ('Have you had this experience?') and a document-revision analogy, with Chinese captions as requested. Narration and audio cannot be verified from stills.",
+    "standout_ideas": [
+      "A relatable hook (a document revised until it breaks) to motivate version control",
+      "Burned-in subtitles as a second caption layer that supports viewers watching without sound"
+    ],
+    "quality": 3,
+    "quality_note": "Clear, friendly educational opener; visuals are simple and largely static in the sampled frames."
+  },
+  {
+    "slug": "buildfastwithai-53234e",
+    "title": "Indian civilisation history film",
+    "handle": "BuildFastWithAI",
+    "date": "2026-09-28",
+    "source_url": "https://x.com/BuildFastWithAI/status/2104451249269780900",
+    "model": "Opus 5.5",
+    "effort": null,
+    "iterations": "One-shot",
+    "declared_stack": null,
+    "prompt_chars": 82,
+    "prompt_summary": "Asks for a creative MP4 on Indian civilisation with music and sound effects.",
+    "inferred_stack": "Code-driven 2D (HTML/canvas or Remotion-style) with display type; tool not declared",
+    "inferred_stack_confidence": "low",
+    "how_it_was_made": "No declared stack. Stills show a navy frame with a vermilion dot and expanding rings, then word cards pairing a Devanagari term ('बिन्दु', bindu) with a one-line English gloss, then a huge condensed letter over a sine-wave line. That suggests coded scenes with word-by-word reveals; music and sound effects are not visible.",
+    "visual_style": {
+      "palette": "Deep navy #0B0F2A, vermilion #E8452C, cream #F2EBDD, saffron #F5B82E, teal pip #2BB6A3",
+      "typography": "Condensed heavy display (Anton-like) for the big letters; Devanagari text in a Noto-style sans; small monospace gloss",
+      "composition": "Centred element with concentric rings; corner crosshairs; left-edge colour pips as a HUD",
+      "background": "Flat deep navy with faint rings"
+    },
+    "motion_techniques": [
+      "ring expansion",
+      "letter reveal",
+      "sine-wave line",
+      "pink offset shadow",
+      "word gloss"
+    ],
+    "prompt_fidelity": "Matches the topic in its opening: a Sanskrit term is introduced in Devanagari with transliteration and gloss, consistent with an Indian civilisation explainer. Music and sound-effect requirements cannot be verified, and only a few words appear in the 4 s preview.",
+    "standout_ideas": [
+      "Word-card format: native-script term, transliteration and one-line gloss, compact and teachable",
+      "A sine-wave line that runs behind a large letter to tie type to rhythm"
+    ],
+    "quality": 3,
+    "quality_note": "Striking type and palette; the sampled stills show only a few words, so the civilisation content is thin here."
+  }
+]
