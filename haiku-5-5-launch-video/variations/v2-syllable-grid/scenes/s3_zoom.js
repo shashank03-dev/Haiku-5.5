@@ -53,10 +53,11 @@ function v2s3_layer(ctx, base, g, fill, alpha) {
   const kc = Math.floor(-g);
   ctx.save();
   if (fill) ctx.fillStyle = V.dark.surface;
-  else { ctx.strokeStyle = V.accent; ctx.lineWidth = 3; }
+  else { ctx.strokeStyle = V.accent; ctx.lineWidth = 2.5; }
+  const strength = fill ? 1 : 0.55; // the near outlines sit under the card, so keep them quieter
   for (let k = kc - 1; k <= kc + 3; k++) {
     const v = k + g;
-    const a = alpha * v2s3_smooth(-0.5, 0, v) * v2s3_smooth(1.5, 0.5, v);
+    const a = strength * alpha * v2s3_smooth(-0.5, 0, v) * v2s3_smooth(1.5, 0.5, v);
     if (a <= 0.004) continue;
     const px = base.px * Math.pow(2, v), py = base.py * Math.pow(2, v);
     const nx = Math.ceil(H.W / 2 / px) + 1, ny = Math.ceil(H.H / 2 / py) + 1;
