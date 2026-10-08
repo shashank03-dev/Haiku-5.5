@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<title>Claude Haiku 5.5: v2-syllable-grid</title>
+<style>
+@font-face { font-family: "Geist"; src: url("../../fonts/Geist-Regular.woff2") format("woff2"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Geist"; src: url("../../fonts/Geist-Medium.woff2") format("woff2"); font-weight: 500; font-display: block; }
+@font-face { font-family: "Geist"; src: url("../../fonts/Geist-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: block; }
+@font-face { font-family: "Geist"; src: url("../../fonts/Geist-Bold.woff2") format("woff2"); font-weight: 700; font-display: block; }
+@font-face { font-family: "Geist Mono"; src: url("../../fonts/GeistMono-Regular.woff2") format("woff2"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Geist Mono"; src: url("../../fonts/GeistMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: block; }
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+#stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+canvas { display: block; width: min(100vw, calc(100vh * 16 / 9)); height: auto; aspect-ratio: 16 / 9; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="c" width="1920" height="1080"></canvas></div>
+<script src="../../engine/core.js"></script>
+<script src="palette.js"></script>
+<script src="scenes/s1_wave.js"></script>
+<script src="scenes/s2_count.js"></script>
+<script src="scenes/s3_zoom.js"></script>
+<script src="scenes/s4_promises.js"></script>
+<script src="scenes/s5_peak.js"></script>
+<script src="scenes/s6_end.js"></script>
+</body>
+</html>

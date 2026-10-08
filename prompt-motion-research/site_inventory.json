@@ -1,0 +1,4462 @@
+{
+ "site": "https://prompt-motion.com",
+ "captured_on": "2026-10-08",
+ "method": "static HTML/RSC/CSS/JS analysis of / and 232 entry pages; live Chromium 141 via Playwright 1.56.1 at 1440x900 and 390x844. Bundled Chromium has no H.264 support, so video playback is NOT verified.",
+ "privacy_note": "Creator titles, handles, and prompt text are deliberately omitted; entries_index holds structural flags and slugs only.",
+ "routes": [
+  {
+   "path": "/",
+   "type": "gallery",
+   "status": 200,
+   "title": "Prompt Motion",
+   "indexable": true
+  },
+  {
+   "path": "/<slug>",
+   "type": "entry (standalone page on direct load; modal over / when opened from a card)",
+   "status": 200,
+   "count": 232,
+   "title": "entry title (no site suffix)",
+   "indexable": true
+  },
+  {
+   "path": "/<unknown>",
+   "type": "not-found",
+   "status": 404,
+   "title": "Not found",
+   "robots": "noindex"
+  },
+  {
+   "path": "/sitemap.xml",
+   "status": 404
+  },
+  {
+   "path": "/manifest.webmanifest",
+   "status": 404
+  },
+  {
+   "path": "/robots.txt",
+   "status": 200,
+   "content_signal": "search=yes, ai-train=no, use=reference",
+   "sitemap_directive": false
+  },
+  {
+   "path": "/about, /submit, /skills, /api, /feed.xml, /rss.xml, /llms.txt",
+   "status": 404
+  }
+ ],
+ "head_metadata": {
+  "home": {
+   "title": "Prompt Motion",
+   "description": "A collection of motion videos made with Claude Opus 5.5, with the prompts and skills behind them.",
+   "og": [
+    "title",
+    "description",
+    "site_name",
+    "image (1200x630 png, 254KB)",
+    "image:alt",
+    "type=website"
+   ],
+   "twitter": [
+    "card=summary_large_image",
+    "creator=@p4nthera_",
+    "title",
+    "description",
+    "image"
+   ],
+   "canonical": null,
+   "og_url": null,
+   "json_ld": 0,
+   "theme_color": null,
+   "icons": [
+    "/favicon.ico (48x48)",
+    "/icon.svg (any)",
+    "/apple-icon.png (180x180)"
+   ]
+  },
+  "entry": {
+   "title_pattern": "<entry title>",
+   "description": "By @<handle>",
+   "og_image": "poster.webp of that entry",
+   "canonical": null,
+   "json_ld": 0
+  },
+  "lang": "en",
+  "viewport": "width=device-width, initial-scale=1",
+  "preconnect": [
+   "https://media.prompt-motion.com"
+  ]
+ },
+ "layout": {
+  "header": {
+   "position": "static",
+   "height_px": 56,
+   "items": [
+    "logo link \"Prompt Motion\" -> /",
+    "button \"Submit\" (opens Submit a video dialog)",
+    "link \"@p4nthera_\" (x.com, new tab)"
+   ]
+  },
+  "main": {
+   "hero": {
+    "h1": "Prompt Motion",
+    "subtitle": "A collection of motion videos made with Claude Opus 5.5, with the prompts and skills behind them.",
+    "signup_card": "form with h2, p#subscribe-note, email input, icon toggle button, hidden honeypot input name=website"
+   },
+   "filter_bar": [
+    "label \"Filter:\"",
+    "radiogroup Prompt | Skill",
+    "combobox Sort (Popular | Recent)",
+    "toggle \"Pause previews\""
+   ],
+   "grid": {
+    "element": "ul > li x 232",
+    "card_link_aria_label": "<title>, by @<handle>",
+    "card_visible_text": "@handle + badge (Prompt|Skill); title is not visible"
+   }
+  },
+  "footer": {
+   "text": [
+    "Videos and prompts belong to their creators, linked on each entry.",
+    "Curated by @p4nthera_"
+   ]
+  }
+ },
+ "copy_static_strings": {
+  "header": [
+   "Prompt Motion",
+   "Submit",
+   "@p4nthera_"
+  ],
+  "hero": [
+   "Prompt Motion",
+   "A collection of motion videos made with Claude Opus 5.5, with the prompts and skills behind them."
+  ],
+  "signup": [
+   "Get new videos and prompts by email",
+   "An email when new ones are added, plus a weekly recap. Unsubscribe anytime.",
+   "Your email (placeholder)",
+   "Subscribe (visually clipped)",
+   "Collapse signup / Open signup (aria-label)",
+   "You're subscribed (success state, from client code)"
+  ],
+  "filter": [
+   "Filter:",
+   "Prompt",
+   "Skill",
+   "Popular",
+   "Recent",
+   "Pause previews"
+  ],
+  "badges": [
+   "Prompt",
+   "Skill"
+  ],
+  "submit_dialog": [
+   "Submit a video",
+   "Know a motion video made with Claude Opus 5.5? Send the post on X.",
+   "The post has a video made with Claude Opus 5.5.",
+   "The prompt or skill behind it is shared publicly.",
+   "Every submission is reviewed by hand before it goes up.",
+   "Post URL (placeholder https://x.com/user/status/...)",
+   "Where's the prompt or skill?",
+   "In the main post",
+   "In the comments",
+   "In a separate post",
+   "Cancel",
+   "Submit",
+   "Close",
+   "Submit another / Done (success state, from client code)"
+  ],
+  "entry": [
+   "All videos",
+   "View post",
+   "(opens in a new tab)",
+   "Prompt",
+   "Copy prompt / Copied",
+   "Show all / Show less",
+   "This prompt was taken directly from @<handle>’s post.",
+   "Model",
+   "Iterations",
+   "Stack",
+   "Effort",
+   "Posted",
+   "Play",
+   "Seek",
+   "Unmute",
+   "Previous entry",
+   "Next entry",
+   "Close"
+  ],
+  "skill_section": [
+   "Skill",
+   "Copy install command / Copied",
+   "View repo"
+  ],
+  "footer": [
+   "Videos and prompts belong to their creators, linked on each entry.",
+   "Curated by"
+  ],
+  "not_found": [
+   "Not found (title)",
+   "404",
+   "This page doesn’t exist",
+   "The link may be broken, or the entry may have been removed from the gallery.",
+   "All videos"
+  ],
+  "metadata_values": {
+   "Model": "Opus 5.5 (all 232)",
+   "Iterations": [
+    "One-shot",
+    "A few rounds",
+    "Many rounds"
+   ],
+   "Effort": [
+    "Max",
+    "High",
+    "Medium"
+   ],
+   "Stack_examples": [
+    "HTML + Playwright",
+    "Remotion",
+    "HyperFrames",
+    "HTML"
+   ]
+  }
+ },
+ "data_model": {
+  "source": "Next.js RSC payload on /; per-entry metadata on /<slug>",
+  "entry_fields": {
+   "slug": "string, <handle>-<6 hex>",
+   "title": "string",
+   "date": "ISO date (YYYY-MM-DD)",
+   "tags": "array of \"prompt\" | \"skill\"",
+   "promptShared": "bool (true for all 232)",
+   "handle": "string",
+   "avatar": "webp URL",
+   "poster": "webp URL",
+   "blur": "inline webp data URI (LQIP)",
+   "preview": "mp4 URL (~4s, muted loop)",
+   "video": "mp4 URL (full)",
+   "width": "int",
+   "height": "int",
+   "prompt": "string or absent (229 present)",
+   "source_url": "x.com status URL (232)",
+   "meta": "Model (232), Posted (232), Iterations (96), Stack (55), Effort (36)"
+  },
+  "counts": {
+   "entries": 232,
+   "tags": {
+    "prompt only": 228,
+    "skill only": 3,
+    "prompt+skill": 1
+   },
+   "unique_handles": 216,
+   "date_range": [
+    "2026-09-23",
+    "2026-10-07"
+   ],
+   "dimensions": {
+    "1920x1080": 149,
+    "1280x720": 37,
+    "1080x1920": 11,
+    "1080x1080": 9,
+    "720x1280": 5,
+    "1440x1440": 4,
+    "1920x982": 2,
+    "1920x1078": 1,
+    "1920x1068": 1,
+    "848x480": 1,
+    "1280x708": 1,
+    "1280x848": 1,
+    "854x480": 1,
+    "1920x972": 1,
+    "1408x1080": 1,
+    "1920x1292": 1,
+    "1080x1350": 1,
+    "1152x720": 1,
+    "886x1920": 1,
+    "720x720": 1,
+    "720x900": 1,
+    "1920x816": 1
+   }
+  },
+  "filter_rules": {
+   "Prompt": "tags includes \"prompt\" AND promptShared (229 shown)",
+   "Skill": "tags includes \"skill\" (4 shown)"
+  },
+  "sort_rules": {
+   "Popular": "server-provided order, no client sort (ranking metric not exposed in payload; not verified)",
+   "Recent": "date descending, ISO string localeCompare"
+  }
+ },
+ "components": [
+  {
+   "name": "SiteHeader",
+   "where": "all pages",
+   "notes": "static, not sticky"
+  },
+  {
+   "name": "HeroSignup",
+   "where": "/",
+   "notes": "h1 + subtitle; email signup card (server action \"subscribe\", not invoked)"
+  },
+  {
+   "name": "FilterBar",
+   "where": "/",
+   "notes": "Radix toggle group (Prompt, Skill), Select (Popular, Recent), pause toggle persisted in localStorage pm:previews"
+  },
+  {
+   "name": "Gallery",
+   "where": "/",
+   "notes": "JS-measured masonry; 232 li items; posters lazy except first 9 (eager, fetchpriority high)"
+  },
+  {
+   "name": "EntryCard",
+   "where": "/",
+   "notes": "Link /<slug>; aspect-ratio from entry width/height; BlurPoster + preview video (IntersectionObserver, 25% threshold); avatar with fallback letter; @handle; badges"
+  },
+  {
+   "name": "EntryModal",
+   "where": "intercepted over / when a card is clicked (parallel route @modal)",
+   "notes": "shared layout animation (layoutId card-/media-<slug>); prev/next, ArrowLeft/ArrowRight, Escape closes; document.title not updated"
+  },
+  {
+   "name": "EntryPage",
+   "where": "/<slug>",
+   "notes": "media player (Play, Seek, Unmute; preload=auto), creator block, h1, prompt or skill section, source line, dl metadata, \"All videos\" back link, footer"
+  },
+  {
+   "name": "SubmitDialog",
+   "where": "header button",
+   "notes": "Post URL (required), where-prompt radio (required), honeypot website; reviewed-by-hand copy; not submitted"
+  },
+  {
+   "name": "NotFound",
+   "where": "unknown slugs",
+   "notes": "status 404, noindex"
+  },
+  {
+   "name": "Footer",
+   "where": "all pages",
+   "notes": "creator-rights line and curator link"
+  }
+ ],
+ "interactive_controls_detected": [
+  {
+   "signature": "a||||||Prompt Motion",
+   "count": 1,
+   "example": null,
+   "inMain": false,
+   "inHeader": true,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "button||dialog-trigger||button||Submit",
+   "count": 1,
+   "example": null,
+   "inMain": false,
+   "inHeader": true,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "a||button||||@p4nthera_",
+   "count": 1,
+   "example": null,
+   "inMain": false,
+   "inHeader": true,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "input|||Email|email|email|",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "button|||Collapse signup|button||Subscribe",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "input||||text|website|",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "div|radiogroup|toggle-group||||PromptSkill",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "button|radio|toggle-group-item||button||Prompt",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "button|radio|toggle-group-item||button||Skill",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "button|combobox|select-trigger|Sort|button||Popular",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "button||toggle||button||Pause previews",
+   "count": 1,
+   "example": null,
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "CARD_LINK (entry card, aria-label varies)",
+   "count": 232,
+   "example": "/stephanlivera-df17a2",
+   "inMain": true,
+   "inHeader": false,
+   "inFooter": false,
+   "inDialog": false
+  },
+  {
+   "signature": "a||||||@p4nthera_",
+   "count": 1,
+   "example": null,
+   "inMain": false,
+   "inHeader": false,
+   "inFooter": true,
+   "inDialog": false
+  }
+ ],
+ "responsive": {
+  "desktop_1440": {
+   "columns": 4,
+   "card_px": {
+    "w": 319,
+    "h": 223
+   },
+   "page_height_px": 17489,
+   "h_overflow_px": 0
+  },
+  "mobile_390": {
+   "columns": 1,
+   "card_px": [
+    358,
+    245
+   ],
+   "page_height_px": 72813,
+   "h_overflow_px": 0,
+   "h1_px": "24px",
+   "tap_targets_px": {
+    "subscribe_toggle": "86x20",
+    "submit": "65x28",
+    "x_link": "113x28",
+    "chips_sort_pause": "32px tall"
+   }
+  },
+  "entry_page_390": {
+   "video_full_bleed": true,
+   "video_box_px": {
+    "w": 390,
+    "h": 219,
+    "y": 116
+   }
+  }
+ },
+ "design_tokens": {
+  "color_mode": "light only (color-scheme: light; dark: variants compiled under :where(.never-dark ...) and never apply)",
+  "colors_light": {
+   "--color-black": "#000",
+   "--color-white": "#fff",
+   "--background": "#fff",
+   "--foreground": "#111",
+   "--card": "#fff",
+   "--card-foreground": "#111",
+   "--popover": "#fff",
+   "--popover-foreground": "#111",
+   "--primary": "#111",
+   "--primary-foreground": "#fff",
+   "--secondary": "#f2f2f2",
+   "--secondary-foreground": "#111",
+   "--muted": "#f2f2f2",
+   "--muted-foreground": "#6b6b6b",
+   "--accent": "#f2f2f2",
+   "--accent-foreground": "#111",
+   "--destructive": "#e40014",
+   "--border": "#e5e5e5",
+   "--input": "#e5e5e5",
+   "--ring": "#c4c4c4",
+   "--focus": "var(--foreground)"
+  },
+  "radius": {
+   "--radius": ".625rem",
+   "radius_md_computed": "0.8 x --radius (8px)",
+   "radius_3xl_computed": "2.2 x --radius (22px)",
+   "card_inline_radius": "12px",
+   "chip": "full pill (9999px)"
+  },
+  "fonts": {
+   "sans": "Geist (variable 100-900, normal style), subsets: 5 woff2 files; fallback \"Geist Fallback\"",
+   "mono": "Geist Mono (variable 100-900), subsets: 6 woff2 files; declared, no element on / or entry pages computes it"
+  },
+  "font_files_downloaded": [
+   "4fa387ec64143e14-s.2tuy5pz7dlieh.woff2",
+   "53b9e256198e5412-s.390ncx5urfkfu.woff2",
+   "5ce348bf30bf5439-s.31988l_ccedte.woff2",
+   "6306c77e7c8268e4-s.2dbetqa9o8jxf.woff2",
+   "7178b3e590c64307-s.21jp631_3pja2.woff2",
+   "797e433ab948586e-s.p.0r6juujl39pe6.woff2",
+   "7d817b4c03b0c5f1-s.1uyisp29ctx0d.woff2",
+   "8a480f0b521d4e75-s.1qq4vpdcun5oj.woff2",
+   "bbc41e54d2fcbd21-s.1rgnod-3esatf.woff2",
+   "caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2",
+   "fef07dbb0973bf53-s.3p2_lha1f2xer.woff2"
+  ],
+  "spacing_base": ".25rem",
+  "type_scale": {
+   "--text-xs": ".75rem",
+   "--text-sm": ".875rem",
+   "--text-base": "1rem",
+   "--text-lg": "1.125rem",
+   "--text-xl": "1.25rem",
+   "--text-2xl": "1.5rem",
+   "--text-3xl": "1.875rem"
+  },
+  "font_weights": {
+   "normal": "400",
+   "medium": "500"
+  },
+  "tracking_tight": "-.025em",
+  "blur_scale": {
+   "--blur-xs": "4px",
+   "--blur-sm": "8px",
+   "--blur-lg": "16px",
+   "--blur-xl": "24px"
+  },
+  "transitions": {
+   "default_duration": ".15s",
+   "default_timing": "cubic-bezier(.4, 0, .2, 1)",
+   "ease_out_quart": "cubic-bezier(.25, 1, .5, 1)",
+   "observed_durations_s": [
+    ".1",
+    ".15",
+    ".2",
+    ".3",
+    ".4",
+    ".5",
+    ".6"
+   ],
+   "modal_shared_layout": "spring, bounce 0, duration 0.45s (Framer Motion)",
+   "stepping_between_entries": "duration 0 (instant)",
+   "reduced_motion": "transition-duration .01ms !important; shimmer disabled; previews default paused"
+  },
+  "focus": {
+   "global": ":focus-visible { outline: 2px solid var(--focus); outline-offset: 3px }",
+   "utility_controls": "focus-visible:ring-3 ring-ring/50 + border-ring (about 1.3:1 halo, 1.7:1 border on white)",
+   "entry_card": "group-focus-visible: 2px solid var(--focus) border ring, -inset 5px"
+  },
+  "hover": {
+   "card": "group-hover ring black/15; handle text -> foreground",
+   "gated_by": "(hover:hover)"
+  },
+  "breakpoints_media": {
+   "sm": "40rem (640px)",
+   "md": "48rem (768px)",
+   "lg": "64rem (1024px)",
+   "xl": "80rem (1280px)",
+   "2xl": "96rem (1536px)"
+  },
+  "container_queries_masonry": {
+   "2_cols": ">= 560px",
+   "3_cols": ">= 900px",
+   "4_cols": ">= 1160px"
+  },
+  "layout": {
+   "max_width_header_main": "1400px",
+   "gutter_mobile": "16px (px-4)",
+   "gutter_sm": "24px (sm:px-6)",
+   "gutter_lg": "32px (lg:px-8)",
+   "header_height": "56px (h-14)",
+   "masonry_gap": "20px"
+  },
+  "keyframes": [
+   "enter",
+   "exit",
+   "tw-shimmer"
+  ]
+ },
+ "contrast_ratios_wcag": {
+  "foreground on background": "18.88:1",
+  "muted-foreground on background #6b6b6b": "5.33:1",
+  "muted-foreground on muted #f2f2f2": "4.76:1",
+  "destructive on background": "4.87:1",
+  "ring halo (ring/50) on background": "1.30:1",
+  "border/ring #c4c4c4 on background": "1.74:1",
+  "chip border #e5e5e5 on background": "1.26:1"
+ },
+ "media": {
+  "host": "https://media.prompt-motion.com",
+  "url_pattern": "/<slug>/{poster|preview|video}.<hash>.{webp|mp4}; avatar.<hash>.webp",
+  "cache_control": "public, max-age=31536000, immutable",
+  "sizes": {
+   "preview": {
+    "n": 232,
+    "ok": 232,
+    "errors": 0,
+    "total_MB": 30.83,
+    "median_KB": 95.7,
+    "max_MB": 0.85,
+    "types": [
+     "video/mp4"
+    ],
+    "cache": [
+     "public, max-age=31536000, immutable"
+    ]
+   },
+   "poster": {
+    "n": 232,
+    "ok": 232,
+    "errors": 0,
+    "total_MB": 5.0,
+    "median_KB": 14.4,
+    "max_MB": 0.27,
+    "types": [
+     "image/webp"
+    ],
+    "cache": [
+     "public, max-age=31536000, immutable"
+    ]
+   },
+   "video": {
+    "n": 232,
+    "ok": 232,
+    "errors": 0,
+    "total_MB": 2710.16,
+    "median_KB": 6991.1,
+    "max_MB": 119.4,
+    "types": [
+     "video/mp4"
+    ],
+    "cache": [
+     "public, max-age=31536000, immutable"
+    ]
+   },
+   "avatar": {
+    "n": 232,
+    "ok": 232,
+    "errors": 0,
+    "total_MB": 0.56,
+    "median_KB": 2.3,
+    "max_MB": 0.01,
+    "types": [
+     "image/webp"
+    ],
+    "cache": [
+     "public, max-age=31536000, immutable"
+    ]
+   }
+  },
+  "full_video_distribution": {
+   "top": [
+    [
+     "ryzoft-4f85bd",
+     119400349
+    ],
+    [
+     "blueoctopusai-dd17bd",
+     80915826
+    ],
+    [
+     "rames-jusso-589f80",
+     64358191
+    ],
+    [
+     "spearwtf-3c1fd1",
+     60259078
+    ],
+    [
+     "rebutonepress-810f78",
+     59516887
+    ],
+    [
+     "faroukzy-9ff23e",
+     54266996
+    ],
+    [
+     "emollick-8661a8",
+     51131704
+    ],
+    [
+     "ajith-io-4c248f",
+     40846329
+    ],
+    [
+     "abderrahmen-g-9e8ed0",
+     38269606
+    ],
+    [
+     "jake11moran-a269c4",
+     37756817
+    ]
+   ],
+   "gt10MB": 85,
+   "gt25MB": 31,
+   "gt50MB": 7,
+   "totalGB": 2.71
+  },
+  "video_codec": "H.264 (avc1) + AAC for full video; H.264 video only for preview; no WebM/AV1 sources",
+  "sample_probe": {
+   "preview": {
+    "codec": "avc1",
+    "approx_px": "721x406",
+    "duration_s": 4.0,
+    "bytes": 98171,
+    "audio": false,
+    "faststart": true
+   },
+   "full": {
+    "codec": "avc1 + mp4a",
+    "px": "1920x1080",
+    "duration_s": 15.06,
+    "bytes": 6374918,
+    "faststart": true
+   }
+  }
+ },
+ "behaviors_verified_live": {
+  "card_click": "opens modal over grid at /<slug>; document.title stays Prompt Motion; 232 cards still mounted",
+  "escape": "returns to / and closes modal",
+  "arrow_keys_in_modal": "ArrowRight and ArrowLeft step to next/previous entry in current order",
+  "next_previous_buttons": "aria-label \"Next entry\" / \"Previous entry\"",
+  "filter_skill": "4 cards; URL unchanged",
+  "filter_prompt": "229 cards; URL unchanged",
+  "sort_recent": "date descending (verified against data)",
+  "pause_toggle": "localStorage pm:previews = paused|playing; state survives reload; reduced-motion default = on",
+  "dark_mode": "stays light under prefers-color-scheme: dark",
+  "copy_prompt": "shows Copied feedback",
+  "show_all": "expands clamped prompt (216px to 1656px for 2,711 chars)",
+  "signup_collapse": "aria-expanded toggles; label becomes Open signup; input hidden",
+  "submit_dialog": "opens; Escape closes; not submitted",
+  "keyboard_tab_order": [
+   "logo",
+   "Submit",
+   "X link",
+   "email input",
+   "Subscribe toggle",
+   "Prompt chip",
+   "Popular select",
+   "Pause previews",
+   "card links..."
+  ]
+ },
+ "not_verified": [
+  "video playback and hover/in-view preview playback (H.264 unsupported in bundled Chromium)",
+  "LCP value (no entries recorded)",
+  "actual bytes transferred by preload=auto on entry page",
+  "ranking metric behind Popular order",
+  "email signup and submit-dialog submission (intentionally not exercised)"
+ ],
+ "entries_index": [
+  {
+   "slug": "stephanlivera-df17a2",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "twoclipping-5cba86",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1440,
+   "height": 1440,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "shneural-2abdfa",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ajith-io-b5626e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "antonio-kodheli-490109",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-06",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "twoclipping-221cab",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1440,
+   "height": 1440,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "himanshutwtxs-5f4b43",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "gabrielbuzziv-4ff0c6",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "lexnlin-038035",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-02",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ror-fly-9950f1",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "notdwd-c2037d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "thismacapital-dfba20",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "ajith-io-c52e09",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "twoclipping-6dd14e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "samuel-yostt-891f87",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-01",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "emollick-8661a8",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "lexnlin-6161a6",
+   "tags": [
+    "skill"
+   ],
+   "date": "2026-10-04",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": false,
+   "source_line_present": false,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "steventey-0d20e4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "alex-prompter-1ea044",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "majin-appsheet-2d3c1a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "tdinh-me-815acb",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "thayto-dev-44b911",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "sab8a-364a5a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "anthonyriera-9b1b2a",
+   "tags": [
+    "skill"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": false,
+   "source_line_present": false,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "davidmarcus-a28a60",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "ultimaxbt-bbebf5",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-06",
+   "width": 1920,
+   "height": 1078,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "itsolelehmann-e47532",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "linearuncle-5d2bae",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "jacksonfall-54b2ac",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1068,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "kloss-xyz-fe0c31",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "jasonzhou1993-8595e0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "robj3d3-b18fad",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-05",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "ho-ba-f3f0e9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "itisrazak-3ad902",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 848,
+   "height": 480,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "notdwd-7de38a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "viktoroddy-98c1d8",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ismailfahmi-557268",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "melvynx-6cde6c",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "rossaxbt-3085b7",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-07",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "tequilafunks-97f6c9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "sudo-kiran-49176d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "lukasersil-0ed38e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "nft-chen-5f8bb0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "axtonliu-0b861d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "gizakdag-cf4ae6",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "mandelduck-95fd08",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 708,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "gorden-sun-041f56",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-30",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "ajith-io-4c248f",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "polydao-7a572b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "ajith-io-ea7f2d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ayushunleashed-ece3e3",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "chatgptastra-0d95c7",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "monokern-ade5b6",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "kloss-xyz-15182a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "0xnfrith-5be616",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "math-files-39c9d0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "hanifproduktif-54bdee",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "nikolajankovic-ce4ff4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1280,
+   "height": 848,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ddryo-loos-300829",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-02",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "eyishazyer-af035b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "blue-clarity-ef56d0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "roundtablespace-d3a1be",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "1littlecoder-9fef89",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "sayan-shanky-f850d8",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 982,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "yunn260414-60d996",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "brainextends-e19ac3",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "pankajkumar-dev-0bee87",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "sudo-kiran-b055de",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-29",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "raphaelaubryy-4b137e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "jake11moran-a269c4",
+   "tags": [
+    "skill"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": false,
+   "source_line_present": false,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "arjunsh1607-93005d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "codestackr-c071bf",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "hqmank-7c61f1",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ratheejaisal-1f4538",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "tankazunori0914-0fc886",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-02",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "prasad-pilla-2c0cba",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "dale-vaz-cc612a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "sarut0bisasuke-cefa43",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "maxalexweber-67688b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "ezshine-c90d73",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "samuel-spitz-974923",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "tak3sh8-be5012",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "hbcoop-de365c",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-05",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "aistocksavvy-3fb9f5",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "techyoutbe-945b56",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "micheleharmonic-77628e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "lemomo-ai-0d9cff",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "triglyceee-bd5b08",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 854,
+   "height": 480,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "zheke-38deff",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "deifosv-04e4d3",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "sudeepsd-1a3485",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "visheshbaghell-3aba37",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "imthatcarlos-e04bfe",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "paulo-kombucha-96431c",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "gigabit-million-16b3a0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "sudo-kiran-6609ed",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "demonugc-4c5753",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1440,
+   "height": 1440,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "jhylee95-e1152f",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "sachaarbonel-8f14f4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "gdgtify-287ddf",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "ercankeskinx-ec2568",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 972,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "influencer-seo-ce8c33",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-29",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "agonaliu-466a8f",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "daniel-haida-8691d4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "bthreeagency-b9b8d9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1408,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "henkvaness-0e06af",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "ndhabarde11-f155b4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "topi-003-9ca6b5",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "rendesr-86be44",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "bogdandragomir-35e024",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "en-ra-81c6dd",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1440,
+   "height": 1440,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "jesscaroline7-1ff7cb",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "theviableedge-9065be",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "0xfemyn-e114d3",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "misbahsy-80eaec",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "reyzostyle-b55864",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-30",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "mdaman010-e7226a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 982,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "motiondsgnr-9dcfa6",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "astrodevil-3f2054",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "hoyoyoda-3a5c08",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "macrohou-33959d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "madhav-xo-f97f20",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "buildfastwithai-ed9447",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "rames-jusso-589f80",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "topi-003-b0e12c",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ik-builds-b8bdcf",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "wani-shola-16ca7a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "manuelogomigo-f33ca9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "mrtanviir-132457",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "0xevinho-3777d8",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "chrisjdimarco-f068db",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1292,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "jayscambler-3f8889",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "utopyaszx-1b2f94",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "aschapmann-131210",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "marklaunches-3b9492",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1080,
+   "height": 1350,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "web3wesley-7bb108",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "reflex-cloud-72ffe5",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "1stnoel-c20a89",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ryzoft-4f85bd",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "kamstudiolabs-c9bb28",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "devius-maximus-beab45",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-29",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "elliot-garreffa-f334bc",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "adamdesgns-478d6d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "andginja-333d32",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "l3d1c-0e35a3",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "wozu-co-242285",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-01",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "buildfastwithai-53234e",
+   "tags": [
+    "prompt",
+    "skill"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "allforbigfire-86ff3c",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 720,
+   "height": 1280,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "tstfully-0aa6b4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "bizibeast-10f264",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "heyiammallik-e72d17",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "sudiyasa-f48ac9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "davidshulmanfl-371638",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "demitiyageekzen-7770ad",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "faroukzy-9ff23e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "m1n9-k7-ff9ab9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "quickdesignio-dd93d0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "rebutonepress-810f78",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "slvdev-64c45a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "sudo-kiran-4f8b59",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "xelandre-363f00",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "justincooperman-e7bbc4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "henkpoley-3d3407",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-27",
+   "width": 1152,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "fractadev-149adc",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "gautam-mer1-2ae354",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 720,
+   "height": 1280,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "levabashidze-2d713a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "miskinho-443898",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "zaqailo-212ad3",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "crazyalphaaa-bc7e75",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "fionntobin-97b7af",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "francoxavier33-d2dfd2",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 886,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "itsuki-dev-10942d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "kangaroohere-b10f8d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "kyonax-on-tech-aabc1d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "loicrambo-ad6830",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "madebyjmayala-b9204d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "tolgayhickiran-e90799",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "oliahmed205-3e31c4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "aisongman-71ffac",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "danilowm-d3720d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "kmasiff-cc72cb",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "pluginplay-3d4006",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "rammanq-f5a90f",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 720,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "robvjourney-ce3e1a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "vanshwtfff-db0466",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "3xtihor-0f6911",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "amol909s-27533e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "cansincengiz-me-cf68dd",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ghinaiya-nirmal-5d8fec",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "johnsavage-ai-b091c0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "leonkohli-6dc01b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "marouanegazouzi-6071d5",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "mehul4795-4a7007",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "safarkhanshuvo-ffd52d",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "sahildesigner23-ee3155",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "abderrahmen-g-9e8ed0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "palashbagchi11-0a4b6b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "x4b47x-9cc84f",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 720,
+   "height": 1280,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "kamstudiolabs-447565",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "grace-sunnyy-29bc61",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-10-03",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "blueoctopusai-dd17bd",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-30",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "apoorvjain25-d24184",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-29",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "deebeeeff-50fcd0",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-29",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "listudio-820c7b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "thilina-a-891c09",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-28",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "amitsingha89-150378",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "blushpetal795-0c85c2",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "ceowinkz-7c776b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "ibrahimwasim240-809370",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "jazzen-chen-4542ae",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "lester-tyy-f897f7",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "majorbaguette-fb11d7",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "nolkeeg-bf062e",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "souravbhar871-61f424",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "spearwtf-3c1fd1",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "teslachartz-c58b32",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-26",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "ai-baymax-0ef9dd",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "anas0ra-e57aea",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 720,
+   "height": 900,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "iammxfschr-d68f90",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "kikelopezdesign-7cc9e8",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "leadnotifi-e83f94",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "rneayan-474bcf",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "rneayan-ea6129",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "samaote-5e2fc2",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_effort"
+   ]
+  },
+  {
+   "slug": "shinskinakamoto-20190b",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "umangratani-57f86a",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-25",
+   "width": 1280,
+   "height": 720,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "anilraok-eff262",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1080,
+   "height": 1920,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "kantamk-61f410",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 720,
+   "height": 1280,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations"
+   ]
+  },
+  {
+   "slug": "parkerrex-1a54fe",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-24",
+   "width": 1080,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted",
+    "meta_iterations",
+    "meta_stack"
+   ]
+  },
+  {
+   "slug": "charlesmendez-73b6e4",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1920,
+   "height": 1080,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "gonzalomacagno-2de1a9",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 720,
+   "height": 1280,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  },
+  {
+   "slug": "kamstudiolabs-0b0824",
+   "tags": [
+    "prompt"
+   ],
+   "date": "2026-09-23",
+   "width": 1920,
+   "height": 816,
+   "prompt_present": true,
+   "source_line_present": true,
+   "meta_rows": [
+    "Model",
+    "Posted"
+   ]
+  }
+ ]
+}
