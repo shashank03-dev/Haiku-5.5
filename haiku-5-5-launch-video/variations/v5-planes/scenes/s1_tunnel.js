@@ -128,8 +128,9 @@
       const i = order[k];
       if (i === FRONT) { drawFront(ctx, t, fade); continue; }
       const c = cards[i], z = zs[i], s = F / z;
-      // fade in out of the far fog and out as a card passes the lens
-      const alpha = H.ramp(z, Z_NEAR, 560) * (1 - H.ramp(z, 2000, 3700)) * fade;
+      // cards dissolve before they reach the front plane, so they never cover the 5.5 card;
+      // the far end fades into the fog
+      const alpha = H.ramp(z, 640, 900) * (1 - H.ramp(z, 2000, 3700)) * fade;
       card(ctx, CX + (c.x - camX) * s, CY + (c.y - camY) * s, s, TW, TH, TR, c.roll,
         alpha, V.dark.surface, c.label, TLABEL, V.dark.text);
     }

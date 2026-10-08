@@ -66,7 +66,8 @@
     ctx.fillRect(cx + 4, Y - 46, 30, 56);
   }
 
-  H.scene({ id: 'v1_s3_flash', start: 10, end: 15, draw(ctx, t, T) {
+  H.scene({ id: 'v1_s3_flash', start: 10, end: 15, draw(ctx, t, local) {
+    const T = local + 1e-6; // float guard: 10.1 - 10 is a hair under 0.1, so the strobe ends on its frame
     if (T < 0 || T >= 5) return;
     if (T < 0.1) return bg(ctx, L.bg);              // 10.0: white strobe, the pattern interrupt
     if (T < 0.5) return bg(ctx, D.bg);              // light to dark

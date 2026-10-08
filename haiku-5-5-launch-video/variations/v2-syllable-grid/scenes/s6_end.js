@@ -51,7 +51,7 @@
     const total = H.measure(ctx, HEAD, HS, 600, H.FONT.sans, HT);
     const x0 = H.W / 2 - total / 2;
     let prefix = '';
-    segs.forEach(([s, c], i) => {
+    segs.forEach(([s, c]) => {
       words.push({ s, c, x: x0 + H.measure(ctx, prefix, HS, 600, H.FONT.sans, HT) });
       prefix += s;
     });
@@ -85,7 +85,7 @@
     id: "v2_s6_end",
     start: 25,
     end: 30,
-    draw(ctx, t) {
+    draw(ctx, t, local, dur) {
       if (t < T0) return;
       ensure(ctx);
       const l = t - T0;
@@ -93,11 +93,15 @@
       ctx.fillStyle = V.dark.bg;
       ctx.fillRect(0, 0, H.W, H.H);
 
-      // Converge: the field cells move into the seal and shrink away behind it.
+      // Converge: the field cells move into the seal and shrink away behind it. Dark cells are drawn
+      // first so the accent cells stay whole on top of them.
       if (l < 0.75) {
-        for (const c of field) {
-          const e = H.easeInOutCubic(H.clamp((l - c.dl) / 0.5));
-          cellRect(ctx, c.x0 + (SX - c.x0) * e, c.y0 + (SY - c.y0) * e, 1 - 0.85 * e, c.ac ? V.accent : V.dark.surface);
+        for (const pass of [false, true]) {
+          for (const c of field) {
+            if (c.ac !== pass) continue;
+            const e = H.easeInOutCubic(H.clamp((l - c.dl) / 0.5));
+            cellRect(ctx, c.x0 + (SX - c.x0) * e, c.y0 + (SY - c.y0) * e, 1 - 0.85 * e, pass ? V.accent : V.dark.surface);
+          }
         }
       }
 

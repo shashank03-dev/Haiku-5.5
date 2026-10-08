@@ -31,10 +31,10 @@
     return frames;
   }
 
-  // Target: a centre cell and three rings (radius 5, 3.5, 2). Rings appear inner first, then the inner
-  // ring and the middle ring pulse in accent on steps 4 and 5.
+  // Target: a centre cell and three one-cell rings (radius 5, 3, and a 3 x 3 ring at 1.2). Rings appear
+  // inner first, then the inner ring and the middle ring pulse in accent on steps 4 and 5.
   function targetFrames() {
-    const RADII = [5, 3.5, 2];               // outer, middle, inner
+    const RADII = [5, 3, 1.2];               // outer, middle, inner
     const APPEAR = [3, 2, 1];                // step at which each ring turns on
     const frames = [];
     for (let k = 0; k < 6; k++) {
@@ -42,7 +42,7 @@
       for (let v = -5; v <= 5; v++) for (let u = -5; u <= 5; u++) {
         const r = Math.hypot(u, v);
         for (let idx = 0; idx < 3; idx++) {
-          if (Math.abs(r - RADII[idx]) < 0.6) {
+          if (Math.abs(r - RADII[idx]) <= 0.5) {
             let key = null;
             if (k >= APPEAR[idx]) key = 'hi';
             if ((k === 4 && idx === 2) || (k === 5 && idx === 1)) key = 'ac';
@@ -56,8 +56,9 @@
   }
 
   // Loop: a figure-eight track (x = 4.8 cos th, y = 3.2 sin 2th) with a comet that runs once around it.
+  // 240 samples keep the rounded track 8-connected, so the loop has no gaps.
   function loopFrames() {
-    const N = 120, track = [];
+    const N = 240, track = [];
     for (let s = 0; s < N; s++) {
       const th = s / N * 2 * Math.PI;
       track.push([Math.round(4.8 * Math.cos(th)), Math.round(3.2 * Math.sin(2 * th))]);
@@ -66,8 +67,8 @@
     for (let k = 0; k < 6; k++) {
       const cells = new Map();
       for (const [u, v] of track) cells.set(u + ',' + v, [u, v, 'lo']);
-      const head = (k * 20) % N;               // the comet moves 20 samples (60 deg) per step
-      for (let d = 14; d >= 0; d--) {
+      const head = (k * 40) % N;               // the comet moves 40 samples (60 deg) per step
+      for (let d = 28; d >= 0; d--) {
         const [u, v] = track[(head - d + N) % N];
         cells.set(u + ',' + v, [u, v, d === 0 ? 'hi' : 'ac']);
       }
@@ -129,7 +130,7 @@
     id: "v2_s4_promises",
     start: 15,
     end: 20,
-    draw(ctx, t) {
+    draw(ctx, t, local, dur) {
       if (t < T0 || t >= T1) return;
       ensure(ctx);
       ctx.save();

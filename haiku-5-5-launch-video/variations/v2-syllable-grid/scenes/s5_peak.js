@@ -3,7 +3,7 @@
 (function () {
   const T0 = 20.0, T1 = 25.0, STEP = 0.25;
   const PITCH = 48, CELL = 36, RAD = 7, NX = 39, NY = 21;
-  const GLYPH = 720;                         // size of the "5.5" mask, px
+  const GLYPH = 820;                         // size of the "5.5" mask, px
   const rnd = H.prng(0x5a5);
 
   // Built on first draw, after the fonts have loaded.
@@ -61,7 +61,7 @@
     id: "v2_s5_peak",
     start: 20,
     end: 25,
-    draw(ctx, t) {
+    draw(ctx, t, local, dur) {
       if (t < T0 || t >= T1) return;
       ensure();
       const l = t - T0;
