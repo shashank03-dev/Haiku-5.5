@@ -17,6 +17,13 @@ let v2s2_lay = null;
 // Tile geometry is measured once, on the first frame, when the fonts are ready.
 function v2s2_layout(ctx) {
   if (v2s2_lay) return v2s2_lay;
+  // The 12 x 7 field, precomputed once: centre, row and key (r * 12 + c) for each cell.
+  const field = [];
+  for (let r = 0; r < 7; r++) {
+    for (let c = 0; c < 12; c++) {
+      field.push({ r, key: r * 12 + c, cx: 8 + c * 160 + v2s2_CW / 2, cy: 9 + r * 154 + v2s2_CH / 2 });
+    }
+  }
   const tiles = [], srcKeys = new Set();
   for (let ri = 0; ri < 3; ri++) {
     const words = v2s2_poem[ri];
@@ -35,7 +42,7 @@ function v2s2_layout(ctx) {
       x += widths[i] + v2s2_GAP;
     });
   }
-  return (v2s2_lay = { tiles, srcKeys });
+  return (v2s2_lay = { field, tiles, srcKeys });
 }
 
 function v2s2_frame(ctx, t) {
@@ -46,18 +53,15 @@ function v2s2_frame(ctx, t) {
 
   // Field cells that do not become tiles collapse, rows nearest the poem first.
   ctx.fillStyle = C.surface;
-  for (let r = 0; r < 7; r++) {
-    for (let c = 0; c < 12; c++) {
-      if (L.srcKeys.has(r * 12 + c)) continue;
-      // Rows 2 to 4 (the poem's rows) are gone by 5.2, before the morph reaches them; outer rows lag a little.
-      const delay = 0.04 * Math.max(0, Math.abs(r - 3) - 1);
-      const s = 1 - H.easeInOutCubic(H.ramp(t, 5.0 + delay, 5.2 + delay));
-      if (s <= 0) continue;
-      const w = v2s2_CW * s, h = v2s2_CH * s;
-      const cx = 8 + c * 160 + v2s2_CW / 2, cy = 9 + r * 154 + v2s2_CH / 2;
-      H.rrect(ctx, cx - w / 2, cy - h / 2, w, h, Math.min(16, w / 2, h / 2));
-      ctx.fill();
-    }
+  for (const f of L.field) {
+    if (L.srcKeys.has(f.key)) continue;
+    // Rows 2 to 4 (the poem's rows) are gone by 5.2, before the morph reaches them; outer rows lag a little.
+    const delay = 0.04 * Math.max(0, Math.abs(f.r - 3) - 1);
+    const s = 1 - H.easeInOutCubic(H.ramp(t, 5.0 + delay, 5.2 + delay));
+    if (s <= 0) continue;
+    const w = v2s2_CW * s, h = v2s2_CH * s;
+    H.rrect(ctx, f.cx - w / 2, f.cy - h / 2, w, h, Math.min(16, w / 2, h / 2));
+    ctx.fill();
   }
 
   // Source cells morph into tiles (x and width only; the rows share the field's y).
@@ -67,7 +71,7 @@ function v2s2_frame(ctx, t) {
     const cx = H.lerp(tile.sx, tile.cx, morph);
     const w = H.lerp(v2s2_CW, tile.w, morph);
     const pp = H.ramp(t, tile.pop, tile.pop + 0.25);
-    const sc = H.lerp(0.9, 1, H.easeOutSoft(pp));
+    const sc = 1 + 0.08 * Math.sin(Math.PI * pp);  // pop: a bump that starts and ends at scale 1
     const rr = Math.min(18, w / 2, v2s2_CH / 2);
     ctx.save();
     ctx.translate(cx, tile.cy);
@@ -91,7 +95,21 @@ function v2s2_frame(ctx, t) {
   }
 }
 
+// Frozen poem frame, built once during the static hold (from 9.0) so that the 10.0 whip in
+// v2_s3_zoom does not pay for it on the interrupt frame.
+let v2s2_frozen = null;
+function v2s2_getFrozen() {
+  if (!v2s2_frozen) {
+    const c = document.createElement('canvas');
+    c.width = H.W; c.height = H.H;
+    v2s2_frame(c.getContext('2d'), 9.99);
+    v2s2_frozen = c;
+  }
+  return v2s2_frozen;
+}
+
 H.scene({ id: "v2_s2_count", start: 5, end: 10, draw(ctx, t, local, dur) {
   if (t < 5 || t >= 10) return;
+  if (t >= 9.0) v2s2_getFrozen();
   v2s2_frame(ctx, t);
 } });
