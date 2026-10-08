@@ -1,13 +1,14 @@
 // v5_s1_tunnel: Parallax Planes, opening (0 to 5 s).
-// A ring of cards whips past the camera. The 5.5 card lands in front at 1.0, the camera
-// steadies by 2.0 and then makes short eased moves. The front card flips to "Haiku 5.5" at 2.5.
+// A ring of cards whips past the camera and twists as it settles. The 5.5 card lands in front
+// at 1.0, the camera steadies by 2.0 and keeps swaying, the ring keeps turning slowly, and the
+// front card flips to "Haiku 5.5" at 2.5.
 (function () {
   const START = 0, END = 5;
   const F = 1000;                              // focal length: sx = W/2 + (x - camX) * F / z
   const CX = H.W / 2, CY = H.H / 2;
   const TUNNEL_LEN = 3600, Z_NEAR = 170;       // depth band the tunnel wraps through
   const SPEED0 = 4200, TAU = 0.7;              // entry speed (units/s) and how fast it settles
-  const N = 28;                                // tunnel cards
+  const N = 34;                                // tunnel cards
   const TW = 340, TH = 200, TR = 22, TLABEL = 56;
   const LABELS = ['Fast.', 'Sharp.', 'Everyday.', 'Haiku', 'Claude', '5.5'];
   const FW = 600, FH = 360, FR = 30;           // front card
@@ -33,6 +34,8 @@
 
   // Forward distance: fast at 0, settling to almost still by 2.0.
   const travel = t => SPEED0 * TAU * (1 - Math.exp(-t / TAU));
+  // Ring twist: a fast turn with the entry move, then a slow continuous turn.
+  const twist = t => 0.7 * (1 - Math.exp(-t / 1.0)) + 0.07 * t;
 
   // Eased keyframes: hold the first value, ease between keys, hold the last.
   function keyed(t, keys) {
@@ -116,6 +119,7 @@
 
     const camX = keyed(t, CAM_X), camY = keyed(t, CAM_Y);
     const D = travel(t);
+    const rot = twist(t), cr = Math.cos(rot), sr = Math.sin(rot);
     for (let i = 0; i < N; i++) {
       let m = (cards[i].zb - D) % TUNNEL_LEN;
       if (m < 0) m += TUNNEL_LEN;
@@ -128,10 +132,13 @@
       const i = order[k];
       if (i === FRONT) { drawFront(ctx, t, fade); continue; }
       const c = cards[i], z = zs[i], s = F / z;
+      // ring position after the twist
+      const wx = c.x * cr - c.y * sr, wy = c.x * sr + c.y * cr;
       // cards dissolve before they reach the front plane, so they never cover the 5.5 card;
       // the far end fades into the fog
       const alpha = H.ramp(z, 640, 900) * (1 - H.ramp(z, 2000, 3700)) * fade;
-      card(ctx, CX + (c.x - camX) * s, CY + (c.y - camY) * s, s, TW, TH, TR, c.roll,
+      const roll = c.roll + 0.04 * Math.sin(t * 1.3 + i);
+      card(ctx, CX + (wx - camX) * s, CY + (wy - camY) * s, s, TW, TH, TR, roll,
         alpha, V.dark.surface, c.label, TLABEL, V.dark.text);
     }
   }

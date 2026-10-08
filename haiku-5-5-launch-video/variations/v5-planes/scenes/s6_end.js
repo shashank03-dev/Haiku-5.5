@@ -1,5 +1,6 @@
 // v5_s6_end (25.0 to 30.0). The camera settles to the front plane. A card flies in from depth over
-// 25.0 to 26.0. "Meet Haiku 5.5." mask-rises on the card at 25.5, and the caption fades in at 27.0.
+// 25.0 to 26.0. Copy-bank word cards ("Fast.", "Sharp.", "Everyday.") pass behind it from the 25.0 cut
+// and clear by 26.2. "Meet Haiku 5.5." mask-rises on the card at 25.5, and the caption fades in at 27.0.
 // From 27.6 the frame is still and readable on graphite (the brand colour) to 30.0.
 (function () {
   const FOCAL = 1000;
@@ -8,7 +9,6 @@
   const HEAD_A = 25.5;                    // headline, on the grid
   const CAP_IN = 27.0;                    // caption, on the grid
   const Z_FROM = 2600;                    // start depth of the front card
-  const Z_NEAR = 1100, Z_FAR = 3700, SPAN = Z_FAR - Z_NEAR;
 
   const CARD = { w: 1400, h: 560, r: 40 };
   const WORDS = ['Meet', 'Haiku', '5.5.'];  // copy: "Meet Haiku 5.5."; the last word takes the accent
@@ -16,27 +16,49 @@
   const HEAD = { weight: 600, base: -10, max: 1240, size0: 150 };
   const CAP = { text: 'claude-haiku-5-5', size: 40, weight: 500, base: 118, track: 3.2 };
 
-  // Flight cards that clear the frame during the settle.
-  const FLOW = [];
+  // Copy-bank word cards. Their depth band (2800 to 3900) sits behind the front card, which
+  // never goes deeper than 2600, so the front card always draws last.
+  const CW_WORDS = ['Fast.', 'Sharp.', 'Everyday.'];
+  const WORD = { size: 84, h: 150, pad: 64, r: 26 };
+  const WZ_LO = 2800, WZ_HI = 3900, WSPAN = WZ_HI - WZ_LO;
+  const WCARDS = [];
   {
-    const r = H.prng(0x3e4d5);
-    for (let i = 0; i < 6; i++) {
-      const w = 380 + r() * 320;
-      FLOW.push({
-        x: (r() * 2 - 1) * 2200,
-        y: (r() * 2 - 1) * 1300,
-        w,
-        h: w * (0.6 + r() * 0.12),
-        z0: Z_NEAR + r() * SPAN,
-      });
+    const r = H.prng(0x51a3c);
+    for (let i = 0; i < 10; i++) {
+      WCARDS.push({ x: (r() * 2 - 1) * 2400, y: (r() * 2 - 1) * 1400, z0: WZ_LO + r() * WSPAN, word: CW_WORDS[i % CW_WORDS.length] });
     }
   }
-  function flowZ(c, u) {
-    const v = (c.z0 - Z_NEAR - 480 * (u + 0.12 * u * u)) % SPAN;
-    return Z_NEAR + (v < 0 ? v + SPAN : v);
+  // u is seconds after 25.0. Depth wraps inside [WZ_LO, WZ_HI], and the alpha fades at both ends.
+  function wordZ(c, u) {
+    const v = (c.z0 - WZ_LO - 900 * u) % WSPAN;
+    return WZ_LO + (v < 0 ? v + WSPAN : v);
   }
-  function flowAlpha(z) {
-    return H.ramp(z, Z_NEAR, Z_NEAR + 200) * (1 - H.ramp(z, Z_FAR - 500, Z_FAR));
+  function wordAlpha(z) {
+    return H.ramp(z, WZ_LO, WZ_LO + 150) * (1 - H.ramp(z, WZ_HI - 200, WZ_HI));
+  }
+  // A word card in its own local frame, so the word sits on the depth plane.
+  function drawWord(ctx, c, z, cam, alpha) {
+    const k = FOCAL / z;
+    ctx.save();
+    ctx.translate(H.W / 2 + (c.x - cam.x) * k, H.H / 2 + (c.y - cam.y) * k);
+    ctx.scale(k, k);
+    const w = H.measure(ctx, c.word, WORD.size, 600, H.FONT.sans) + WORD.pad * 2;
+    ctx.globalAlpha *= alpha;
+    H.rrect(ctx, -w / 2, -WORD.h / 2, w, WORD.h, WORD.r);
+    ctx.fillStyle = V.dark.surface;
+    ctx.fill();
+    ctx.save();
+    ctx.globalAlpha *= 0.35;
+    ctx.strokeStyle = V.dark.mute;
+    ctx.lineWidth = 2 / k;
+    H.rrect(ctx, -w / 2, -WORD.h / 2, w, WORD.h, WORD.r);
+    ctx.stroke();
+    ctx.restore();
+    H.text(ctx, c.word, 0, 0, {
+      size: WORD.size, weight: 600, family: H.FONT.sans, color: V.dark.mute,
+      align: 'center', baseline: 'middle', alpha: 0.6,
+    });
+    ctx.restore();
   }
 
   // Camera: settles from an offset to the front plane, eased.
@@ -98,7 +120,6 @@
 
   H.scene({ id: "v5_s6_end", start: 25, end: 30, draw(ctx, t, local, dur) {
     if (t < T_IN) return;
-    const u = t - 15;
     const cam = camAt(t);
 
     // Graphite, the brand colour of this variation.
@@ -111,28 +132,19 @@
     const kf = FOCAL / zf;
     const pf = { x: H.W / 2 + (0 - cam.x) * kf, y: H.H / 2 + (0 - cam.y) * kf, k: kf };
 
-    // Flight cards clear out during the settle. Far to near, the front card is drawn last.
-    const fadeOut = 1 - H.ramp(t, 25.4, 26.0);
     const items = [];
-    if (fadeOut > 0) {
-      for (const c of FLOW) {
-        const z = flowZ(c, u);
-        const a = flowAlpha(z) * fadeOut;
-        if (a <= 0) continue;
-        const k = FOCAL / z;
-        const w = c.w * k, h = c.h * k;
-        const cx = H.W / 2 + (c.x - cam.x) * k;
-        const cy = H.H / 2 + (c.y - cam.y) * k;
-        items.push({ z, fn: () => {
-          ctx.save();
-          ctx.globalAlpha *= a;
-          H.rrect(ctx, cx - w / 2, cy - h / 2, w, h, 22 * k);
-          ctx.fillStyle = V.dark.surface;
-          ctx.fill();
-          ctx.restore();
-        } });
+
+    // Word cards: on from the 25.0 cut, gone by 26.2. Low contrast.
+    const wf = 1 - H.ramp(t, 25.6, 26.2);
+    if (wf > 0) {
+      const uw = t - T_IN;
+      for (const c of WCARDS) {
+        const z = wordZ(c, uw);
+        const a = wordAlpha(z) * wf;
+        if (a > 0) items.push({ z, fn: () => drawWord(ctx, c, z, cam, a * 0.7) });
       }
     }
+
     items.push({ z: zf, fn: () => drawFront(ctx, t, pf) });
     items.sort((a, b) => b.z - a.z);
     for (const it of items) it.fn();

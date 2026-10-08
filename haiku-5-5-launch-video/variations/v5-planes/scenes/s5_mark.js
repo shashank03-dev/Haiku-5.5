@@ -1,17 +1,22 @@
 // v5_s5_mark (20.0 to 25.0). 20.0 is the pattern interrupt: the frame flashes to amber and the
 // flight cards collapse to a point. At 20.5 the frame flips back to graphite and the cards re-expand.
-// The three bars (5:7:5) fly in as planes and land on 22.0, 22.25 and 22.5. The camera locks at 23.0.
-// The seal card arrives at 23.5, and the seal stamps onto it at 24.0 with the main film's s01 recipe
-// (220 px, paper "5.5" knocked out, seeded speckles), redrawn in the variation's amber.
+// From 21.0, copy-bank words ("Fast.", "Sharp.", "Everyday.") drift on low-contrast cards in depth.
+// The three bars (5:7:5) fly in as planes with a trailing card and land on 22.0, 22.25 and 22.5.
+// The camera locks at 23.0, when "Built for everyday work." mask-rises under the mark. The seal card
+// arrives at 23.5, and the seal stamps onto it at 24.0 with the main film's s01 recipe (220 px, paper
+// "5.5" knocked out, seeded speckles), redrawn in the variation's amber.
 (function () {
   const FOCAL = 1000;
   const T_IN = 20.0, T_OUT = 25.0;
-  const FLASH_END = 20.5;               // amber flash ends, on the grid
-  const CLEAR_A = 21.0, CLEAR_B = 21.5; // flight cards fade out
-  const LOCK_A = 21.0, LOCK_B = 23.0;   // camera pulls in and locks on the mark at 23.0
-  const CARD_A = 23.5, CARD_B = 24.0;   // seal card arrives, on the grid
-  const STAMP = 24.0;                   // seal stamps, on the grid
-  const ZC = 24000;                     // collapse depth: cards shrink to a point here
+  const FLASH_END = 20.5;                 // amber flash ends, on the grid
+  const CLEAR_A = 21.0, CLEAR_B = 21.5;   // collapsed flight cards fade out
+  const WORD_IN = 21.0;                   // word cards start drifting, on the grid
+  const WORD_OUT_A = 24.0, WORD_OUT_B = 24.5;
+  const LOCK_A = 21.0, LOCK_B = 23.0;     // camera pulls in and locks on the mark at 23.0
+  const TAG_IN = 23.0;                    // "Built for everyday work." lands, on the grid
+  const CARD_A = 23.5, CARD_B = 24.0;     // seal card arrives, on the grid
+  const STAMP = 24.0;                     // seal stamps, on the grid
+  const ZC = 24000;                       // collapse depth: cards shrink to a point here
   const Z_NEAR = 1100, Z_FAR = 3700, SPAN = Z_FAR - Z_NEAR;
 
   // Seal: the s01 recipe. 220 px, rasterised at 2x. Speckles are seeded and sit inside the body.
@@ -102,6 +107,9 @@
     ctx.restore();
   }
 
+  // Copy-bank words: "Fast.", "Sharp.", "Everyday.". Every card carries one, so no card is empty.
+  const WORDS = ['Fast.', 'Sharp.', 'Everyday.'];
+
   // Flight cards: the same depth flow as s4, with a different seed. Frozen from 20.0.
   const FLOW = [];
   {
@@ -114,12 +122,50 @@
         w,
         h: w * (0.6 + r() * 0.12),
         z0: Z_NEAR + r() * SPAN,
+        word: WORDS[i % WORDS.length],
       });
     }
   }
   function flowZ(c, u) {
     const v = (c.z0 - Z_NEAR - 480 * (u + 0.12 * u * u)) % SPAN;
     return Z_NEAR + (v < 0 ? v + SPAN : v);
+  }
+  function flowAlpha(z) {
+    return H.ramp(z, Z_NEAR, Z_NEAR + 200) * (1 - H.ramp(z, Z_FAR - 500, Z_FAR));
+  }
+
+  // Copy-bank word cards, drifting from 21.0 on low-contrast cards.
+  const WORD = { size: 84, h: 150, pad: 64, r: 26 };
+  const WCARDS = [];
+  {
+    const r = H.prng(0x2c8e7);
+    for (let i = 0; i < 12; i++) {
+      WCARDS.push({ x: (r() * 2 - 1) * 2000, y: (r() * 2 - 1) * 1150, z0: Z_NEAR + r() * SPAN, word: WORDS[i % WORDS.length] });
+    }
+  }
+  // A word card in its own local frame, so the word sits on the depth plane.
+  function drawWord(ctx, c, z, cam, alpha) {
+    const k = FOCAL / z;
+    ctx.save();
+    ctx.translate(H.W / 2 + (c.x - cam.x) * k, H.H / 2 + (c.y - cam.y) * k);
+    ctx.scale(k, k);
+    const w = H.measure(ctx, c.word, WORD.size, 600, H.FONT.sans) + WORD.pad * 2;
+    ctx.globalAlpha *= alpha;
+    H.rrect(ctx, -w / 2, -WORD.h / 2, w, WORD.h, WORD.r);
+    ctx.fillStyle = V.dark.surface;
+    ctx.fill();
+    ctx.save();
+    ctx.globalAlpha *= 0.35;
+    ctx.strokeStyle = V.dark.mute;
+    ctx.lineWidth = 2 / k;
+    H.rrect(ctx, -w / 2, -WORD.h / 2, w, WORD.h, WORD.r);
+    ctx.stroke();
+    ctx.restore();
+    H.text(ctx, c.word, 0, 0, {
+      size: WORD.size, weight: 600, family: H.FONT.sans, color: V.dark.mute,
+      align: 'center', baseline: 'middle', alpha: 0.6,
+    });
+    ctx.restore();
   }
 
   // Mark: bars are centred on MARK_X, 56 px tall, 28 px apart, widths 5u : 7u : 5u with u = 52.
@@ -135,6 +181,31 @@
     return { x: H.lerp(b.fx, MARK_X, p), y: H.lerp(b.fy, b.y, p), z: H.lerp(b.fz, FOCAL, p) };
   }
   const SEAL_CARD = { x: 290, y: 0, w: 340, h: 340, r: 40 };
+
+  // "Built for everyday work." mask-rises under the mark, one word every 0.06 s from 23.0.
+  const TAG = { words: ['Built', 'for', 'everyday', 'work.'], size: 56, weight: 500, base: 860 };
+  function drawTag(ctx, t) {
+    if (t < TAG_IN) return;
+    const full = TAG.words.join(' ');
+    const total = H.measure(ctx, full, TAG.size, TAG.weight, H.FONT.sans);
+    const x0 = H.W / 2 - total / 2;
+    TAG.words.forEach((w, i) => {
+      const start = TAG_IN + i * 0.06;
+      if (t < start) return;
+      const pre = i ? TAG.words.slice(0, i).join(' ') + ' ' : '';
+      const x = x0 + H.measure(ctx, pre, TAG.size, TAG.weight, H.FONT.sans);
+      const ww = H.measure(ctx, w, TAG.size, TAG.weight, H.FONT.sans);
+      const q = H.easeOutExpo(H.ramp(t, start, start + 0.6));
+      ctx.save();
+      ctx.beginPath();
+      ctx.rect(x - 6, TAG.base - TAG.size * 0.95, ww + 12, TAG.size * 1.3);
+      ctx.clip();
+      H.text(ctx, w, x, TAG.base + (1 - q) * TAG.size * 0.6, {
+        size: TAG.size, weight: TAG.weight, family: H.FONT.sans, color: V.dark.text,
+      });
+      ctx.restore();
+    });
+  }
 
   // Camera: pulls in from 21.0 to 23.0 and locks. After that it drifts gently.
   function camAt(t) {
@@ -168,18 +239,35 @@
         let z;
         if (flash) z = zr + (ZC - zr) * H.easeInCubic(H.ramp(t, T_IN, FLASH_END));
         else z = ZC + (zr - ZC) * H.easeOutCubic(H.ramp(t, FLASH_END, FLASH_END + 0.5));
-        const p = proj(c.x, c.y, z, cam);
-        items.push({ z, fn: () => roundCard(ctx, p, c.w, c.h, 22, flash ? V.dark.bg : V.dark.surface, fade, !flash) });
+        items.push({ z, fn: () => drawWord(ctx, c, z, cam, fade * 0.7) });
       }
     }
 
-    // Bars: fly in as planes and land on the grid.
+    // Copy-bank words drift in depth from 21.0 and clear by 24.5. Low contrast.
+    const wIn = H.ramp(t, WORD_IN, WORD_IN + 0.4) * (1 - H.ramp(t, WORD_OUT_A, WORD_OUT_B));
+    if (wIn > 0) {
+      const u = t - WORD_IN;
+      for (const c of WCARDS) {
+        const z = flowZ(c, u);
+        const a = flowAlpha(z) * wIn;
+        if (a > 0) items.push({ z, fn: () => drawWord(ctx, c, z, cam, a * 0.7) });
+      }
+    }
+
+    // Bars: fly in as planes and land on the grid. Each leaves a trailing card 0.16 s behind.
     for (const b of BARS) {
       const a = H.ramp(t, b.land - 0.75, b.land - 0.6);
       if (a <= 0) continue;
       const q = barAt(b, t);
       const p = proj(q.x, q.y, q.z, cam);
       items.push({ z: q.z, fn: () => roundCard(ctx, p, b.w, BAR_H, BAR_R, V.dark.text, a, false) });
+
+      const tr = barAt(b, Math.max(t - 0.16, b.land - 0.75));
+      const trA = a * 0.5 * (1 - H.ramp(t, b.land, b.land + 0.25));
+      if (trA > 0) {
+        const tp = proj(tr.x, tr.y, tr.z, cam);
+        items.push({ z: tr.z, fn: () => roundCard(ctx, tp, b.w, BAR_H, BAR_R, V.dark.surface, trA, true) });
+      }
     }
 
     // Seal card: flies in at 23.5. The seal stamps onto it at 24.0 (s01 recipe).
@@ -200,5 +288,8 @@
     // Far to near.
     items.sort((a, b) => b.z - a.z);
     for (const it of items) it.fn();
+
+    // Screen-space caption, on top of the cards.
+    drawTag(ctx, t);
   } });
 })();

@@ -1,6 +1,7 @@
 // v5_s4_code (15.0 to 20.0). A flight of cards runs past behind a large code card. The card rises
 // from below and lands on 15.5. A five-line snippet (lines 5 to 9 of s05 in the main film) types in
-// from 15.5 to 17.5, and the output chip lands on the grid at 18.0. The scene stops at 20.0, where
+// from 15.5 to 17.5, and the output chip lands on the grid at 18.0. Copy-bank words ride the same
+// depth flight on low-contrast cards, always behind the code card. The scene stops at 20.0, where
 // the s05 pattern interrupt takes over. Everything is projected with sx = W/2 + (x - camX) F / z.
 (function () {
   const FOCAL = 1000;                   // a card at z = FOCAL is drawn 1:1
@@ -93,7 +94,7 @@
   const FLOW = [];
   {
     const r = H.prng(0x7a11e);
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 14; i++) {
       const w = 380 + r() * 320;
       FLOW.push({
         x: (r() * 2 - 1) * 2200,
@@ -104,6 +105,18 @@
       });
     }
   }
+
+  // Copy-bank words on low-contrast cards. They ride the same depth flight as the plain cards.
+  const WORDS = ['Fast.', 'Sharp.', 'Everyday.'];
+  const WORD = { size: 84, h: 150, pad: 64, r: 26 };
+  const WCARDS = [];
+  {
+    const r = H.prng(0x3a7d1);
+    for (let i = 0; i < 6; i++) {
+      WCARDS.push({ x: (r() * 2 - 1) * 2000, y: (r() * 2 - 1) * 1150, z0: Z_NEAR + r() * SPAN, word: WORDS[i % WORDS.length] });
+    }
+  }
+
   // u is seconds after 15.0. The depth wraps inside [Z_NEAR, Z_FAR], and the alpha fades at both ends.
   function flowZ(c, u) {
     const v = (c.z0 - Z_NEAR - 480 * (u + 0.12 * u * u)) % SPAN;
@@ -128,6 +141,30 @@
     ctx.stroke();
     ctx.restore();
   }
+  // A word card, drawn in its own local frame so the word sits on the depth plane.
+  function drawWord(ctx, c, z, cam, alpha) {
+    const k = FOCAL / z;
+    ctx.save();
+    ctx.translate(H.W / 2 + (c.x - cam.x) * k, H.H / 2 + (c.y - cam.y) * k);
+    ctx.scale(k, k);
+    const w = H.measure(ctx, c.word, WORD.size, 600, H.FONT.sans) + WORD.pad * 2;
+    ctx.globalAlpha *= alpha;
+    H.rrect(ctx, -w / 2, -WORD.h / 2, w, WORD.h, WORD.r);
+    ctx.fillStyle = V.dark.surface;
+    ctx.fill();
+    ctx.save();
+    ctx.globalAlpha *= 0.35;
+    ctx.strokeStyle = V.dark.mute;
+    ctx.lineWidth = 2 / k;
+    H.rrect(ctx, -w / 2, -WORD.h / 2, w, WORD.h, WORD.r);
+    ctx.stroke();
+    ctx.restore();
+    H.text(ctx, c.word, 0, 0, {
+      size: WORD.size, weight: 600, family: H.FONT.sans, color: V.dark.mute,
+      align: 'center', baseline: 'middle', alpha: 0.6,
+    });
+    ctx.restore();
+  }
 
   // Camera: a slow eased drift over the scene. Parallax comes from the flight cards sitting behind the code card.
   function camAt(t) {
@@ -144,12 +181,20 @@
     ctx.fillStyle = V.dark.bg;
     ctx.fillRect(0, 0, H.W, H.H);
 
-    // Flight cards, far to near.
-    const order = FLOW.map(c => ({ c, z: flowZ(c, u) })).sort((a, b) => b.z - a.z);
-    for (const { c, z } of order) {
+    // Flight cards and word cards, far to near. All sit behind the code card (z > FOCAL).
+    const items = [];
+    for (const c of FLOW) {
+      const z = flowZ(c, u);
       const a = flowAlpha(z);
-      if (a > 0) drawFlow(ctx, c, z, cam, a);
+      if (a > 0) items.push({ z, fn: () => drawFlow(ctx, c, z, cam, a) });
     }
+    for (const c of WCARDS) {
+      const z = flowZ(c, u);
+      const a = flowAlpha(z);
+      if (a > 0) items.push({ z, fn: () => drawWord(ctx, c, z, cam, a * 0.7) });
+    }
+    items.sort((p, q) => q.z - p.z);
+    for (const it of items) it.fn();
 
     // Code card. At z = FOCAL the projection is 1:1, so the card keeps its 1480 x 440 size.
     const rise = H.easeOutExpo(H.ramp(t, RISE_A, RISE_B));
