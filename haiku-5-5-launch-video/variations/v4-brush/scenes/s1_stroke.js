@@ -141,29 +141,42 @@ window.V4B = (function () {
     return path;
   }
 
-  // Unit-radius brush ring. Its thickness is 0.03 of the radius, so it thickens as it expands.
+  // Unit-radius brush ring. Its thickness is about 0.03 of the radius, so it thickens as it expands.
+  // Dry gaps run along the band (thin slivers, cut out by evenodd fill). Fill it with 'evenodd'.
   function ring(seed) {
     const pr = H.prng(seed), N = 260;
     const hs = [], ht = [];
     for (let k = 2; k <= 7; k++) hs.push({ k, a: (pr() * 2 - 1) / (k * 1.6), ph: pr() * TAU });
     for (let k = 3; k <= 9; k++) ht.push({ k, a: (pr() * 2 - 1) / k, ph: pr() * TAU });
-    const outer = [], inner = [];
-    for (let i = 0; i <= N; i++) {
-      const th = (TAU * i) / N;
-      let ro = 1, thick = 0.03;
-      for (const h of hs) ro += 0.035 * h.a * Math.cos(h.k * th + h.ph);
-      for (const h of ht) thick += 0.017 * h.a * Math.cos(h.k * th + h.ph);
-      outer.push([Math.cos(th) * ro, Math.sin(th) * ro]);
-      inner.push([Math.cos(th) * (ro - thick), Math.sin(th) * (ro - thick)]);
-    }
+    const radius = th => { let r = 1; for (const h of hs) r += 0.035 * h.a * Math.cos(h.k * th + h.ph); return r; };
+    const thick = th => { let t = 0.03; for (const h of ht) t += 0.017 * h.a * Math.cos(h.k * th + h.ph); return t; };
     const path = new Path2D();
-    outer.forEach((q, i) => (i ? path.lineTo(q[0], q[1]) : path.moveTo(q[0], q[1])));
+    for (let i = 0; i <= N; i++) {
+      const th = (TAU * i) / N, ro = radius(th);
+      if (i === 0) path.moveTo(Math.cos(th) * ro, Math.sin(th) * ro);
+      else path.lineTo(Math.cos(th) * ro, Math.sin(th) * ro);
+    }
     path.closePath();
     for (let i = N; i >= 0; i--) {
-      const q = inner[i];
-      if (i === N) path.moveTo(q[0], q[1]); else path.lineTo(q[0], q[1]);
+      const th = (TAU * i) / N, ri = radius(th) - thick(th);
+      if (i === N) path.moveTo(Math.cos(th) * ri, Math.sin(th) * ri);
+      else path.lineTo(Math.cos(th) * ri, Math.sin(th) * ri);
     }
     path.closePath();
+    // Dry gaps: 7 slivers, each 0.2 to 0.8 rad long, at 30 to 70 percent of the band from the outside.
+    const pg = H.prng(seed * 3 + 5);
+    for (let g = 0; g < 7; g++) {
+      const a0 = pg() * TAU, span = 0.2 + pg() * 0.6, f = 0.3 + pg() * 0.4, half = 0.0012, M = 24;
+      const at = (s, side) => {
+        const th = a0 + span * s;
+        const rr = radius(th) - thick(th) * f + side * half * Math.sin(Math.PI * s);
+        return [Math.cos(th) * rr, Math.sin(th) * rr];
+      };
+      let q = at(0, 0); path.moveTo(q[0], q[1]);
+      for (let j = 1; j <= M; j++) { q = at(j / M, 1); path.lineTo(q[0], q[1]); }
+      for (let j = M; j >= 0; j--) { q = at(j / M, -1); path.lineTo(q[0], q[1]); }
+      path.closePath();
+    }
     return path;
   }
 
@@ -237,11 +250,11 @@ window.V4B = (function () {
     B.paint(ctx, SWASH, H.easeInOutCubic(H.ramp(t, 2.0, 2.4)), acc, 1);
     // 2.5: an ink underline below the bars.
     B.paint(ctx, UNDERLINE, H.easeOutCubic(H.ramp(t, 2.5, 2.95)), ink, 1);
-    // 3.5: a cinnabar dab after the title, stamped with a small overshoot.
+    // 3.5: a cinnabar drop at the start of the underline, stamped with a small overshoot.
     const rDab = 17 * H.easeOutSoft(H.ramp(t, 3.5, 3.8));
     if (rDab > 0.5) {
       ctx.save();
-      ctx.translate(L.tx + L.tw + 42, TY - 17);
+      ctx.translate(300, 862);
       ctx.scale(rDab, rDab);
       ctx.fillStyle = acc;
       ctx.fill(DAB);

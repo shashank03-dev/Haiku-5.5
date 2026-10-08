@@ -1,6 +1,6 @@
 // v2_s2_count (5.0 to 10.0): the field collapses. 17 of its cells morph into the three poem rows
-// (5, 7, 5 tiles). Each tile pops on the 0.25 s grid (ticks 5.5 to 9.0) with its syllable, so every
-// syllable is on screen for at least 1.0 s. A single accent pulse runs across the poem at 9.5.
+// (5, 7, 5 tiles). Each tile pops on the 0.25 s grid (ticks 5.5 to 8.5) with its syllable, so every
+// syllable is fully on screen for at least 1.25 s. A single accent pulse runs across the poem at 9.5.
 // The frame is frozen after 9.75; v2_s3_zoom reads this state at 9.99 for its whip.
 const v2s2_SIZE = 68, v2s2_PAD = 34, v2s2_GAP = 20;
 const v2s2_CW = 144, v2s2_CH = 138;                       // field cell size (tile height matches it)
@@ -30,7 +30,7 @@ function v2s2_layout(ctx) {
       tiles.push({
         word, w: widths[i], cx: x + widths[i] / 2, cy: v2s2_rowY[ri],
         sx: 8 + col * 160 + v2s2_CW / 2,                 // source cell centre x
-        pop: 5.5 + 0.25 * Math.floor(idx * 15 / 17),     // 17 tiles over 15 grid ticks
+        pop: 5.5 + 0.25 * Math.floor(idx * 13 / 17),     // 17 tiles over 13 grid ticks (5.5 to 8.5)
       });
       x += widths[i] + v2s2_GAP;
     });

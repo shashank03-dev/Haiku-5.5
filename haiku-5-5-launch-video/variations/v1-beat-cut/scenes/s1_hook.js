@@ -7,7 +7,7 @@
   const CAP = 0.36;         // half a cap height (0.72 em): puts a centred line's caps on the frame's middle
   const MAX_W = 1500;       // every display line is fitted to this width
   const HAIKU = 300;        // size of the HAIKU / 5.5 lockup
-  const LETTERS = 'HAIKU';  // the copy-bank word "Haiku", set in capitals as the brief asks
+  const LETTERS = 'HAIKU';  // the copy-bank word "Haiku", set in capitals as PLAN.md asks
 
   // Text is measured once, on first draw (Geist is loaded by then). Later frames only read the memo.
   const memo = new Map();
@@ -34,8 +34,8 @@
   const yMid = size => HT / 2 + size * CAP;                              // baseline that centres a line
 
   // 0.0 to 0.5: "5.5" slams full-frame (scale 2.6 to 1, blur 18 to 0 over 0.25 s), then holds.
-  // The blur runs on a quarter-resolution scratch canvas (blur / 4, then scaled up), which keeps
-  // the blurred frames near 5 ms instead of ~40 ms for a full-frame filter. The scratch canvas is made once.
+  // The blur runs on a quarter-resolution scratch canvas (blur / 4, then scaled up). A full-frame
+  // blur filter cost ~40 ms a frame in software; this keeps the blurred frames under 10 ms.
   const Q = 4;
   let scratch = null;
   function slam(ctx, T) {
@@ -66,7 +66,7 @@
     g.restore();
     ctx.save();
     ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
+    ctx.imageSmoothingQuality = 'low'; // bilinear: the image is already blurred, and 'high' costs ~25 ms here
     ctx.drawImage(scratch, 0, 0, W, HT);
     ctx.restore();
   }

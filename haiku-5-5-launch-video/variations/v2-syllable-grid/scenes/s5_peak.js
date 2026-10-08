@@ -33,7 +33,8 @@
     }
     for (const c of cells) cellRect(g, c.x, c.y, 1, V.light.surface);
 
-    // "5.5" rasterised once and sampled at each cell centre: alpha above 127 means the cell is in the glyph.
+    // "5.5" rasterised once. A cell is lit when at least 30% of its 3 x 3 sample points are inked,
+    // which keeps the strokes continuous at this cell pitch.
     const m = document.createElement('canvas');
     m.width = H.W;
     m.height = H.H;
@@ -45,7 +46,14 @@
     const mt = mg.measureText('5.5');
     mg.fillText('5.5', H.W / 2, H.H / 2 + (mt.actualBoundingBoxAscent - mt.actualBoundingBoxDescent) / 2);
     const px = mg.getImageData(0, 0, H.W, H.H).data;
-    for (const c of cells) c.g = px[(Math.round(c.y) * H.W + Math.round(c.x)) * 4 + 3] > 127;
+    const coverage = (x, y) => {
+      let s = 0;
+      for (let a = -1; a <= 1; a++) for (let b = -1; b <= 1; b++) {
+        s += px[(Math.round(y + b * 12) * H.W + Math.round(x + a * 12)) * 4 + 3];
+      }
+      return s / 9 / 255;
+    };
+    for (const c of cells) c.g = coverage(c.x, c.y) >= 0.3;
 
     // Reveal order: a diagonal sweep from top-left to bottom-right, in 12 steps from 21.0 s.
     lit = cells.filter(c => c.g).sort((a, b) => (a.x + 0.35 * a.y) - (b.x + 0.35 * b.y));
