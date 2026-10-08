@@ -111,10 +111,10 @@
         drawSeal(ctx, 1.35 - 0.35 * e, -4 * (1 - e) * Math.PI / 180, H.clamp((l - 0.5) / 0.15));
       }
 
-      // Copy: "Meet Haiku 5.5." words rise on an 0.08 s stagger from 26.5.
+      // Copy: "Meet Haiku 5.5." segments rise on a 0.25 s stagger from 26.5 (26.5, 26.75, 27.0, 27.25).
       if (l >= 1.5) {
         words.forEach((w, i) => {
-          riseText(ctx, w.s, w.x, TEXT_Y, 150, 600, w.c === 'ac' ? V.accent : V.dark.text, (l - 1.5 - i * 0.08) / 0.5, -4);
+          riseText(ctx, w.s, w.x, TEXT_Y, 150, 600, w.c === 'ac' ? V.accent : V.dark.text, (l - 1.5 - i * 0.25) / 0.5, -4);
         });
       }
 

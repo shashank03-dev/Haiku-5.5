@@ -50,7 +50,7 @@ function v2s2_frame(ctx, t) {
     for (let c = 0; c < 12; c++) {
       if (L.srcKeys.has(r * 12 + c)) continue;
       const delay = 0.06 * Math.abs(r - 3);
-      const s = 1 - H.easeInCubic(H.ramp(t, 5.0 + delay, 5.35 + delay));
+      const s = 1 - H.easeInOutCubic(H.ramp(t, 5.0 + delay, 5.35 + delay));
       if (s <= 0) continue;
       const w = v2s2_CW * s, h = v2s2_CH * s;
       const cx = 8 + c * 160 + v2s2_CW / 2, cy = 9 + r * 154 + v2s2_CH / 2;
