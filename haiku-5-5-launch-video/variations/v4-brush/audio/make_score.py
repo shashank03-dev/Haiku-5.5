@@ -141,19 +141,19 @@ def swish_centre(t):
 
 def swish_level(t):
     if t < 5.0:
-        base = 0.20
+        base = 0.16
     elif t < 10.0:
-        base = 0.24
+        base = 0.19
     elif t < 15.0:
-        base = 0.28
-    elif t < 20.0:
-        base = 0.42                           # the eight sweeps carry the most energy
-    elif t < 25.0:
-        base = 0.34
-    elif t < 27.0:
         base = 0.22
+    elif t < 20.0:
+        base = 0.32                           # the eight sweeps carry the most energy
+    elif t < 25.0:
+        base = 0.22
+    elif t < 27.0:
+        base = 0.18
     else:
-        base = 0.22 * min(1.0, max(0.0, (29.5 - t) / 2.5))
+        base = 0.18 * min(1.0, max(0.0, (29.5 - t) / 2.5))
     if t in (10.0, 20.0):                     # the two pattern interrupts
         return base * 1.5
     if abs(t - round(t)) < 1e-9:              # whole-second beats sit a little higher
@@ -167,6 +167,7 @@ def brush_swish(t0, level, fc, octaves, decay, pan_from, pan_to, send):
     n = int(round(dur * SR))
     t = t_axis(n)
     grit = bandpass_noise(n, fc, octaves)
+    grit = grit / math.sqrt(np.mean(grit ** 2))               # unit RMS: level is an RMS level
     knots = rng.uniform(-1.0, 1.0, int(dur * 150) + 2)        # bristle texture at ~150 Hz
     tex = 0.7 + 0.3 * np.interp(t, np.linspace(0.0, dur, len(knots)), knots)
     tau = decay / 6.9                                         # -60 dB after `decay` seconds
@@ -346,12 +347,12 @@ def report(mix, final):
 
 
 def main():
-    drone(0.085)                              # minor drone, 1 s to 27 s
+    drone(0.045)                              # minor drone, 1 s to 27 s
     brush_layer()                             # 0.5 s grid, 0.0 to 29.0 s
-    koto(0.0, 69, 0.30, -0.35, 0.35)          # A4
-    koto(1.0, 72, 0.26, 0.35, 0.35)           # C5
-    koto(5.0, 76, 0.26, -0.20, 0.30)          # E5
-    koto(7.0, 81, 0.24, 0.25, 0.30)           # A5
+    koto(0.0, 69, 0.50, -0.35, 0.35)          # A4
+    koto(1.0, 72, 0.45, 0.35, 0.35)           # C5
+    koto(5.0, 76, 0.45, -0.20, 0.30)          # E5
+    koto(7.0, 81, 0.42, 0.25, 0.30)           # A5
     taiko(10.0, 0.85, 0.25)                   # splash
     taiko(20.0, 0.85, 0.30)                   # ink fill
     bell(20.5, 69, 0.22, 0.15, 0.40)          # seal stamp
