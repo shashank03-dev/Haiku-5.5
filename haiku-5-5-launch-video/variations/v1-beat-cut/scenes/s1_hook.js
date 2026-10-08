@@ -3,6 +3,7 @@
 (function () {
   const W = H.W, HT = H.H, SAFE = H.SAFE, SANS = H.FONT.sans;
   const D = V.dark, L = V.light, A = V.accent;
+  const EPS = 1e-6;         // float guard so a cut on the grid switches on its own frame
   const CAP = 0.36;         // half a cap height (0.72 em): puts a centred line's caps on the frame's middle
   const MAX_W = 1500;       // every display line is fitted to this width
   const HAIKU = 300;        // size of the HAIKU / 5.5 lockup
@@ -57,7 +58,6 @@
       if (T < t0) continue;
       const p = snap(T, t0, 0.1);
       ctx.save();
-      ctx.globalAlpha *= Math.min(1, p * 3);
       ctx.translate(xs[i] + ws[i] / 2, y);
       ctx.scale(1.3 - 0.3 * p, 1.3 - 0.3 * p);
       txt(ctx, LETTERS[i], 0, 0, HAIKU, D.text);
@@ -69,7 +69,7 @@
   function lockup(ctx, T) {
     word(ctx, T);
     const p = snap(T, 1.0, 0.1);
-    txt(ctx, '5.5', W - SAFE + 120 * (1 - p), yMid(HAIKU), HAIKU, A, 'right');
+    txt(ctx, '5.5', W - SAFE + 80 * (1 - p), yMid(HAIKU), HAIKU, A, 'right');
   }
 
   // Full-frame cards on hard cuts: [start, end, background, text, copy]. Each card hits from 1.08x.
@@ -99,11 +99,12 @@
     const y1 = HT / 2 - lh / 2 + size * CAP;
     [['Small model,', L.text, 0.0], ['big aim.', A, 0.04]].forEach(([s, col, d], i) => {
       const p = snap(T, 3.0 + d, 0.12);
-      txt(ctx, s, SAFE - 90 * (1 - p), y1 + i * lh, size, col, 'left');
+      txt(ctx, s, SAFE - 60 * (1 - p), y1 + i * lh, size, col, 'left');
     });
   }
 
-  H.scene({ id: 'v1_s1_hook', start: 0, end: 5, draw(ctx, t, T) {
+  H.scene({ id: 'v1_s1_hook', start: 0, end: 5, draw(ctx, t, local) {
+    const T = local + EPS;
     if (T < 0 || T >= 5) return;
     if (T < 0.5) return slam(ctx, T);
     if (T < 1.0) return word(ctx, T);

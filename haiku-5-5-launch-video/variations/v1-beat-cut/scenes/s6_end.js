@@ -31,7 +31,8 @@
       const cw = H.measure(ctx, g.c, size, weight, H.FONT.sans, 0);
       ctx.save();
       ctx.beginPath();
-      ctx.rect(gx - 4, baseline - size * 0.95, cw + 8, size * 1.25);
+      // Mask line sits on the baseline (a little below, for overshoot), so glyphs emerge from it.
+      ctx.rect(gx - 4, baseline - size * 0.95, cw + 8, size * 1.01);
       ctx.clip();
       H.text(ctx, g.c, gx, baseline + (1 - p) * size * RISE_DIST, {
         size, weight, family: H.FONT.sans, color: g.color, align: 'left',
@@ -119,8 +120,8 @@
     rise(ctx, meet.lay, SAFE, 500, meet.size, 600, 26.5, t);
     if (t >= 27.0 - EPS) drawSeal(ctx, H.W - SAFE - SEAL / 2, H.H - SAFE - SEAL / 2);
     if (t >= 27.5 - EPS) {
-      H.text(ctx, 'claude-haiku-5-5', SAFE, 580, {
-        size: 44, weight: 500, family: H.FONT.mono, color: V.light.text, align: 'left', tracking: 1.8,
+      H.text(ctx, 'claude-haiku-5-5', SAFE, 600, {
+        size: 48, weight: 500, family: H.FONT.mono, color: V.light.text, align: 'left', tracking: 1.9,
       });
     }
   } });

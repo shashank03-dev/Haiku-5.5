@@ -4,13 +4,13 @@
 // appears, 24.5 the three bars take the accent. 25.0 is the cut to the end card. Nothing fades.
 (function () {
   const START = 20.0, END = 25.0, EPS = 1e-6;
-  const U = 60, BAR_H = 64, BAR_GAP = 32, BAR_R = 16;
+  const U = 72, BAR_H = 76, BAR_GAP = 36, BAR_R = 18;
   const BAR_W = [5 * U, 7 * U, 5 * U];          // 5 : 7 : 5, in px
-  const MARK_H = 3 * BAR_H + 2 * BAR_GAP;       // 256
+  const MARK_H = 3 * BAR_H + 2 * BAR_GAP;       // 300
   const SEAL = 140, SEAL_R = 28, SEAL_GAP = 48;
   const CX = H.W / 2;
   const TOP_BUILD = H.H / 2 - MARK_H / 2;       // mark centred
-  const TOP_UP = 270;                           // mark after 23.0, leaves room for the line
+  const TOP_UP = 250;                           // mark after 23.0, leaves room for the line
   const LINE = 'Built for everyday work.';
   const LINE_SIZE = 96, LINE_Y = 720;
 

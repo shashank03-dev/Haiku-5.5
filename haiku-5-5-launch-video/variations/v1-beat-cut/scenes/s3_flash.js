@@ -28,7 +28,8 @@
     bg(ctx, D.bg);
     let k = 0;
     for (let j = 0; j < STEP.length; j++) if (T >= STEP[j]) k = j;
-    const p = H.easeOutExpo(H.ramp(T, STEP[k], STEP[k] + 0.12)); // squares snap in and out over 0.12 s
+    // The new state shows on the cut frame: squares pop from 35% of the way and settle over 0.12 s.
+    const q = 0.35 + 0.65 * H.easeOutExpo(H.ramp(T, STEP[k], STEP[k] + 0.12));
     for (let i = 0; i < ROWS * COLS; i++) {
       const x = GX + (i % COLS) * (SQ + GAP), y = GY + Math.floor(i / COLS) * (SQ + GAP);
       ctx.globalAlpha = 0.35;                       // ghost outline keeps the grid visible while squares are off
@@ -37,7 +38,7 @@
       ctx.strokeRect(x + 1, y + 1, SQ - 2, SQ - 2);
       ctx.globalAlpha = 1;
       const from = k > 0 ? MASK[k - 1][i] : 0;
-      const s = from + (MASK[k][i] - from) * p;
+      const s = from + (MASK[k][i] - from) * q;
       if (s > 0.01) {
         const w = SQ * s;
         ctx.fillStyle = HOT[k] === i ? A : D.text;
@@ -56,7 +57,7 @@
       x0: (W - H.measure(ctx, FULL, LSZ, 500, MONO, 0)) / 2,
       cmd: H.measure(ctx, CMD, LSZ, 500, MONO, 0),
     };
-    const n = Math.floor(H.clamp((T - 3.0) / 0.7) * FULL.length);
+    const n = Math.floor(H.clamp((T - 3.0) / 0.7) * FULL.length + 1e-6); // whole string by 13.7 s
     const f = { size: LSZ, weight: 500, family: MONO };
     H.text(ctx, CMD.slice(0, Math.min(n, CMD.length)), layout.x0, Y, { ...f, color: D.text });
     H.text(ctx, MODEL.slice(0, Math.max(0, n - CMD.length)), layout.x0 + layout.cmd, Y, { ...f, color: A });

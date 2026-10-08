@@ -5,7 +5,7 @@
 // Layouts are measured on the first draw, because Geist is only loaded by then.
 (function () {
   const START = 15.0, END = 20.0, EPS = 1e-6;
-  const SIZE = 60, WEIGHT = 500, TH = 120, PADX = 26, GAP = 22, ROW_GAP = 22, RAD = 22;
+  const SIZE = 68, WEIGHT = 500, TH = 136, PADX = 28, GAP = 24, ROW_GAP = 24, RAD = 24;
 
   // Syllable tiles in haiku order: 5 (small mod el big aim), 7 (fast re plies sharp rea son ing), 5 (read y when you are).
   const TILES = ['small', 'mod', 'el', 'big', 'aim', 'fast', 're', 'plies', 'sharp', 'rea', 'son', 'ing', 'read', 'y', 'when', 'you', 'are'];

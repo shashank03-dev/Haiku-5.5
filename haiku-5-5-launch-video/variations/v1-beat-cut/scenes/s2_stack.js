@@ -26,7 +26,8 @@
     [4.5, 1, 4, 'left', 'accent'],
   ];
 
-  H.scene({ id: 'v1_s2_stack', start: 5, end: 10, draw(ctx, t, T) {
+  H.scene({ id: 'v1_s2_stack', start: 5, end: 10, draw(ctx, t, local) {
+    const T = local + 1e-6; // float guard: a cut on the grid switches on its own frame
     if (T < 0 || T >= 5) return;
     let cut = CUTS[0];
     for (const c of CUTS) if (T >= c[0]) cut = c;
