@@ -241,7 +241,7 @@ window.V4B = (function () {
     const rDab = 17 * H.easeOutSoft(H.ramp(t, 3.5, 3.8));
     if (rDab > 0.5) {
       ctx.save();
-      ctx.translate(L.tx + L.tw + 42, TY - 20);
+      ctx.translate(L.tx + L.tw + 42, TY - 17);
       ctx.scale(rDab, rDab);
       ctx.fillStyle = acc;
       ctx.fill(DAB);

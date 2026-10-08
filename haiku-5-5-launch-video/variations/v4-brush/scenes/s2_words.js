@@ -7,7 +7,7 @@
   const B = window.V4B;
   const SAFE = H.SAFE, U = (H.W - 2 * SAFE) / 7;
   const BAR_H = 150, TEXT_SIZE = 76;
-  const ROW_Y = [420, 600, 780];
+  const ROW_Y = [390, 560, 730];
   const ROW_X = [
     [H.W / 2 - 2.5 * U, H.W / 2 + 2.5 * U],
     [SAFE, H.W - SAFE],
@@ -16,12 +16,13 @@
   // Copy-bank lines, exactly as they appear in the copy bank.
   const POEM = ['Small model, big aim.', 'Fast replies, sharp reasoning.', 'Ready when you are.'];
 
+  // Dry gaps sit near the band edges (edge: true), so no slit crosses the knocked-out text.
   const BANDS = [
-    B.stroke(ROW_X[0][0], ROW_Y[0], ROW_X[0][1], ROW_Y[0], { w: BAR_H, seed: 61, disp: 6, taper: 0.25, dry: 0.3 }),
-    B.stroke(ROW_X[1][0], ROW_Y[1], ROW_X[1][1], ROW_Y[1], { w: BAR_H, seed: 62, disp: 6, taper: 0.25, dry: 0.3 }),
-    B.stroke(ROW_X[2][0], ROW_Y[2], ROW_X[2][1], ROW_Y[2], { w: BAR_H, seed: 63, disp: 6, taper: 0.25, dry: 0.3 }),
+    B.stroke(ROW_X[0][0], ROW_Y[0], ROW_X[0][1], ROW_Y[0], { w: BAR_H, seed: 61, disp: 6, taper: 0.25, dry: 0.7, edge: true }),
+    B.stroke(ROW_X[1][0], ROW_Y[1], ROW_X[1][1], ROW_Y[1], { w: BAR_H, seed: 62, disp: 6, taper: 0.25, dry: 0.7, edge: true }),
+    B.stroke(ROW_X[2][0], ROW_Y[2], ROW_X[2][1], ROW_Y[2], { w: BAR_H, seed: 63, disp: 6, taper: 0.25, dry: 0.7, edge: true }),
   ];
-  const UNDER = B.stroke(430, 902, 1490, 902, { w: 16, seed: 71, disp: 5, taper: 0.7, dry: 0.5 });
+  const UNDER = B.stroke(430, 862, 1490, 862, { w: 16, seed: 71, disp: 5, taper: 0.7, dry: 0.5 });
 
   // One band: the ink stroke, then its line in paper colour, both under the same brush front.
   function band(ctx, i, p) {
