@@ -11,9 +11,9 @@ const S07_LAYOUT = {
   BAR_R: 14,
   BAR_SLIDE: 300, // bars travel in from 300 px to the left
   SEAL: 120,
-  SEAL_DX: 34,    // seal centre offset from the bottom-right corner of the bottom bar
-  SEAL_DY: 34,
-  WORD_GAP: 64,   // mark right edge to wordmark ink left
+  SEAL_DX: 0,     // seal centre offset from the bottom-right corner of the bottom bar
+  SEAL_DY: 0,
+  WORD_GAP: 48,   // mark right edge to wordmark ink left
   CAP_GAP: 84,    // wordmark baseline to caption baseline
 };
 
@@ -97,7 +97,7 @@ H.scene({ id: "s07_mark", start: 23, end: 26.5, draw(ctx, t, local, dur) {
     const e = H.easeOutExpo(H.ramp(local, cue, cue + 0.6));
     const w = L.BAR_W[i];
     const x = mx - w / 2 - (1 - e) * L.BAR_SLIDE;
-    const y = YA - (L.BAR_PITCH + L.BAR_H) + i * L.BAR_PITCH;
+    const y = YA - (2 * L.BAR_PITCH + L.BAR_H) / 2 + i * L.BAR_PITCH; // stack centred on YA
     ctx.save();
     ctx.globalAlpha = a * fo;
     ctx.fillStyle = H.COLOR.ink;
@@ -113,7 +113,7 @@ H.scene({ id: "s07_mark", start: 23, end: 26.5, draw(ctx, t, local, dur) {
     const sc = H.lerp(1.35, 1.0, e);
     const rot = H.lerp(-4, 0, e) * Math.PI / 180;
     const sx = mx + L.BAR_W[2] / 2 + L.SEAL_DX;
-    const sy = YA + (L.BAR_PITCH + L.BAR_H) + L.SEAL_DY;
+    const sy = YA + (2 * L.BAR_PITCH + L.BAR_H) / 2 + L.SEAL_DY; // bottom edge of the bottom bar
     ctx.save();
     ctx.globalAlpha = sa * fo;
     ctx.translate(sx, sy);

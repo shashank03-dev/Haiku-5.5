@@ -12,8 +12,8 @@
   const STEP = 9;                // sample grid pitch in px (gives about 2200 points)
   const ROW_Y = [380, 540, 700]; // same row centres as s02
   const ROW_N = [5, 7, 5];       // 17 syllables: 5, 7, 5
-  const ROW_PITCH = 180;         // dot spacing inside a row
-  const DOT_R = 46;              // dot radius: each dot is a golden-angle disc of its particles
+  const ROW_PITCH = 200;         // dot spacing inside a row
+  const DOT_R = 52;              // dot radius: each dot is a golden-angle disc of its particles
   const FLOW_AMP = 70;           // px, peak sideways drift of the flow field during the move
   const SEAL_RATE = 0.1;         // one in ten particles is seal coloured
   const BUCKETS = 20;            // alpha quantisation, so each frame is a few batched fills
@@ -196,7 +196,7 @@
       if (tau < 0) continue;
       const x = 150 + 0.5 * RISER_A * tau * tau;
       if (x > H.W + 20) continue;
-      const y = 900 - 70 * (x - 150) / (H.W - 300);
+      const y = 900 - 150 * (x - 150) / (H.W - 300);
       const a = H.ramp(tau, 0, 0.12) * fade;
       if (a <= 0) continue;
       ctx.globalAlpha = a;
