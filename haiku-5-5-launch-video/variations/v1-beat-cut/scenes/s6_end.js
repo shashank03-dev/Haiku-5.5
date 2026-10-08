@@ -106,8 +106,11 @@
     if (t < START - EPS) return;
     if (!giant) build(ctx);
 
-    ctx.fillStyle = V.light.bg;
+    // 25.0 strobe, matching the audio hit: two paper frames (25.000, 25.017), then ink until the rise at 25.2.
+    const strobeInk = t >= START + 2 / H.FPS - EPS && t < 25.2 - EPS;
+    ctx.fillStyle = strobeInk ? V.dark.bg : V.light.bg;
     ctx.fillRect(0, 0, H.W, H.H);
+    if (strobeInk) return;
 
     if (t < 26.5 - EPS) {
       // 25.0 to 26.5: the wordmark, centred on the frame, rising from 25.2.
