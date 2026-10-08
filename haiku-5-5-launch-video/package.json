@@ -1,0 +1,16 @@
+{
+  "name": "haiku-5-5-launch-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "30-second motion-graphics launch film for Claude Haiku 5.5, rendered from code (canvas 2D + Playwright + ffmpeg).",
+  "type": "module",
+  "scripts": {
+    "audio": "python3 audio/make_score.py",
+    "still": "node render.mjs --times",
+    "render": "node render.mjs"
+  },
+  "devDependencies": {
+    "playwright-core": "1.56.1",
+    "geist": "1.7.2"
+  }
+}
