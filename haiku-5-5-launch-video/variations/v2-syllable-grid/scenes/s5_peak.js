@@ -62,7 +62,7 @@
     // Strobe patterns for the steps 0 to 3 (index 1 to 3 are used) and flicker patterns outside the glyph.
     for (let k = 0; k < 4; k++) strobe.push(cells.filter(() => rnd() < 0.3));
     const rest = cells.filter(c => !c.g);
-    for (let k = 0; k < 4; k++) flick.push(rest.filter(() => rnd() < 0.07));
+    for (let k = 0; k < 4; k++) flick.push(rest.filter(() => rnd() < 0.035));
   }
 
   H.scene({

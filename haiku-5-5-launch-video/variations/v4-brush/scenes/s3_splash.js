@@ -7,7 +7,7 @@
   const B = window.V4B;
   const CX = H.W / 2, CY = H.H / 2;
   const SPLASH = B.blob(81, { amp: 0.22, spikes: 14, drops: 20 });  // unit radius, scaled per frame
-  const FLOOD = B.blob(83, { amp: 0.12 });
+  const FLOOD = B.blob(83, { amp: 0.1, spikes: 10 });  // spikes only push outward, so the flood still covers the frame at 1500 px
   const RINGS = [B.ring(91), B.ring(92)];
 
   H.scene({ id: "v4_s3_splash", start: 10, end: 15, draw(ctx, t, local, dur) {
@@ -57,7 +57,7 @@
       ctx.translate(CX, CY);
       ctx.scale(R, R);
       ctx.fillStyle = k % 2 ? V.dark.text : V.accent;
-      ctx.fill(RINGS[k % 2]);
+      ctx.fill(RINGS[k % 2], 'evenodd');
       ctx.restore();
     }
     ctx.restore();
