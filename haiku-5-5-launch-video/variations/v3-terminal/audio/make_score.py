@@ -38,7 +38,7 @@ BEAT = 0.5                               # 120 BPM, one beat = 0.5 s
 GRID = 0.125                             # typing-tick grid
 SEED = 20261008                          # fixed seed: the score is reproducible
 CEILING = 0.89                           # limiter ceiling, -1.01 dBFS (1.0 dBFS = 0.891)
-MASTER = 1.0                             # bus gain before the limiter
+MASTER = 1.6                             # bus gain before the limiter (raw peak ~ -2 dBFS, RMS ~ -20 dBFS)
 PAD_X = 0.6                              # chord crossfade half-width (s)
 
 TICK_LEVEL = 0.10                        # typing ticks: quiet
