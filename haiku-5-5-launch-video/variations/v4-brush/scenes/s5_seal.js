@@ -56,10 +56,10 @@ const v4s5 = (function () {
 
   // Brush front: clips to everything left of a front that travels x0 to x1. The edge is jagged by noise.
   function wipe(ctx, x0, x1, y0, y1, p, jag) {
-    const front = H.lerp(x0, x1, p), n = 14;
+    const front = H.lerp(x0, x1, p), n = 28;
     ctx.beginPath();
     ctx.moveTo(-400, y0);
-    for (let j = 0; j <= n; j++) ctx.lineTo(front + 16 * jag(j * 0.8), H.lerp(y0, y1, j / n));
+    for (let j = 0; j <= n; j++) ctx.lineTo(front + 24 * jag(j * 0.3), H.lerp(y0, y1, j / n));
     ctx.lineTo(-400, y1);
     ctx.closePath();
     ctx.clip();
@@ -140,7 +140,7 @@ const v4s5 = (function () {
     const wob = noise(777), path = new Path2D(), R = SEAL / 2 + 12, M = 180;
     for (let i = 0; i < M; i++) {
       const th = i / M * Math.PI * 2, cs = Math.cos(th), sn = Math.sin(th);
-      const rr = R * (1 + 0.06 * wob(i * 0.11));
+      const rr = R * (1 + 0.1 * wob(i * 0.23) + 0.04 * wob(i * 0.7 + 50));
       const x = Z / 2 + rr * Math.sign(cs) * Math.pow(Math.abs(cs), 0.3);
       const y = Z / 2 + rr * Math.sign(sn) * Math.pow(Math.abs(sn), 0.3);
       if (i === 0) path.moveTo(x, y); else path.lineTo(x, y);

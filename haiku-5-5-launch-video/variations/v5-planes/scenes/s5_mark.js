@@ -11,7 +11,7 @@
   const LOCK_A = 21.0, LOCK_B = 23.0;   // camera pulls in and locks on the mark at 23.0
   const CARD_A = 23.5, CARD_B = 24.0;   // seal card arrives, on the grid
   const STAMP = 24.0;                   // seal stamps, on the grid
-  const ZC = 9000;                      // collapse depth: cards shrink to a point here
+  const ZC = 24000;                     // collapse depth: cards shrink to a point here
   const Z_NEAR = 1100, Z_FAR = 3700, SPAN = Z_FAR - Z_NEAR;
 
   // Seal: the s01 recipe. 220 px, rasterised at 2x. Speckles are seeded and sit inside the body.
@@ -167,7 +167,7 @@
         const zr = flowZ(c, uHold);
         let z;
         if (flash) z = zr + (ZC - zr) * H.easeInCubic(H.ramp(t, T_IN, FLASH_END));
-        else z = ZC + (zr - ZC) * H.easeOutExpo(H.ramp(t, FLASH_END, FLASH_END + 0.5));
+        else z = ZC + (zr - ZC) * H.easeOutCubic(H.ramp(t, FLASH_END, FLASH_END + 0.5));
         const p = proj(c.x, c.y, z, cam);
         items.push({ z, fn: () => roundCard(ctx, p, c.w, c.h, 22, flash ? V.dark.bg : V.dark.surface, fade, !flash) });
       }
