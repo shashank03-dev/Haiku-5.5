@@ -34,17 +34,40 @@
   const yMid = size => HT / 2 + size * CAP;                              // baseline that centres a line
 
   // 0.0 to 0.5: "5.5" slams full-frame (scale 2.6 to 1, blur 18 to 0 over 0.25 s), then holds.
+  // The blur runs on a quarter-resolution scratch canvas (blur / 4, then scaled up), which keeps
+  // the blurred frames near 5 ms instead of ~40 ms for a full-frame filter. The scratch canvas is made once.
+  const Q = 4;
+  let scratch = null;
   function slam(ctx, T) {
     const size = fit(ctx, '5.5', 1100);
     const k = snap(T, 0, 0.25);
     const s = 2.6 - 1.6 * k;
     const blur = 18 * (1 - k);
     bg(ctx, L.bg);
+    if (blur <= 0.05) {
+      ctx.save();
+      ctx.translate(W / 2, HT / 2);
+      ctx.scale(s, s);
+      txt(ctx, '5.5', 0, size * CAP, size, L.text);
+      ctx.restore();
+      return;
+    }
+    if (!scratch) { scratch = document.createElement('canvas'); scratch.width = W / Q; scratch.height = HT / Q; }
+    const g = scratch.getContext('2d');
+    g.setTransform(1, 0, 0, 1, 0, 0);
+    g.fillStyle = L.bg;
+    g.fillRect(0, 0, scratch.width, scratch.height);
+    g.save();
+    g.scale(1 / Q, 1 / Q);
+    g.translate(W / 2, HT / 2);
+    g.scale(s, s);
+    g.filter = `blur(${(blur / Q).toFixed(2)}px)`;
+    txt(g, '5.5', 0, size * CAP, size, L.text);
+    g.restore();
     ctx.save();
-    ctx.translate(W / 2, HT / 2);
-    ctx.scale(s, s);
-    if (blur > 0.05) ctx.filter = `blur(${blur.toFixed(2)}px)`;
-    txt(ctx, '5.5', 0, size * CAP, size, L.text);
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(scratch, 0, 0, W, HT);
     ctx.restore();
   }
 

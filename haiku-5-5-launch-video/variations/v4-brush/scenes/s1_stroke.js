@@ -30,7 +30,8 @@ window.V4B = (function () {
 
   // Dry brush stroke from (x0, y0) to (x1, y1). Built in its own frame: x runs 0..len along the
   // stroke and y is across it. Options: w (body width px), seed, bow (arc px), disp (centre-line
-  // wobble px), taper (0..1, how far the tail thins), dry (0..1, bristle gaps near the tail), N.
+  // wobble px), taper (0..1, how far the tail thins), dry (0..1, bristle gaps near the tail),
+  // edge (true puts the gaps near the two edges, so a centre line of text stays clean), N.
   function stroke(x0, y0, x1, y1, o) {
     const len = Math.hypot(x1 - x0, y1 - y0), ang = Math.atan2(y1 - y0, x1 - x0);
     const seed = o.seed, N = o.N || 110, w = o.w;
@@ -46,7 +47,7 @@ window.V4B = (function () {
       const tail = 1 - taper * 0.9 * smooth(0.5, 1, u);    // the tail thins
       const press = 1 + 0.22 * vn(tW, u * 5) + 0.07 * vn(tE, u * 19); // pressure variation
       hw.push(Math.max(1.5, 0.5 * w * swell * tail * press));
-      const rag = 0.04 + 0.12 * smooth(0.55, 1, u);        // edges get ragged as the brush runs dry
+      const rag = 0.04 + 0.1 * smooth(0.55, 1, u);         // edges get ragged as the brush runs dry
       jt.push(rag * vn(tE, u * 31));
       jb.push(rag * vn(tE, u * 27 + 13));
     }
@@ -55,14 +56,18 @@ window.V4B = (function () {
     for (let i = 1; i <= N; i++) path.lineTo(xs[i], cy[i] - hw[i] * (1 + jt[i]));
     for (let i = N; i >= 0; i--) path.lineTo(xs[i], cy[i] + hw[i] * (1 + jb[i]));
     path.closePath();
-    // Dry-brush gaps: thin slivers inside the body, cut out by the evenodd fill.
+    // Dry-brush gaps: thin slivers inside the body, cut out by the evenodd fill. Lanes stay inside
+    // the body (the edge jitter is at most 0.14 of the half width), so no sliver pokes outside it.
     const pr = H.prng(seed * 5 + 9);
-    const K = Math.round(dry * (3 + w / 25));
+    const K = Math.round(dry * (4 + w / 20));
     for (let k = 0; k < K; k++) {
-      const ua = 0.28 + pr() * 0.62, ub = Math.min(0.99, ua + 0.05 + pr() * 0.16);
+      const ua = 0.25 + pr() * 0.7, ub = Math.min(0.99, ua + 0.04 + pr() * 0.2);
       const ia = Math.round(ua * N), ib = Math.round(ub * N);
       if (ib - ia < 3) continue;
-      const span = ib - ia, lane = (pr() * 2 - 1) * 0.5, gap = 0.01 + pr() * 0.02;
+      const span = ib - ia, gap = 0.008 + pr() * 0.016;
+      const lane = o.edge
+        ? (pr() < 0.5 ? -1 : 1) * (0.55 + pr() * 0.2)
+        : (pr() * 2 - 1) * 0.5;
       path.moveTo(xs[ia], cy[ia] + lane * hw[ia]);
       for (let i = ia; i <= ib; i++) path.lineTo(xs[i], cy[i] + lane * hw[i] - gap * hw[i] * Math.sin(Math.PI * (i - ia) / span));
       for (let i = ib; i >= ia; i--) path.lineTo(xs[i], cy[i] + lane * hw[i] + gap * hw[i] * Math.sin(Math.PI * (i - ia) / span));
@@ -147,7 +152,7 @@ window.V4B = (function () {
       const th = (TAU * i) / N;
       let ro = 1, thick = 0.03;
       for (const h of hs) ro += 0.035 * h.a * Math.cos(h.k * th + h.ph);
-      for (const h of ht) thick += 0.012 * h.a * Math.cos(h.k * th + h.ph);
+      for (const h of ht) thick += 0.017 * h.a * Math.cos(h.k * th + h.ph);
       outer.push([Math.cos(th) * ro, Math.sin(th) * ro]);
       inner.push([Math.cos(th) * (ro - thick), Math.sin(th) * (ro - thick)]);
     }
@@ -171,7 +176,7 @@ window.V4B = (function () {
   const F = H.FONT;
   const SAFE = H.SAFE, U = (H.W - 2 * SAFE) / 7;          // one syllable unit: the bars are 5U, 7U, 5U
   const BAR_H = 150;
-  const ROW_Y = [420, 600, 780];                           // poem rows, top to bottom
+  const ROW_Y = [390, 560, 730];                           // poem rows, top to bottom
   const ROW_X = [
     [H.W / 2 - 2.5 * U, H.W / 2 + 2.5 * U],                // 5U
     [SAFE, H.W - SAFE],                                    // 7U (full width)
@@ -183,9 +188,9 @@ window.V4B = (function () {
   const SWEEP = B.stroke(SAFE - 20, ROW_Y[1], H.W - SAFE + 20, ROW_Y[1], { w: 170, seed: 11, bow: 6, disp: 10, taper: 0.8, dry: 0.8 });
   const ROW_A = B.stroke(ROW_X[0][0], ROW_Y[0], ROW_X[0][1], ROW_Y[0], { w: BAR_H, seed: 21, bow: -4, disp: 8, taper: 0.6, dry: 0.7 });
   const ROW_C = B.stroke(ROW_X[2][1], ROW_Y[2], ROW_X[2][0], ROW_Y[2], { w: BAR_H, seed: 33, bow: 4, disp: 8, taper: 0.6, dry: 0.7 });
-  const SWASH = B.stroke(330, 400, 1600, 850, { w: 30, seed: 41, disp: 12, taper: 0.9, dry: 0.9 });
-  const UNDERLINE = B.stroke(300, 896, 1640, 896, { w: 12, seed: 52, bow: 3, disp: 4, taper: 0.5, dry: 0.4 });
-  const DAB = B.blob(61, { amp: 0.14 });
+  const SWASH = B.stroke(330, 360, 1600, 820, { w: 30, seed: 41, disp: 12, taper: 0.9, dry: 0.9 });
+  const UNDERLINE = B.stroke(300, 862, 1640, 862, { w: 12, seed: 52, bow: 3, disp: 4, taper: 0.5, dry: 0.4 });
+  const DAB = B.blob(61, { amp: 0.05 });
 
   // Title measurements need the Geist faces, so they are taken on the first draw, not at load.
   let lay = null;
