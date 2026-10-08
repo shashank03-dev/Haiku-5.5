@@ -560,10 +560,11 @@ def convolve(x, h):
 
 
 def remove_dc(x, fc=8.0):
-    """Zero-phase high-pass with a smooth edge at fc Hz. Removes the DC left by decaying sines."""
-    freqs = np.fft.rfftfreq(x.shape[-1], 1.0 / SR)
-    gain = 1.0 - np.exp(-(freqs / fc) ** 4)
-    return np.fft.irfft(np.fft.rfft(x, axis=-1) * gain, n=x.shape[-1], axis=-1)
+    """Causal one-pole DC blocker (x minus its 8 Hz lowpass). Removes the DC left by decaying
+    sines, and unlike a zero-phase filter it adds no pre-ringing before transients."""
+    p = math.exp(-2.0 * math.pi * fc / SR)
+    kernel = (1.0 - p) * p ** np.arange(int(0.5 * SR))   # p^(0.5 s) is about e^-25, truncation is exact enough
+    return np.stack([x[c] - convolve(x[c], kernel) for c in range(x.shape[0])])
 
 
 def master(ir):
@@ -573,8 +574,9 @@ def master(ir):
     t = t_axis(N)
     gate = np.ones(N)
     for a, b in ((14.90, 15.00), (26.50, 26.60)):          # short silences before 15.0 and 26.6
-        box = np.clip((t - a) / 0.002, 0.0, 1.0) * np.clip((b - t) / 0.002, 0.0, 1.0)
-        gate *= 1.0 - box
+        # Close over 2 ms at a, stay closed until b, reopen over 2 ms after b (no pre-echo of the cue).
+        closed = np.clip((t - a) / 0.002, 0.0, 1.0) * (1.0 - np.clip((t - b) / 0.002, 0.0, 1.0))
+        gate *= 1.0 - closed
     fade_in = np.minimum(1.0, t / 0.005)
     fade_out = 1.0 - smoothstep((t - 29.4) / 0.6)            # silent by 30.0
     return mix * (gate * fade_in * fade_out)
