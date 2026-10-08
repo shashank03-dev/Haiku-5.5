@@ -11,7 +11,7 @@ const S03 = {
   SIZE: 240,          // display size, Geist 600
   WEIGHT: 600,
   TRACK: -7.2,        // -0.03em
-  LABEL_Y: 470,       // baseline of the mono "CLAUDE" label
+  LABEL_Y: 440,       // baseline of the mono "CLAUDE" label (lockup centred on the canvas)
   LABEL_GAP: 56,      // label baseline to title cap top
   DROP: 0.9,          // mask travel, in em
   seal: null,         // offscreen seal raster, made on first draw
