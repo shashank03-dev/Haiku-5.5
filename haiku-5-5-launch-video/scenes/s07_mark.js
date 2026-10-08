@@ -2,7 +2,7 @@
 // with the "Haiku 5.5" wordmark and the mono caption. Helpers are prefixed s07_ because every
 // scene file shares one global scope.
 
-// Layout constants (px). The mark is centred on x = 960, then moves to x = 700 for the lockup.
+// Layout constants (px). The mark is centred on x = 960, then moves to x = 523 for the lockup.
 const S07_LAYOUT = {
   YA: 510,        // mark centre y; the lockup group is centred on the canvas
   BAR_W: [260, 364, 260], // 5u, 7u, 5u with u = 52
@@ -72,7 +72,7 @@ H.scene({ id: "s07_mark", start: 23, end: 26.5, draw(ctx, t, local, dur) {
   const L = S07_LAYOUT;
   const YA = L.YA;
   const CX0 = H.W / 2;   // 960: mark centre at rest
-  const CX1 = 700;       // mark centre in the lockup
+  const CX1 = 523;       // mark centre in the lockup (puts the whole lockup at the canvas centre)
 
   // Cover the ink of s06 while it fades out, so the scene starts on paper.
   ctx.save();
@@ -85,7 +85,7 @@ H.scene({ id: "s07_mark", start: 23, end: 26.5, draw(ctx, t, local, dur) {
   const fo = 1 - H.ramp(t, 26.2, 26.5);
   if (fo <= 0) return;
 
-  // Mark centre x: rest at 960 until WORDMARK (24.5), then ease to 700 over 0.8 s.
+  // Mark centre x: rest at 960 until WORDMARK (24.5), then ease to 523 over 0.8 s.
   const mx = H.lerp(CX0, CX1, H.easeInOutCubic(H.ramp(t, 24.5, 25.3)));
 
   // Bars: slide in from the left at 23.00, 23.25, 23.50 (0.6 s, easeOutExpo).
