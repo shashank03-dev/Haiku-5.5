@@ -49,8 +49,9 @@ function v2s2_frame(ctx, t) {
   for (let r = 0; r < 7; r++) {
     for (let c = 0; c < 12; c++) {
       if (L.srcKeys.has(r * 12 + c)) continue;
-      const delay = 0.06 * Math.abs(r - 3);
-      const s = 1 - H.easeInOutCubic(H.ramp(t, 5.0 + delay, 5.35 + delay));
+      // Rows 2 to 4 (the poem's rows) are gone by 5.2, before the morph reaches them; outer rows lag a little.
+      const delay = 0.04 * Math.max(0, Math.abs(r - 3) - 1);
+      const s = 1 - H.easeInOutCubic(H.ramp(t, 5.0 + delay, 5.2 + delay));
       if (s <= 0) continue;
       const w = v2s2_CW * s, h = v2s2_CH * s;
       const cx = 8 + c * 160 + v2s2_CW / 2, cy = 9 + r * 154 + v2s2_CH / 2;
@@ -60,7 +61,7 @@ function v2s2_frame(ctx, t) {
   }
 
   // Source cells morph into tiles (x and width only; the rows share the field's y).
-  const morph = H.easeInOutCubic(H.ramp(t, 5.0, 5.5));
+  const morph = H.easeInOutCubic(H.ramp(t, 5.1, 5.5));
   const pulse = 1 - Math.abs(2 * H.ramp(t, 9.5, 9.75) - 1); // 0, 1, 0 across 9.5 to 9.75
   for (const tile of L.tiles) {
     const cx = H.lerp(tile.sx, tile.cx, morph);
