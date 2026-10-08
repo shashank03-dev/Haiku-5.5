@@ -6,43 +6,55 @@
 // Cached once, on the first draw (fonts are loaded by then, which they are not at file load).
 let s08Cache = null;
 
-// Hanko, the same design as s01: a rounded vermilion square, a paper-coloured "5.5" on it,
-// and paper speckles at 3% to 12% opacity, clipped to the seal. Rasterised at 2x.
-function s08MakeHanko(ctx, S) {
-  const R = 2;
-  const c = document.createElement('canvas');
-  c.width = c.height = Math.round(S * R);
-  const g = c.getContext('2d');
-  g.scale(R, R);
+// Hanko: the same sprite recipe as s01 (220 px, radius 26, 1600 speckles from H.prng(20255),
+// "5.5" with a 150 px ink width). Here the carved "5.5" is filled paper rather than knocked out,
+// because this scene is on ink; on screen it reads exactly like s01 on paper.
+const S08_SEAL = 220;
+const S08_SEAL_R = 26;
+const S08_GLYPH_INK_W = 150;
 
-  // Body.
+function s08MakeHanko() {
+  const SEAL = S08_SEAL;
+  const RS = 2; // rasterised at 2x for crisp edges when scaled and rotated
+  const c = document.createElement('canvas');
+  c.width = c.height = SEAL * RS;
+  const g = c.getContext('2d');
+  g.scale(RS, RS);
+
+  // Body: vermilion rounded square.
   g.fillStyle = H.COLOR.seal;
-  H.rrect(g, 0, 0, S, S, S * 0.12);
+  H.rrect(g, 0, 0, SEAL, SEAL, S08_SEAL_R);
   g.fill();
 
-  // Ink texture: speckles only where the seal already is (source-atop).
-  const rnd = H.prng(0x5508);
-  const n = Math.round((S * S) / 40);
+  // Ink texture: paper-coloured specks inside the body only, each under 12% opacity.
+  const rnd = H.prng(20255);
   g.save();
-  g.globalCompositeOperation = 'source-atop';
+  H.rrect(g, 0, 0, SEAL, SEAL, S08_SEAL_R);
+  g.clip();
   g.fillStyle = H.COLOR.paper;
-  for (let i = 0; i < n; i++) {
-    const x = rnd() * S, y = rnd() * S;
-    const r = 0.25 + rnd() * rnd() * 1.6;
-    g.globalAlpha = 0.03 + rnd() * 0.09; // never above 0.12
+  for (let i = 0; i < 1600; i++) {
+    const x = rnd() * SEAL, y = rnd() * SEAL;
+    const r = 0.3 + Math.pow(rnd(), 4) * 1.3;
+    g.globalAlpha = 0.02 + rnd() * 0.10;
     g.beginPath();
     g.arc(x, y, r, 0, Math.PI * 2);
     g.fill();
   }
   g.restore();
 
-  // Carved "5.5": sized to about 62% of the seal width, optically centred.
-  const w100 = H.measure(g, '5.5', 100, 600, H.FONT.sans, 0);
-  const gs = Math.min(0.46 * S, (0.62 * S) / (w100 / 100));
-  H.text(g, '5.5', S / 2, S / 2 + 0.355 * gs, {
-    size: gs, weight: 600, family: H.FONT.sans, color: H.COLOR.paper,
-    align: 'center', baseline: 'alphabetic', tracking: -0.02 * gs,
-  });
+  // Carved "5.5": size solved from the measured ink width, box centred on the seal.
+  g.textAlign = 'left';
+  g.textBaseline = 'alphabetic';
+  g.font = H.font(100, 600);
+  const m0 = g.measureText('5.5');
+  const size = 100 * S08_GLYPH_INK_W / (m0.actualBoundingBoxLeft + m0.actualBoundingBoxRight);
+  g.font = H.font(size, 600);
+  const m = g.measureText('5.5');
+  const x = SEAL / 2 - (m.actualBoundingBoxRight - m.actualBoundingBoxLeft) / 2;
+  const y = SEAL / 2 + (m.actualBoundingBoxAscent - m.actualBoundingBoxDescent) / 2;
+  g.globalAlpha = 1;
+  g.fillStyle = H.COLOR.paper;
+  g.fillText('5.5', x, y);
   return c;
 }
 
@@ -64,7 +76,7 @@ function s08Layout(ctx) {
   const xDot = left + m('Meet Haiku 5.5');
 
   const base = 470 + 0.355 * hs; // caps centred on y 470
-  const S = 200;                 // hanko size
+  const S = S08_SEAL;            // hanko size, same as s01
   s08Cache = {
     hs, base, drop: 0.95 * hs, clipTop: base - hs, clipH: 1.14 * hs,
     words: [
@@ -76,7 +88,7 @@ function s08Layout(ctx) {
     S,
     sealX: H.W - H.SAFE - S / 2,
     sealY: H.H - H.SAFE - S / 2,
-    hanko: s08MakeHanko(ctx, S),
+    hanko: s08MakeHanko(),
   };
   return s08Cache;
 }
