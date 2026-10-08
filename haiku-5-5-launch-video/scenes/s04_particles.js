@@ -1,5 +1,5 @@
 // s04_particles (11.0 to 15.0), ink. The coded image.
-// The "5.5" is sampled once from Geist 600 at load (offscreen canvas, 9 px grid, about 2200 points).
+// The "5.5" is sampled once from Geist 600 at load (offscreen canvas, 9 px grid, about 2140 points, 2125 used).
 // Particles gather into it (11.0 to 12.0), hold it (12.0 to 13.0), then flow out of it into three
 // rows of 5, 7 and 5 dots, the haiku's syllables (13.0 onward). A riser accelerates a rising line of
 // dots off the right edge (13.0 to 15.0). Everything is a pure function of t; all randomness is
@@ -9,7 +9,7 @@
   const rnd = H.prng(0x55a4);
 
   const GLYPH_PX = 640;          // Geist 600 size of the "5.5"
-  const STEP = 9;                // sample grid pitch in px (gives about 2200 points)
+  const STEP = 9;                // sample grid pitch in px (gives about 2140 points, 2125 used)
   const ROW_Y = [380, 540, 700]; // same row centres as s02
   const ROW_N = [5, 7, 5];       // 17 syllables: 5, 7, 5
   const ROW_PITCH = 200;         // dot spacing inside a row
@@ -22,7 +22,7 @@
 
   let P = null;   // particle state, built once
   let RS = null;  // riser state, built once
-  let AX = null, AY = null, AA = null, AB = null, AS = null; // per-frame scratch (typed arrays)
+  let AX = null, AY = null, AB = null, AS = null; // per-frame scratch (typed arrays)
 
   // Sample the "5.5" glyph on a STEP px grid, centred on the canvas. Returns [{x, y}] in scene px.
   function sampleGlyph() {
@@ -103,7 +103,7 @@
     const GX = new Float32Array(M), GY = new Float32Array(M), RX = new Float32Array(M), RY = new Float32Array(M);
     const GD = new Float32Array(M), FD = new Float32Array(M), RAD = new Float32Array(M);
     const SEAL = new Uint8Array(M);
-    AX = new Float32Array(M); AY = new Float32Array(M); AA = new Float32Array(M);
+    AX = new Float32Array(M); AY = new Float32Array(M);
     AB = new Uint8Array(M); AS = new Uint8Array(M);
 
     for (let i = 0; i < M; i++) {
@@ -168,7 +168,7 @@
       }
 
       const a = H.ramp(t, 11.0 + GD[i], 11.2 + GD[i]) * fade;
-      AX[i] = x; AY[i] = y; AA[i] = a;
+      AX[i] = x; AY[i] = y;
       AB[i] = Math.round(a * BUCKETS);
       AS[i] = SEAL[i];
     }

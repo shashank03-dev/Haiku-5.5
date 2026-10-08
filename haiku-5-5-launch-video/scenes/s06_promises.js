@@ -41,7 +41,7 @@ const s06 = (function () {
   // Target: two stroked rings and the innermost ring replaced by a seal-colour disc.
   const target = { outer: arc(0, 0, 68), middle: arc(0, 0, 40), disc: 16 };
   // Endless loop: lemniscate of Gerono, x = A cos t, y = (A/2) sin 2t (a figure eight, 2:1).
-  const LOOP_A = 70, LOOP_N = 720;
+  const LOOP_A = 74, LOOP_N = 720;
   const loopPts = [];
   for (let i = 0; i < LOOP_N; i++) {
     const t = (i / LOOP_N) * TAU;
@@ -55,6 +55,8 @@ const s06 = (function () {
     if (p >= 1) ctx.setLineDash([]);
     else { ctx.setLineDash([o.len, o.len]); ctx.lineDashOffset = o.len * (1 - p); }
     ctx.stroke(o.path);
+    ctx.setLineDash([]); // never leak the dash pattern into the next stroke (the needle)
+    ctx.lineDashOffset = 0;
   }
 
   function drawStopwatch(ctx, lt) {
